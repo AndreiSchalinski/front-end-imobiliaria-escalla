@@ -1,0 +1,391 @@
+.header-site {
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Sora", sans-serif;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.header-height {
+  height: 70px;
+  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.342);
+}
+
+.button-drawer-text {
+  color: #7e7e7e !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+}
+
+.dropdown-header {
+  color: #5a5a5a !important;
+  font-size: 17px !important;
+  width: 200px;
+}
+
+.dropdown-header:hover {
+  color: #000000 !important;
+}
+
+.container-link-icon-header:hover .link {
+  transform: translateX(10px);
+  transition: transform 0.4s ease-in-out;
+}
+
+.container-link-icon-header:hover .icon {
+  animation: rotacionar 1s ease-in-out;
+  fill: #000000;
+}
+
+.link,
+.icon {
+  transition: 0.4s;
+}
+
+@keyframes rotacionar {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+
+.icon {
+  margin-left: 20px;
+  fill: #6d6d6d;
+}
+
+@media (max-width: 1200px) {
+  .space-img {
+    transform: translateX(-170%) !important;
+    transition: 0.8s;
+  }
+}
+
+.titles-drawer-links {
+  color: #265AE6;
+  font-size: 20px;
+}
+
+/*--------------------------Home Site Principal------------------------*/
+
+.home-page-site-principal {
+  position: relative;
+  background-image: url("../assets/image-home.png");
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.home-page-site-principal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.685); /* Preto com 50% de transparência */
+  z-index: 1; /* Certifique-se de que a camada de sobreposição fique acima da imagem */
+}
+
+.home-page-site-principal-container-informations {
+  margin: auto;
+  z-index: 2;
+  width: 100%;
+}
+
+.home-page-site-principal-container-text-title {
+  font-size: 25px;
+  font-family: "Sora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 50px;
+  color: white;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.home-page-container-filters {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  width: 1100px;
+  background-color: white;
+}
+
+/*-----------------------Input text filters--------------------*/
+
+.myInput {
+  border: 1px solid #808080 !important;
+  border-radius: 15px !important;
+  transition: 0s !important;
+  font-size: 17px !important;
+  letter-spacing: 0px !important;
+  color: #808080 !important;
+}
+
+.myInput::placeholder {
+  font-size: 17px !important;
+  color: red !important;
+  letter-spacing: 0px !important;
+}
+
+.myInput:hover {
+  border: 1px solid black !important;
+  transition: 0s !important;
+}
+
+/*-------------------------Destaques----------------------*/
+
+.container-site-principal-destaques {
+  padding: 150px 20px;
+}
+
+.container-site-principal-destaques h1 {
+  text-align: center;
+  font-family: "Sora", sans-serif;
+  margin-bottom: 50px;
+}
+
+.container-site-principal-informacoes-destaques {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+
+.container-site-principal-lista-informacoes {
+  margin: 10px;
+}
+
+/*----------------------container-carousel-destaques---------------------*/
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #082f9a;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.mySwiper [class^="swiper-button-"]::after {
+  font-size: 15px;
+}
+
+.container-carousel-destaques {
+  padding: 0 230px;
+}
+
+.container-carousel-destaques h1,
+p {
+  font-family: "Sora", sans-serif;
+}
+
+/*---------------------Site principal consultorias------------------*/
+
+.container-site-principal-consultorias {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-site-principal-consultorias-vantagens,
+.container-site-principal-consultorias-corretores {
+  width: 710px; /* Ajuste conforme necessário */
+  height: 300px; /* Ajuste conforme necessário */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 10px;
+  background-size: cover;
+  margin: 10px;
+}
+
+.button-consultores {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: black;
+  font-family: "Sora", sans-serif;
+  margin: 0 0 20px -370px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.button-consultores:hover {
+  background: black;
+  color: white;
+  transition: 0.4s;
+}
+
+.container-site-principal-consultores {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-site-principal-consultor {
+  width: 250px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0 2.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.container-site-principal-consultor-button {
+  display: flex;
+  align-items: center;
+  background-color: #020617;
+  width: 100%;
+  height: 48px;
+  color: white;
+  font-family: "Sora", sans-serif;
+}
+
+.container-site-principal-consultor img {
+  width: 100%; /* A imagem ocupa toda a largura do container */
+  height: 100%; /* A imagem ocupa toda a altura do container */
+  object-fit: cover; /* Ajusta a imagem para cobrir o container, cortando se necessário */
+}
+
+/*-------------------Depoimentos-------------------*/
+
+.container-site-principal-depoimentos {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.container-site-principal-depoimentos h2 {
+  font-family: "Sora", sans-serif;
+  margin-bottom: 100px;
+}
+
+.container-site-principal-depoimentos div {
+  border: 3px solid #dddddd;
+  border-radius: 4px;
+  width: 912px;
+  text-align: center;
+  padding: 30px 10px;
+  font-family: "Sora", sans-serif;
+  box-shadow: 0px 7px 10px #7070708a;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.container-site-principal-depoimentos h5,
+p {
+  line-height: 30px;
+}
+
+/*-------------------Footer--------------------*/
+
+.container-site-principal-footer {
+  background-color: black;
+  font-family: "Sora", sans-serif;
+  padding: 100px 0;
+}
+
+.container-site-principal-footer-row1,
+.container-site-principal-footer-row2 {
+  max-width: 70%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.container-site-principal-footer-row1 ul {
+  margin: 0 30px;
+}
+
+.container-site-principal-footer-row1 ul h3,
+.container-site-principal-footer-row2 ul h3 {
+  margin-bottom: 30px;
+  color: #767676;
+}
+
+.container-site-principal-footer-row2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container-site-principal-footer-row2 ul {
+  margin-left: 100px;
+}
+
+.container-barra-footer {
+  background-color: black;
+  margin-top: auto;
+  color: white;
+  font-family: "Sora", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 60px;
+}
+
+.container-barra-footer ul {
+  display: flex;
+  align-items: center;
+}
+
+.container-barra-footer ul li {
+  margin: 0 20px;
+}
+
+/*-----------------Site principal blog----------------*/
+
+.container-site-principal-blog {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.container-site-principal-blog ul {
+  display: flex;
+  font-family: "Sora", sans-serif;
+}
+
+.container-site-principal-blog ul li:nth-child(1) {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 50px;
+  line-height: 40px;
+}
+
+.container-site-principal-blog ul li:nth-child(1) p {
+  line-height: 23px;
+}
+
+.container-site-principal-blog ul li {
+  width: 300px;
+  margin: 0 10px 0 10px;
+}
