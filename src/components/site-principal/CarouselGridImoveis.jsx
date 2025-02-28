@@ -1,11 +1,13 @@
 "use client";
 
 import { Fancybox as NativeFancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css"; // Importar o CSS do Fancybox
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// import required modules
 import { Grid, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
 
 const images = [
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-26-1723828636.webp",
@@ -23,6 +25,7 @@ const images = [
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-16-1723828630.webp",
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-9-1723828626.webp",
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-7-1723828625.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-7-1723828625.webp"
 ];
 
 const openFancybox = (index) => {
@@ -37,49 +40,46 @@ const openFancybox = (index) => {
     },
     startIndex: index,
   });
+
 };
 
 export default function SiteCardCarouselFotos() {
-  const caixa = images.map((urlImage, i) => (
-    <SwiperSlide key={i}>
-      <a data-fancybox="gallery" href={urlImage}>
-        <img
-          alt=""
-          src={urlImage}
-          width="100%"
-          height=""
-          style={{
-            display: "block",
-            objectFit: "cover",
-            borderRadius: "8px",
-          }}
-          onClick={(e) => {
-            e.preventDefault();
-            openFancybox(i);
-          }}
-        />
-      </a>
-    </SwiperSlide>
-  ));
-
-  const carousel = (
-    <Swiper
-      loop={true}
-      slidesPerView={2}
-      grid={{
-        rows: 2,
-        fill: "row",
-      }}
-      spaceBetween={5}
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Grid, Pagination]}
-      className="kk"
-    >
-      {caixa}
-    </Swiper>
+  return (
+    <div style={{ maxWidth: "800px", margin: "auto" }}>
+      <Swiper
+        slidesPerView={2}
+        grid={{
+          rows: 2,
+          fill: "row",
+        }}
+        spaceBetween={5}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Grid, Pagination]}
+        className="swiper-grid"
+      >
+        {images.map((urlImage, i) => (
+          <SwiperSlide key={i}>
+            <img
+              alt={`Imagem ${i + 1}`}
+              src={urlImage}
+              width="100%"
+              height="auto"
+              style={{
+                display: "block",
+                objectFit: "cover",
+                borderRadius: "8px",
+                cursor: "pointer",
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                openFancybox(i);
+              }}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
-
-  return <div style={{ maxWidth: "600px", margin: "auto" }}>{carousel}</div>;
 }

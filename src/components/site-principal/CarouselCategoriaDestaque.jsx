@@ -16,7 +16,7 @@ export default function CarouselDestaques({ categoriaDestaque, legenda }) {
           clickable: true,
         }}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="swiper-container-carousel"
       >
         {[...Array(8)].map((_, index) => (
           <SwiperSlide
