@@ -1,4 +1,3 @@
-import Fancybox from "@/components/general/Fancybox";
 import CarouselGridImoveis from "@/components/site-principal/CarouselGridImoveis";
 
 export default function SitePrincipalSobreEdificio() {
