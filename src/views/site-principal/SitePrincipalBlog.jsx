@@ -16,7 +16,7 @@ export default function SitePrincipalBlog() {
           </p>
           <Button
             variant="contained"
-            sx={{ background: "black", textTransform: "none", width:200 }}
+            sx={{ background: "black", textTransform: "none", width:245, height:48, fontSize:16 }}
           >
             Acesse nosso Blog
           </Button>
