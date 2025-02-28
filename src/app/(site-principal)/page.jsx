@@ -8,13 +8,25 @@ import SitePrincipalBlog from "@/views/site-principal/SitePrincipalBlog";
 import SitePrincipalFooter from "@/components/site-principal/Footer";
 import HeaderSite from "@/components/site-principal/Header";
 
+const listImoveisDestaques = [
+  { titulo: "Imóveis com alta procura", legenda: "" },
+  {
+    titulo: "Imóveis frente mar",
+    legenda: "Um cenário à altura das suas conquistas.",
+  },
+  {
+    titulo: "Imóveis na planta",
+    legenda: "A melhor parte da sua vida já está nos nossos planos.",
+  },
+];
+
 export default function Home() {
   return (
     <>
-      <HeaderSite/>
+      <HeaderSite />
       <SitePrincipalHomePage />
       <SitePrincipalDestaques />
-      <SitePrincipalCarouselDestaques />
+      <SitePrincipalCarouselDestaques listImoveisDestaques={listImoveisDestaques}/>
       <SitePrincipalConsultoria />
       <SitePrincipalConsultores />
       <SitePrincipalDepoimentos />

@@ -10,7 +10,7 @@ export default function SitePrincipalConsultoria() {
           backgroundImage: `url(${ImgConsultoriaImovelProprio.src})`,
         }}
       >
-        <div className="button-consultores">
+        <div className="button-consultores site-fifth">
           <p>Confira nossas vantagens</p>
         </div>
       </div>
@@ -20,7 +20,7 @@ export default function SitePrincipalConsultoria() {
           backgroundImage: `url(${ImgConsultoriaCorretor.src})`,
         }}
       >
-        <div className="button-consultores">
+        <div className="button-consultores site-fifth">
           <p>Receba uma consultoria</p>
         </div>
       </div>
