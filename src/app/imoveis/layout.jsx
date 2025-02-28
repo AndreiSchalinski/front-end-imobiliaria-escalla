@@ -1,8 +1,10 @@
 import "../../style/global.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "swiper/css";
+import "swiper/css/grid";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 export const metadata = {
   title: "Page imóveis",
