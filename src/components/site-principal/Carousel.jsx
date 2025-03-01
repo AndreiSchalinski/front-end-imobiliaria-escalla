@@ -4,7 +4,7 @@ import { Row, Col, Card, Button } from "antd";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { Navigation } from "swiper/modules";
-import icon from "../../assets/icons";
+import { getIcon } from "@/assets/icons";
 import { Box } from "@mui/material";
 import Imagem1 from "../../assets/imgs/sun-beach-1-1729866902.jpeg";
 import Imagem2 from "../../assets/imgs/sun-beach-11-1729866914.jpeg";
@@ -75,7 +75,7 @@ export default function SiteCardCarousel() {
           }}
         >
           <Row style={{ display: "flex", alignItems: "center" }}>
-            <Col>{icon.iconLocation}</Col>
+            <Col>{getIcon().iconLocation}</Col>
             <Col>
               <h5>Testando título</h5>
             </Col>
@@ -97,15 +97,15 @@ export default function SiteCardCarousel() {
             }}
           >
             <Col>
-              <span>{icon.iconRuler} 149 m²</span>
+              <span>{getIcon().iconRuler} 149 m²</span>
             </Col>
 
             <Col>
-              <span>{icon.iconCar} 3 vagas</span>
+              <span>{getIcon().iconCar} 3 vagas</span>
             </Col>
 
             <Col>
-              <span>{icon.iconBed} 4 quartos</span>
+              <span>{getIcon().iconBed} 4 quartos</span>
             </Col>
           </Row>
 

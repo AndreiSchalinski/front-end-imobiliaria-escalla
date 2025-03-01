@@ -1,4 +1,4 @@
-import icon from "@/assets/icons";
+import {getIcon} from "@/assets/icons";
 import Link from "@/assets/Link.png";
 import Image from "next/image";
 
@@ -12,7 +12,7 @@ export default function SitePrincipalFooter() {
               <h3>Horário de funcionamento</h3>
             </li>
             <li>
-              <p>{icon.iconRelogio} Segunda à Domingo 8h - 19h</p>
+              <p>{getIcon().iconRelogio} Segunda à Domingo 8h - 19h</p>
             </li>
           </ul>
 
@@ -67,8 +67,8 @@ export default function SitePrincipalFooter() {
             </li>
             <li>
               <p>
-                {icon.iconInstagran} {icon.iconFacebook}
-                {icon.iconLinkedin} {icon.iconWhats}
+                {getIcon().iconInstagran} {getIcon().iconFacebook}
+                {getIcon().iconLinkedin} {getIcon().iconWhatsBackground}
               </p>
             </li>
           </ul>
@@ -80,13 +80,13 @@ export default function SitePrincipalFooter() {
               <h3>Contato</h3>
             </li>
             <li>
-              <p>{icon.iconWhats} (47) 9 9999 - 9999</p>
+              <p>{getIcon().iconWhats} (47) 9 9999 - 9999</p>
             </li>
             <li>
-              <p>{icon.iconTelefone} (47) 9999 - 9999</p>
+              <p>{getIcon().iconTelefone} (47) 9999 - 9999</p>
             </li>
             <li>
-              <p>{icon.iconEmail} contato@escallaimoveis.com.br</p>
+              <p>{getIcon().iconEmail} contato@escallaimoveis.com.br</p>
             </li>
           </ul>
         </div>

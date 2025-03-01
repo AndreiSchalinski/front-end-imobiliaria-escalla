@@ -1,3 +1,6 @@
+import { Button } from "@mui/material";
+import { getIcon } from "@/assets/icons";
+
 export default function SitePrincipalImoveisCarousel() {
   return (
     <div className="container-site-principal-informacoes-imovel">
@@ -40,8 +43,63 @@ export default function SitePrincipalImoveisCarousel() {
           <a href="">Exibir Mais +</a>
         </div>
       </div>
-      <div className="container-site-principal-informacoes-imovel-cliente">
-        <h1>Botões de contato</h1>
+      <div className="container-site-principal-informacoes-imovel-cliente receber-informacoes">
+        <div>
+          <p>
+            <p>R$ 3.200.000,00</p>
+          </p>
+
+          <Button
+            variant="contained"
+            sx={{
+              background: "#FCE3E5",
+              textTransform: "none",
+              width: "80%",
+              height: "56px",
+              fontSize: 16,
+              color: "#F5858D",
+              fontWeight: "bold",
+              borderRadius:50
+            }}
+          >
+           {getIcon().iconBells} &nbsp; Condições de pagamento
+          </Button>
+        </div>
+
+        <p>Apartamento no Edifício Brava Aikon na Praia Brava. IM23685</p>
+
+        <p>Localização</p>
+
+        <p>5/5 (3 avaliações)</p>
+
+        <Button
+          variant="contained"
+          sx={{
+            background: "#0057B8",
+            textTransform: "none",
+            width: "100%",
+            height: "56px",
+            fontSize: 16,
+          }}
+        >
+          Receber informações
+        </Button>
+
+        <Button
+          variant="outlined"
+          sx={{
+            textTransform: "none",
+            width: "100%",
+            height: "56px",
+            fontSize: 16,
+            marginTop: 2,
+            border: "1px solid #3CC359",
+            color: "#3CC359",
+            fontWeight: "bold",
+          }}
+        >
+          {getIcon("#3CC359").iconWhats} &nbsp; Condições de pagamento
+        </Button>
       </div>
     </div>
   );
