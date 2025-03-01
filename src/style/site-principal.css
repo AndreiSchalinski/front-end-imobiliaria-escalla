@@ -225,7 +225,7 @@
   width: 12px;
 }
 
-.swiper-container-carousel .swiper-pagination-bullet{
+.swiper-container-carousel .swiper-pagination-bullet {
   height: 12px;
   width: 12px;
 }
@@ -460,6 +460,33 @@ p {
 
 /*-----------------Page informações imóveis---------------*/
 
+.container-site-principal-informacoes-imovel {
+  padding: 300px 20px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+
+.container-site-principal-informacoes-imovel
+  .container-site-principal-informacoes-imovel-cliente {
+  border: 1px solid blue;
+  width: 50%;
+}
+
+.container-site-principal-informacoes-imovel
+  .container-site-principal-informacoes-imovel-cliente
+  div {
+  margin-bottom: 50px;
+}
+
+.container-site-principal-informacoes-imovel
+  .container-site-principal-informacoes-imovel-cliente
+  div a {
+  margin-top: 50px;
+}
+
 .container-site-principal-imoveis-informacoes-edificios {
   margin: 100px auto 100px auto;
   display: flex;
@@ -470,4 +497,13 @@ p {
 .container-site-principal-imoveis-informacoes-edificios-detalhes {
   font-family: "Sora", sans-serif;
   margin: 20px;
+}
+
+.container-site-principal-informacoes-imovel-cliente-icones-medidas {
+  display: flex;
+}
+
+.container-site-principal-informacoes-imovel-cliente-icones-medidas li {
+  margin: 0 20px 50px 20px;
+  margin-left: 0;
 }
