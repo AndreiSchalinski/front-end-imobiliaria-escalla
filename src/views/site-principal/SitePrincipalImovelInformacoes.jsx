@@ -44,7 +44,7 @@ export default function SitePrincipalImoveisCarousel() {
         </div>
       </div>
       <div className="container-site-principal-informacoes-imovel-cliente receber-informacoes">
-        <div>
+        <div className="container-button-preco-informacoes-imoveis">
           <p>
             <p>R$ 3.200.000,00</p>
           </p>
@@ -54,9 +54,9 @@ export default function SitePrincipalImoveisCarousel() {
             sx={{
               background: "#FCE3E5",
               textTransform: "none",
-              width: "80%",
+              width: "240px",
               height: "56px",
-              fontSize: 16,
+              fontSize: 14,
               color: "#F5858D",
               fontWeight: "bold",
               borderRadius:50
