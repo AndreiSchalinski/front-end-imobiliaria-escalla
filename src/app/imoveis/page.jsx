@@ -1,5 +1,6 @@
 import HeaderSite from "@/components/site-principal/Header";
-import SitePrincipalImoveisCarousel from "@/views/site-principal/SitePrincipalImoveisCarousel";
+import SitePrincipalButtonsApresentacao from "@/views/site-principal/SitePrincipalButtonsApresentacao";
+import SitePrincipalImovelInformacoes from "@/views/site-principal/SitePrincipalImovelInformacoes";
 import SitePrincipalSobreEdificio from "@/views/site-principal/SitePrincipalSobreEdificio";
 import SitePrincipalCarouselDestaques from "@/views/site-principal/SitePrincipalCarouselDestaques";
 import SitePrincipalBlog from "@/views/site-principal/SitePrincipalBlog";
@@ -21,8 +22,9 @@ export default function Imoveis() {
   return (
     <>
       <HeaderSite />
-      <SitePrincipalImoveisCarousel />
-      <SitePrincipalSobreEdificio/>
+      <SitePrincipalButtonsApresentacao />
+      <SitePrincipalImovelInformacoes />
+      <SitePrincipalSobreEdificio />
       <SitePrincipalCarouselDestaques
         listImoveisDestaques={listImoveisDestaques}
       />
