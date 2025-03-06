@@ -1,4 +1,5 @@
 import HeaderSite from "@/components/site-principal/Header";
+import SitePrincipalCarouselInformacoesImovel from "@/views/site-principal/SitePrincipalCarouselInformacoesImovel";
 import SitePrincipalButtonsApresentacao from "@/views/site-principal/SitePrincipalButtonsApresentacao";
 import SitePrincipalImovelInformacoes from "@/views/site-principal/SitePrincipalImovelInformacoes";
 import SitePrincipalSobreEdificio from "@/views/site-principal/SitePrincipalSobreEdificio";
@@ -22,6 +23,7 @@ export default function Imoveis() {
   return (
     <>
       <HeaderSite />
+      <SitePrincipalCarouselInformacoesImovel />
       <SitePrincipalButtonsApresentacao />
       <SitePrincipalImovelInformacoes />
       <SitePrincipalSobreEdificio />
