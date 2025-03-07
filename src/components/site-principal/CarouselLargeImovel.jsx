@@ -4,38 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 
-import Imagem1 from "../../assets/testee.jpeg";
-import Imagem2 from "../../assets/testee.jpeg";
-import Imagem3 from "../../assets/testee.jpeg";
-import Imagem4 from "../../assets/testee.jpeg";
-import Imagem5 from "../../assets/testee.jpeg";
-import Imagem6 from "../../assets/testee.jpeg";
-import Imagem7 from "../../assets/testee.jpeg";
-import Imagem8 from "../../assets/testee.jpeg";
-import Imagem9 from "../../assets/testee.jpeg";
-import Imagem10 from "../../assets/testee.jpeg";
-
-const listImgs = [
-  Imagem1,
-  Imagem2,
-  Imagem3,
-  Imagem4,
-  Imagem5,
-  Imagem6,
-  Imagem7,
-  Imagem8,
-  Imagem9,
-  Imagem10,
-];
-
-export default function CarouselLargeImovel() {
+export default function CarouselLargeImovel({listImgs}) {
   return (
     <div>
       <Swiper
         loop={true}
         slidesPerView={1.65}
         centeredSlides={true}
-        spaceBetween={10} 
+        spaceBetween={10}
         pagination={{
           type: "fraction",
         }}
@@ -51,6 +27,7 @@ export default function CarouselLargeImovel() {
               justifyContent: "center",
               alignItems: "center",
               borderRadius: 5,
+              border: "1px solid red",
             }}
           >
             <Image
