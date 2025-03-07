@@ -446,5 +446,62 @@ export const getIcon = (color) => {
         </defs>
       </svg>
     ),
+    iconCompartilhamento: (
+      <svg
+        width="25"
+        height="33"
+        viewBox="0 0 25 33"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.18387 13.8419C9.38616 13.4381 9.5 12.9824 9.5 12.5C9.5 12.0176 9.38616 11.5619 9.18387 11.1581M9.18387 13.8419C8.69134 14.8251 7.67449 15.5 6.5 15.5C4.84315 15.5 3.5 14.1569 3.5 12.5C3.5 10.8431 4.84315 9.5 6.5 9.5C7.67449 9.5 8.69134 10.1749 9.18387 11.1581M9.18387 13.8419L15.8161 17.1581M9.18387 11.1581L15.8161 7.84193M15.8161 17.1581C15.6138 17.5619 15.5 18.0176 15.5 18.5C15.5 20.1569 16.8431 21.5 18.5 21.5C20.1569 21.5 21.5 20.1569 21.5 18.5C21.5 16.8431 20.1569 15.5 18.5 15.5C17.3255 15.5 16.3087 16.1749 15.8161 17.1581ZM15.8161 7.84193C16.3087 8.82508 17.3255 9.5 18.5 9.5C20.1569 9.5 21.5 8.15685 21.5 6.5C21.5 4.84315 20.1569 3.5 18.5 3.5C16.8431 3.5 15.5 4.84315 15.5 6.5C15.5 6.98237 15.6138 7.43815 15.8161 7.84193Z"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    ),
+    iconAmplitude: (
+      <svg
+        width="25"
+        height="24"
+        viewBox="0 0 25 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.6719 9.48535L20.3289 3.82849M20.3289 3.82849V9.48534M20.3289 3.82849H14.672"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M9.98512 14.8285L4.32812 20.4854M4.32812 20.4854V14.8285M4.32812 20.4854H9.98497"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    ),
+    iconSave: (
+      <svg
+        width="25"
+        height="24"
+        viewBox="0 0 25 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M7.5 3H17.5C18.6 3 19.5 3.9 19.5 5V21L12.5 18L5.5 21V5C5.5 3.9 6.4 3 7.5 3ZM12.5 15.82L17.5 18V6C17.5 5.45 17.05 5 16.5 5H8.5C7.95 5 7.5 5.45 7.5 6V18L12.5 15.82Z"
+          fill="white"
+        />
+      </svg>
+    ),
   };
 };
