@@ -2,7 +2,7 @@
   position: fixed;
   background-color: #ffffff;
   width: 100%;
-  height: 110px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -527,15 +527,16 @@ p {
 /*---------------------carousel grande-------------------------*/
 
 .testekk{
-  padding-top: 125px;
-
+  padding-top: 102px;
 }
 
+/*
 .carousel-large-swiper .swiper {
   width: 100%;
   height: 50px;
   
 }
+  */
 .carousel-large-swiper .append-buttons {
   text-align: center;
   margin-top: 20px;
