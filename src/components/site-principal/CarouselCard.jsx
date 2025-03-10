@@ -1,24 +1,39 @@
 "use client"; // For Next.js App Router (if needed)
 
+import { openFacyboxImages } from "@/services/service.fancybox";
 import { Row, Col, Card, Button } from "antd";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { Navigation } from "swiper/modules";
 import { getIcon } from "@/assets/icons";
 import { Box } from "@mui/material";
-import Imagem1 from "../../assets/imgs/sun-beach-1-1729866902.jpeg";
-import Imagem2 from "../../assets/imgs/sun-beach-11-1729866914.jpeg";
-import Imagem3 from "../../assets/imgs/sun-beach-3-1729866903.jpeg";
-import Imagem4 from "../../assets/imgs/sun-beach-4-1729866905.jpeg";
-import Imagem5 from "../../assets/imgs/sun-beach-6-1729866907.jpeg";
+
+const images = [
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-26-1723828636.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-28-1723828636.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-25-1723828634.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-24-1723828634.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-20-1723828633.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-23-1723828633.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-19-1723828632.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-12-1723828628.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-18-1723828631.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-11-1723828627.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-17-1723828630.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-16-1723828630.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-9-1723828626.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-7-1723828625.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-7-1723828625.webp",
+];
 
 export default function SiteCardCarousel() {
   return (
-    <div style={{width:450}}>
+    <div style={{ width: 450 }}>
       <Box
         sx={{
           padding: 0,
-          margin:"0 10px",
+          margin: "0 10px",
           borderRadius: 2,
           transition: "0.9s",
           "&:hover": {
@@ -37,32 +52,27 @@ export default function SiteCardCarousel() {
           navigation={true}
           modules={[Navigation]}
           className="mySwiper"
+          onClick={(e) => {
+            e.preventDefault();
+            openFacyboxImages(_, index);
+          }}
         >
-          <SwiperSlide
-            style={{ height: "400px", backgroundColor: "lightblue" }}
-          >
-            <Image src={Imagem1} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide
-            style={{ height: "400px", backgroundColor: "lightblue" }}
-          >
-            <Image src={Imagem2} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide
-            style={{ height: "400px", backgroundColor: "lightblue" }}
-          >
-            <Image src={Imagem3} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide
-            style={{ height: "400px", backgroundColor: "lightblue" }}
-          >
-            <Image src={Imagem4} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide
-            style={{ height: "400px", backgroundColor: "lightblue" }}
-          >
-            <Image src={Imagem5} alt=""/>
-          </SwiperSlide>
+          {images.map((image, index) => {
+            return (
+              <SwiperSlide
+                style={{ height: "400px", backgroundColor: "lightblue" }}
+              >
+                <img
+                  src={image}
+                  alt=""
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openFacyboxImages(images, index);
+                  }}
+                />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
         <Box
           sx={{

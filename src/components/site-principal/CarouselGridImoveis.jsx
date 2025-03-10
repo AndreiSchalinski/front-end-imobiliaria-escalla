@@ -1,8 +1,6 @@
 "use client";
 
-import { Fancybox as NativeFancybox } from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox/fancybox.css"; // Importar o CSS do Fancybox
-
+import { openFacyboxImages } from "@/services/service.fancybox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -25,23 +23,8 @@ const images = [
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-16-1723828630.webp",
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-9-1723828626.webp",
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-7-1723828625.webp",
-  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-7-1723828625.webp"
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-7-1723828625.webp",
 ];
-
-const openFancybox = (index) => {
-  const items = images.map((src) => ({
-    src,
-    type: "image",
-  }));
-
-  NativeFancybox.show(items, {
-    Carousel: {
-      infinite: true,
-    },
-    startIndex: index,
-  });
-
-};
 
 export default function SiteCardCarouselFotos() {
   return (
@@ -74,7 +57,7 @@ export default function SiteCardCarouselFotos() {
               }}
               onClick={(e) => {
                 e.preventDefault();
-                openFancybox(i);
+                openFacyboxImages(images, i);
               }}
             />
           </SwiperSlide>

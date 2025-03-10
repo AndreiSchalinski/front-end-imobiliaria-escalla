@@ -550,7 +550,7 @@ p {
 
 .carousel-large-swiper .swiper-button-next,
 .carousel-large-swiper .swiper-button-prev {
-  background-color: rgba(0, 0, 0, 0.658);
+  background-color: rgb(0, 0, 0);
   height: 40px;
   font-weight: bold;
   color: white;
@@ -586,7 +586,7 @@ p {
   font-size: 5px;
   color: #ffffff;
   font-family: "Sora", sans-serif;
-  background-color: rgba(0, 0, 0, 0.658);
+  background-color: rgb(0, 0, 0);
   padding: 15px 10px;
   border-radius: 20px;
   width: 50px;
@@ -644,8 +644,15 @@ p {
   padding: 5px 8px;
   border-radius: 5px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .icon-list {
   display: flex;
+}
+
+.icon-list-1,
+.icon-list-2,
+.icon-list-3 {
+  cursor: pointer;
 }

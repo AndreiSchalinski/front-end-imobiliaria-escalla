@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import CardCarousel from "@/components/site-principal/Carousel";
+import CardCarousel from "@/components/site-principal/CarouselCard";
 
 export default function CarouselDestaques({ categoriaDestaque, legenda }) {
   return (
@@ -27,6 +27,7 @@ export default function CarouselDestaques({ categoriaDestaque, legenda }) {
               backgroundColor: "",
               padding: "70px 0",
             }}
+            
           >
             <CardCarousel />
             <CardCarousel />

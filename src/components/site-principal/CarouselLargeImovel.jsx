@@ -1,9 +1,9 @@
 "use client";
 
+import { openFacyboxImages } from "@/services/service.fancybox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import ButtonsLegendaImovel from "./ButtonsLegendaImovel";
-import Image from "next/image";
 
 export default function CarouselLargeImovel({ listImgs }) {
   return (
@@ -39,9 +39,10 @@ export default function CarouselLargeImovel({ listImgs }) {
                 justifyContent: "center",
                 alignItems: "center",
                 borderRadius: 5,
+                cursor:'pointer'
               }}
             >
-              <Image
+              <img
                 src={img}
                 alt={`Imagem ${i + 1}`}
                 layout="intrinsic"
@@ -49,6 +50,10 @@ export default function CarouselLargeImovel({ listImgs }) {
                 height={1000}
                 objectFit="cover"
                 style={{ borderRadius: 5 }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  openFacyboxImages(listImgs, i);
+                }}
               />
             </SwiperSlide>
           ))}

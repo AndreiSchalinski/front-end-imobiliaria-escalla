@@ -1,47 +1,22 @@
 import CarouselLargeImovel from "@/components/site-principal/CarouselLargeImovel";
 
-import Imagem1 from "../../assets/testee.jpeg";
-import Imagem2 from "../../assets/testee.jpeg";
-import Imagem3 from "../../assets/testee.jpeg";
-import Imagem4 from "../../assets/testee.jpeg";
-import Imagem5 from "../../assets/testee.jpeg";
-import Imagem6 from "../../assets/testee.jpeg";
-import Imagem7 from "../../assets/testee.jpeg";
-import Imagem8 from "../../assets/testee.jpeg";
-import Imagem9 from "../../assets/testee.jpeg";
-import Imagem10 from "../../assets/testee.jpeg";
-import Imagem11 from "../../assets/testee.jpeg";
-import Imagem12 from "../../assets/testee.jpeg";
-import Imagem13 from "../../assets/testee.jpeg";
-import Imagem14 from "../../assets/testee.jpeg";
-import Imagem15 from "../../assets/testee.jpeg";
-import Imagem16 from "../../assets/testee.jpeg";
-import Imagem17 from "../../assets/testee.jpeg";
-import Imagem18 from "../../assets/testee.jpeg";
-import Imagem19 from "../../assets/testee.jpeg";
-import Imagem20 from "../../assets/testee.jpeg";
-
 const listImgs = [
-  Imagem1,
-  Imagem2,
-  Imagem3,
-  Imagem4,
-  Imagem5,
-  Imagem6,
-  Imagem7,
-  Imagem8,
-  Imagem9,
-  Imagem10,
-  Imagem11,
-  Imagem12,
-  Imagem13,
-  Imagem14,
-  Imagem15,
-  Imagem16,
-  Imagem17,
-  Imagem18,
-  Imagem19,
-  Imagem20,
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-26-1723828636.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-28-1723828636.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-25-1723828634.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-24-1723828634.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-20-1723828633.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-23-1723828633.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-19-1723828632.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-12-1723828628.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-18-1723828631.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-11-1723828627.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-17-1723828630.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-16-1723828630.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-9-1723828626.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-7-1723828625.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-7-1723828625.webp",
 ];
 
 export default function SitePrincipalCarouselInformacoesImovel() {

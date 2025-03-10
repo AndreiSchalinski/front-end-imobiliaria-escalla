@@ -5,11 +5,38 @@ const listLegends = [
   "Cozinha integrada",
   "Área de serviço",
   "Suíte máster",
-  "Banheira de hidromassagem",
-  "Vista mar",
-  "Sacada integrada",
-  "Espaço gourmet",
-  "Living integrado"
+  //"Banheira de hidromassagem",
+  //"Vista mar",
+  //"Sacada integrada",
+  //"Espaço gourmet",
+  //"Living integrado"
+];
+
+const items = [
+  {
+    key: "1",
+    label: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.antgroup.com"
+      >
+        {getIcon("blue").iconCopyFolha}
+      </a>
+    ),
+  },
+  {
+    key: "2",
+    label: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.aliyun.com"
+      >
+        {getIcon("blue").iconWhats}
+      </a>
+    ),
+  },
 ];
 
 export default function ButtonsLegendaImovel() {
@@ -23,11 +50,11 @@ export default function ButtonsLegendaImovel() {
         ))}
       </ul>
       <ul className="icon-list">
-        <li>{getIcon().iconSave}</li>
-        <li>
-          <Drops />
+        <li className="icon-list-1">{getIcon().iconSave}</li>
+        <li className="icon-list-2">
+          <Drops items={items} />
         </li>
-        <li>{getIcon().iconAmplitude}</li>
+        <li className="icon-list-3">{getIcon().iconAmplitude}</li>
       </ul>
     </div>
   );
