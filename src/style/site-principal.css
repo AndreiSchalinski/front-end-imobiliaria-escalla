@@ -607,3 +607,45 @@ p {
 .carousel-large-swiper .swiper-pagination-fraction span:nth-child(2) {
   color: #ffffff;
 }
+
+/*---------------------legenda de imagens carousel grande---------------------*/
+
+.container-legenda-vantagens-imovel {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 5;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 30;
+  width: 59%;
+  margin: auto;
+  background: rgba(0, 0, 0, 0);
+}
+
+.legenda-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 5%;
+}
+
+.legenda-item {
+  display: inline-block;
+  white-space: nowrap;
+  margin: 10px 0 0 0;
+  background-color: black;
+  font-family: "Sora", sans-serif;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.icon-list {
+  display: flex;
+}
