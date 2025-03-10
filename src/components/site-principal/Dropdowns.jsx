@@ -2,34 +2,7 @@ import { getIcon } from "@/assets/icons";
 
 import { Button, Dropdown, Space } from "antd";
 
-const items = [
-  {
-    key: "1",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.antgroup.com"
-      >
-        K
-      </a>
-    ),
-  },
-  {
-    key: "2",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.aliyun.com"
-      >
-        L
-      </a>
-    ),
-  },
-];
-
-export default function Drops() {
+export default function Drops({items}) {
   return (
     <Space direction="vertical">
       <Space wrap>
