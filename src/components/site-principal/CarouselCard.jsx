@@ -1,15 +1,15 @@
-"use client"; // For Next.js App Router (if needed)
+"use client";
 
-import { openFacyboxImages } from "@/services/service.fancybox";
-import { Row, Col, Card, Button } from "antd";
+import { openFacyboxImages } from "@/services/fancybox.service";
+import Fancybox from "@/services/Facyboxs";
+import { Row, Col, Button } from "antd";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 import { Navigation } from "swiper/modules";
 import { getIcon } from "@/assets/icons";
 import { Box } from "@mui/material";
 
 const images = [
-  "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-26-1723828636.webp",
+  "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-28-1723828636.webp",
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-25-1723828634.webp",
@@ -29,7 +29,7 @@ const images = [
 
 export default function SiteCardCarousel() {
   return (
-    <div style={{ width: 450 }}>
+    <div style={{ width: 500 }}>
       <Box
         sx={{
           padding: 0,
@@ -51,11 +51,6 @@ export default function SiteCardCarousel() {
           }}
           navigation={true}
           modules={[Navigation]}
-          className="mySwiper"
-          onClick={(e) => {
-            e.preventDefault();
-            openFacyboxImages(_, index);
-          }}
         >
           {images.map((image, index) => {
             return (

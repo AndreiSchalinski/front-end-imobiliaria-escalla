@@ -208,6 +208,7 @@
   color: #082f9a;
   font-weight: bold;
   transition: opacity 0.3s ease;
+  box-shadow: 0px 8px 5px #83b2c173;
 }
 
 .swiper-container-carousel [class^="swiper-button-"]::after {
@@ -233,7 +234,7 @@
 /*-------------------------destaques-----------------------*/
 
 .container-carousel-destaques {
-  padding: 0 230px;
+  padding: 0 150px;
   margin-bottom: 100px;
 }
 
@@ -505,7 +506,48 @@ p {
 .container-site-principal-informacoes-imovel-cliente-icones-medidas li {
   margin: 0 20px 50px 20px;
   margin-left: 0;
+  border: 1px solid #83b1c1;
+  padding: 17px 35px;
+  border-radius: 5px;
+  color: #83b1c1;
+  font-family: "Sora", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  transition: 0.2s;
 }
+
+.container-site-principal-informacoes-imovel-cliente-icones-medidas li:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
+  box-shadow: 0px 5px 10px #83b2c141;
+}
+
+.container-site-principal-informacoes-imovel-cliente-icones-medidas-texts {
+  font-family: "Sora", sans-serif;
+  line-height: 2.5;
+}
+
+.container-site-principal-informacoes-imovel-cliente-icones-medidas-texts h3 {
+  color: #5783eb;
+  font-size: 18px;
+}
+
+.container-site-principal-informacoes-imovel-cliente-icones-medidas-texts p {
+  display: inline-flex; /* Flexbox para alinhar conteúdo */
+  align-items: center; /* Alinha verticalmente o ícone e o texto */
+  margin-right: 10px; /* Espaçamento entre os itens */
+  color: #879dac;
+  font-size: 12px;
+}
+
+/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
+
+
+
+/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
 
 .container-site-principal-informacoes-imovel-cliente .receber-informacoes {
   width: 30%;
@@ -515,10 +557,14 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #4ac7f0;
+  font-weight: bold;
 }
 
 .container-site-principal-buttons-apresentacao {
-  padding: 100px 100px;
+  padding: 0px 100px;
+  padding-bottom: 30px;
+  margin-top: -30px;
   display: flex;
   justify-content: flex-end;
   gap: 20;
