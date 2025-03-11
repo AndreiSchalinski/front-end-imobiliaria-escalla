@@ -28,7 +28,18 @@ export default function CardDescription() {
         </ul>
       </div>
 
-      <span onClick={() => setIsOpen(!isOpen)}>Exibir mais!</span>
+      <span
+        onClick={() => setIsOpen(!isOpen)}
+        style={{
+          textDecoration: "underline",
+          cursor: "pointer",
+          color: "#5783eb",
+          fontSize: 18,
+          fontFamily: "Sora",
+        }}
+      >
+        Exibir mais+
+      </span>
     </>
   );
 }

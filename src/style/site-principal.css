@@ -543,11 +543,16 @@ p {
   font-size: 12px;
 }
 
-/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
+.container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2 h3 {
+  color: #5783eb;
+  font-size: 18px;
+  font-family: "Sora", sans-serif;
+  line-height: 2.5;
+}
 
-
-
-/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
+.container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2  p {
+  font-family: "Sora", sans-serif;
+}
 
 .container-site-principal-informacoes-imovel-cliente .receber-informacoes {
   width: 30%;

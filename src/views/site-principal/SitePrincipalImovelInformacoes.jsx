@@ -3,7 +3,7 @@
 import { Button } from "@mui/material";
 import { getIcon } from "@/assets/icons";
 import { useState } from "react";
-import CardDescription from "./CardDescription";
+import CardDescription from "../../components/site-principal/CardDescription";
 
 const listChecksImovel = [
   "Cozinha",
@@ -37,15 +37,9 @@ const listChecksEmpreendimento = [
 ];
 
 export default function SitePrincipalImoveisCarousel() {
-  const [showFade, setShowFade] = useState(true);
-
   return (
     <div className="container-site-principal-informacoes-imovel">
-      <div
-        className={`container-site-principal-informacoes-imovel-cliente .card-description ${
-          showFade ? "expanded" : ""
-        } `}
-      >
+      <div className="container-site-principal-informacoes-imovel-cliente">
         <ul className="container-site-principal-informacoes-imovel-cliente-icones-medidas">
           <li>{getIcon("#83B1C1").iconRuler} 228m²</li>
           <li>{getIcon("#83B1C1").iconShower} 4 suítes</li>
@@ -79,7 +73,7 @@ export default function SitePrincipalImoveisCarousel() {
           })}
         </div>
 
-        <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
+        <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2">
           <h3>Sobre este imóvel</h3>
 
           <p>
