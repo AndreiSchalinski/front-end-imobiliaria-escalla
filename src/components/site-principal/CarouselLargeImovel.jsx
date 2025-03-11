@@ -1,11 +1,18 @@
 "use client";
 
-import { openFacyboxImages } from "@/services/service.fancybox";
+import { openFacyboxImages } from "@/services/fancybox.service";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import ButtonsLegendaImovel from "./ButtonsLegendaImovel";
+import { useState } from "react";
 
 export default function CarouselLargeImovel({ listImgs }) {
+  const [indexImg, setIndexImg] = useState(null);
+
+  const handleSlideChange = (swiper) => {
+    setIndexImg(swiper.realIndex);
+  };
+
   return (
     <>
       <div
@@ -17,7 +24,7 @@ export default function CarouselLargeImovel({ listImgs }) {
           justifyContent: "center",
         }}
       >
-        <ButtonsLegendaImovel />
+        <ButtonsLegendaImovel listImgs={listImgs} index={indexImg} />
 
         <Swiper
           loop={true}
@@ -29,6 +36,7 @@ export default function CarouselLargeImovel({ listImgs }) {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
+          onSlideChange={handleSlideChange}
           className="carousel-large-swiper"
         >
           {listImgs.map((img, i) => (
@@ -39,7 +47,7 @@ export default function CarouselLargeImovel({ listImgs }) {
                 justifyContent: "center",
                 alignItems: "center",
                 borderRadius: 5,
-                cursor:'pointer'
+                cursor: "pointer",
               }}
             >
               <img

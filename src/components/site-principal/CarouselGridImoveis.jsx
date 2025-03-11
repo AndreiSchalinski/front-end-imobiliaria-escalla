@@ -1,6 +1,6 @@
 "use client";
 
-import { openFacyboxImages } from "@/services/service.fancybox";
+import { openFacyboxImages } from "@/services/fancybox.service";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Pagination } from "swiper/modules";
 import "swiper/css";

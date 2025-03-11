@@ -1,5 +1,6 @@
 import Drops from "./Dropdowns";
 import { getIcon } from "@/assets/icons";
+import { openFacyboxImages } from "@/services/fancybox.service";
 
 const listLegends = [
   "Cozinha integrada",
@@ -39,7 +40,7 @@ const items = [
   },
 ];
 
-export default function ButtonsLegendaImovel() {
+export default function ButtonsLegendaImovel({ listImgs, index }) {
   return (
     <div className="container-legenda-vantagens-imovel">
       <ul className="legenda-list">
@@ -54,7 +55,15 @@ export default function ButtonsLegendaImovel() {
         <li className="icon-list-2">
           <Drops items={items} />
         </li>
-        <li className="icon-list-3">{getIcon().iconAmplitude}</li>
+        <li
+          className="icon-list-3"
+          onClick={(e) => {
+            e.preventDefault();
+            openFacyboxImages(listImgs, index);
+          }}
+        >
+          {getIcon().iconAmplitude}
+        </li>
       </ul>
     </div>
   );

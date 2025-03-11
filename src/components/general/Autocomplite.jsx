@@ -13,8 +13,6 @@ export default function Grouped() {
     };
   });
 
-  console.log(options)
-
   return (
     <FormControl sx={{ m: 1, minWidth: "23.52%" }}>
       <Autocomplete

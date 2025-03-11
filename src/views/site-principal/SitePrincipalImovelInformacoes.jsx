@@ -1,53 +1,102 @@
+"use client";
+
 import { Button } from "@mui/material";
 import { getIcon } from "@/assets/icons";
+import { useState } from "react";
+import CardDescription from "./CardDescription";
+
+const listChecksImovel = [
+  "Cozinha",
+  "integrada",
+  "Área de serviço",
+  "Suíte máster",
+  "Banheira de hidromassagem",
+  "Vista mar",
+  "Sacada integrada",
+  "Espaço gourmet",
+  "Lavabo",
+  "Living integrado",
+  "Quadra mar",
+];
+
+const listChecksEmpreendimento = [
+  "Piscina",
+  "Playground",
+  "Salão de festas",
+  "Salão de jogos",
+  "Brinquedoteca",
+  "Espaço",
+  "Fitness",
+  "Espaço",
+  "Gourmet",
+  "Cinema",
+  "Sala de Massagem",
+  "Spa",
+  "Sala de descanso",
+  "Sauna úmida",
+];
 
 export default function SitePrincipalImoveisCarousel() {
+  const [showFade, setShowFade] = useState(true);
+
   return (
     <div className="container-site-principal-informacoes-imovel">
-      <div className="container-site-principal-informacoes-imovel-cliente">
+      <div
+        className={`container-site-principal-informacoes-imovel-cliente .card-description ${
+          showFade ? "expanded" : ""
+        } `}
+      >
         <ul className="container-site-principal-informacoes-imovel-cliente-icones-medidas">
-          <li>Ícone</li>
-          <li>Ícone</li>
-          <li>Ícone</li>
-          <li>Ícone</li>
-          <li>Ícone</li>
+          <li>{getIcon("#83B1C1").iconRuler} 228m²</li>
+          <li>{getIcon("#83B1C1").iconShower} 4 suítes</li>
+          <li>{getIcon("#83B1C1").iconBed} 4 quartos</li>
+          <li>{getIcon("#83B1C1").iconCar} 3 vagas</li>
         </ul>
 
-        <div>
+        <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
           <h3>O que você vai encontrar nesse imóvel:</h3>
-          <p>
-            Cozinha | integrada | Área de serviço | Suíte máster | Banheira de
-            hidromassagem | Vista mar | Sacada integrada | Espaço gourmet |
-            Lavabo Living integrado | Quadra mar
-          </p>
+          {listChecksImovel.map((el) => {
+            return (
+              <p>
+                &nbsp; {getIcon().iconCircleCheck}
+                &nbsp; &nbsp;
+                {el}
+              </p>
+            );
+          })}
         </div>
 
-        <div>
+        <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
           <h3>O que você vai encontrar nesse empreendimento:</h3>
-          <p>
-            Piscina | Playground | Salão de festas | Salão de jogos |
-            Brinquedoteca | Espaço | Fitness | Espaço | Gourmet | Cinema | Sala
-            de Massagem | Spa Sala de descanso | Sauna úmida
-          </p>
+          {listChecksEmpreendimento.map((el) => {
+            return (
+              <p>
+                &nbsp; {getIcon().iconCircleCheck}
+                &nbsp; &nbsp;
+                {el}
+              </p>
+            );
+          })}
         </div>
 
-        <div>
+        <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
           <h3>Sobre este imóvel</h3>
+
           <p>
-            CONDIÇÃO ESPECIAL - Apartamento Duplex no Edifício Magnifique Tower
-            em Balneário Camboriú com 227m² privativos, 03 suítes + 01 suíte
-            master com banheira de hidromassagem, lavabo, living integrado com
-            sala de estar e sala de jantar, amplo mezanino, cozinha, sacada
-            integrada com espaço gourmet, área de serviço e 03 vagas de garagem.
+            ANDAR ALTO VISTA MAR FINAMENTE MOBILIADO - Apartamento no Edifício
+            Alameda Jardins em Balneário Camboriú com 228,00m² privativos, 04
+            suítes sendo uma máster com closet, finamente mobiliado pela
+            Kitchens, jacuzzi no living, sala de estar, sala de jantar, home
+            office, lavabo, cozinha, área de serviço, vista mar e 03 vagas de
+            garagem.
           </p>
-          <a href="">Exibir Mais +</a>
+
+          <CardDescription />
         </div>
       </div>
       <div className="container-site-principal-informacoes-imovel-cliente receber-informacoes">
         <div className="container-button-preco-informacoes-imoveis">
-          <p>
-            <p>R$ 3.200.000,00</p>
-          </p>
+          <p>R$ 3.200.000,00</p>
 
           <Button
             variant="contained"
@@ -59,10 +108,10 @@ export default function SitePrincipalImoveisCarousel() {
               fontSize: 14,
               color: "#F5858D",
               fontWeight: "bold",
-              borderRadius:50
+              borderRadius: 50,
             }}
           >
-           {getIcon().iconBells} &nbsp; Condições de pagamento
+            {getIcon().iconBells} &nbsp; Condições de pagamento
           </Button>
         </div>
 
