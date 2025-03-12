@@ -55,6 +55,7 @@ export default function SiteCardCarousel() {
           {images.map((image, index) => {
             return (
               <SwiperSlide
+                key={index}
                 style={{ height: "400px", backgroundColor: "lightblue" }}
               >
                 <img

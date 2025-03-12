@@ -56,8 +56,7 @@ export default function CarouselLargeImovel({ listImgs }) {
                 layout="intrinsic"
                 width={2000}
                 height={1000}
-                objectFit="cover"
-                style={{ borderRadius: 5 }}
+                style={{ borderRadius: 5, objectFit: "cover" }}
                 onClick={(e) => {
                   e.preventDefault();
                   openFacyboxImages(listImgs, i);

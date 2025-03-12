@@ -27,8 +27,8 @@ export default function SitePrincipalSobreEdificio() {
             Gourmet, Solarium
           </p>
           <div className="container-site-principal-imoveis-informacoes-edificios-detalhes-list-caracteristicas">
-            {listCaracteristicas.map((el) => {
-              return el;
+            {listCaracteristicas.map((el, i) => {
+              return <div key={i}>{el}</div>;
             })}
           </div>
           <div>
