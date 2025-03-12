@@ -8,7 +8,7 @@ export default function SitePrincipalConsultores() {
   return (
     <div className="container-site-principal-consultores">
       <div className="container-site-principal-consultor">
-        <Image src={Image1} alt="" objectFit="cover"/>
+        <Image src={Image1} alt="" style={{ objectFit: "cover" }} />
         <div className="container-site-principal-consultor-button">
           <p>Anderson</p>
         </div>
@@ -20,13 +20,13 @@ export default function SitePrincipalConsultores() {
         </div>
       </div>
       <div className="container-site-principal-consultor">
-        <Image src={Image3} alt=""/>
+        <Image src={Image3} alt="" />
         <div className="container-site-principal-consultor-button">
           <p>Bianca</p>
         </div>
       </div>
       <div className="container-site-principal-consultor">
-        <Image src={Image4} alt=""/>
+        <Image src={Image4} alt="" />
         <div className="container-site-principal-consultor-button">
           <p>Brianna</p>
         </div>

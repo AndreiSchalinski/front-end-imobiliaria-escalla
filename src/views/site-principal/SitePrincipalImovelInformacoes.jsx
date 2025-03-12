@@ -49,9 +49,9 @@ export default function SitePrincipalImoveisCarousel() {
 
         <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
           <h3>O que você vai encontrar nesse imóvel:</h3>
-          {listChecksImovel.map((el) => {
+          {listChecksImovel.map((el, index) => {
             return (
-              <p>
+              <p key={index}>
                 &nbsp; {getIcon().iconCircleCheck}
                 &nbsp; &nbsp;
                 {el}
@@ -62,9 +62,9 @@ export default function SitePrincipalImoveisCarousel() {
 
         <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
           <h3>O que você vai encontrar nesse empreendimento:</h3>
-          {listChecksEmpreendimento.map((el) => {
+          {listChecksEmpreendimento.map((el, index) => {
             return (
-              <p>
+              <p key={index}>
                 &nbsp; {getIcon().iconCircleCheck}
                 &nbsp; &nbsp;
                 {el}
