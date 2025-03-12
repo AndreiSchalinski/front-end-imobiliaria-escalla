@@ -492,11 +492,35 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 75%;
 }
 
 .container-site-principal-imoveis-informacoes-edificios-detalhes {
   font-family: "Sora", sans-serif;
   margin: 20px;
+}
+
+.container-site-principal-imoveis-informacoes-edificios-detalhes span{
+  color: #1890FF;
+  line-height: 3;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.container-site-principal-imoveis-informacoes-edificios-detalhes-text-short {
+  font-weight: bold;
+  line-height: 3;
+}
+
+.container-site-principal-imoveis-informacoes-edificios-detalhes-list-caracteristicas{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container-site-principal-imoveis-informacoes-edificios-detalhes-list-caracteristicas p{
+  line-height: 3;
 }
 
 .container-site-principal-informacoes-imovel-cliente-icones-medidas {
@@ -543,14 +567,16 @@ p {
   font-size: 12px;
 }
 
-.container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2 h3 {
+.container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2
+  h3 {
   color: #5783eb;
   font-size: 18px;
   font-family: "Sora", sans-serif;
   line-height: 2.5;
 }
 
-.container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2  p {
+.container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2
+  p {
   font-family: "Sora", sans-serif;
 }
 

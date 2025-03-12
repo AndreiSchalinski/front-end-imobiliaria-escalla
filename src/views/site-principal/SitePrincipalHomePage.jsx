@@ -3,6 +3,7 @@ import Grouped from "@/components/general/Autocomplite";
 import InputText from "@/components/general/InputText";
 import Buttons from "@/components/general/Buttons";
 import ButtonsC from "@/components/general/ButtonComun";
+import { getIcon } from "@/assets/icons";
 
 export default function HomePage() {
   return (
@@ -26,7 +27,7 @@ export default function HomePage() {
                 className="material-symbols-outlined"
                 style={{ fontSize: 19 }}
               >
-                source_environment
+                {getIcon().iconHome}
               </span>
             }
             label={"Tipo imóvel"}
