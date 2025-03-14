@@ -1,10 +1,23 @@
-import FilterListIcon from '@mui/icons-material/FilterList';
+import FilterListIcon from "@mui/icons-material/FilterList";
 
 import Button from "@mui/material/Button";
 
 export default function Buttons() {
   return (
-    <Button variant="outlined" sx={{borderRadius:8, color:'black'}} endIcon={<FilterListIcon />}>
+    <Button
+      variant="contained"
+      sx={{
+        borderRadius: 20,
+        color: "black",
+        border: "none",
+        background: "white",
+        height:40,
+        textTransform:'none',
+        fontSize:15,
+        margin:'0 10px'
+      }}
+      endIcon={<FilterListIcon />}
+    >
       Mais filtros
     </Button>
   );

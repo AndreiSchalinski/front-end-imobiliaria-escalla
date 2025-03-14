@@ -32,25 +32,28 @@ export default function HomePage() {
             }
             label={"Tipo imóvel"}
           />
-          <Grouped />
+          {/*<Grouped />*/}
           <InputText label={"Digite condomínio, região, bairro, cidade"} />
           <Buttons />
           <ButtonsC />
-          <SelectOption
+
+          {/*<SelectOption
             hiddenCheckbox={true}
             isMultiple={false}
             label={"Preço de venda"}
-          />
-          <SelectOption
+          />*/}
+
+          {/*<SelectOption
             hiddenCheckbox={true}
             isMultiple={false}
             label={"Em condomínio fechado"}
-          />
-          <SelectOption
+          />*/}
+
+          {/*<SelectOption
             hiddenCheckbox={true}
             isMultiple={false}
             label={"Suítes"}
-          />
+          />*/}
         </div>
       </div>
     </div>

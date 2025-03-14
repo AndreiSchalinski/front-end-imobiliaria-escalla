@@ -3,7 +3,7 @@
 import "../../style/site-principal.css";
 import Links from "./Link";
 import LogoEscalla from "../../assets/logo-escalla.png";
-import {getIcon} from "../../assets/icons";
+import { getIcon } from "../../assets/icons";
 import Image from "next/image";
 import DrawerSite from "./Drawer";
 import { Space, Button } from "antd";
@@ -23,7 +23,7 @@ export default function HeaderSite() {
   const showDrawer = () => {
     setOpen(true);
   };
-  
+
   const onClose = () => {
     setOpen(false);
   };
@@ -70,7 +70,10 @@ export default function HeaderSite() {
             type="text"
             onClick={showDrawer}
           >
-            <span className="material-symbols-outlined" style={{ fontSize: 30 }}>
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: 30 }}
+            >
               menu
             </span>
           </Button>

@@ -1,6 +1,5 @@
 "use client";
 
-import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -33,7 +32,12 @@ const names = [
   "Kelly Snyder",
 ];
 
-export default function SelectOption({ isMultiple, hiddenCheckbox, iconLabel, label }) {
+export default function SelectOption({
+  isMultiple,
+  hiddenCheckbox,
+  iconLabel,
+  label,
+}) {
   const [personName, setPersonName] = useState([]);
 
   const handleChange = (event) => {
@@ -44,7 +48,7 @@ export default function SelectOption({ isMultiple, hiddenCheckbox, iconLabel, la
   };
 
   return (
-    <FormControl sx={{ m: 1, minWidth: "23.52%" }}>
+    <FormControl sx={{ minWidth: 200, margin: "0 5px" }}>
       <InputLabel
         id="demo-multiple-checkbox-label"
         sx={{
@@ -52,33 +56,36 @@ export default function SelectOption({ isMultiple, hiddenCheckbox, iconLabel, la
           "&.Mui-focused": {
             color: "black", // Cor do label ao focar
           },
-          display:"flex",
-          alignItems:"center"
+          position: "absolute",
+          top: "50%",
+          fontSize: 20,
+          display: "flex",
+          alignItems: "center",
+          pointerEvents: "none",
         }}
+        shrink
       >
-       {iconLabel} {'\u2005'} {label}
+        {iconLabel} {"\u2005"} {label}
       </InputLabel>
       <Select
-        labelId="demo-multiple-checkbox-label"
-        id="demo-multiple-checkbox"
+        autoWidth
         multiple={isMultiple}
         value={personName}
         onChange={handleChange}
-        input={<OutlinedInput label="Pretensão" />}
         renderValue={(selected) => selected.join(", ")}
         MenuProps={MenuProps}
         sx={{
-          borderRadius: 4,
-          //height: 65,
+          borderRadius: 3,
           "& .MuiOutlinedInput-notchedOutline": {
             borderColor: "gray", // Cor padrão da borda
           },
           "&:hover .MuiOutlinedInput-notchedOutline": {
-            border: "1px solid black", // Cor da borda ao passar o mouse
+            border: "none", // Cor da borda ao passar o mouse
           },
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-            border: "1px solid black", // Cor da borda ao focar
+            border: "none", // Cor da borda ao focar
           },
+          background:'white'
         }}
       >
         {names.map((name) => (
@@ -88,9 +95,9 @@ export default function SelectOption({ isMultiple, hiddenCheckbox, iconLabel, la
               sx={{
                 color: "",
                 "&.Mui-checked": { color: "black" },
-                transform: "scale(1.2)", // Aumenta o tamanho
+                transform: "scale(1.0)", // Aumenta o tamanho
                 borderRadius: "8px",
-                display: hiddenCheckbox?'none':'block',
+                display: hiddenCheckbox ? "none" : "block",
               }}
             />
             <ListItemText primary={name} />
