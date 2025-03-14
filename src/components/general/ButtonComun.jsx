@@ -10,7 +10,7 @@ export default function ButtonsC() {
         background: "black",
         padding: "0px 40px",
         fontSize: 17,
-        height:80
+        height:65
       }}
     >
       Encontrar imóveis

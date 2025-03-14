@@ -128,7 +128,8 @@
   align-items: center;
   flex-wrap: wrap;
   border-radius: 15px;
-  
+  max-width: 70%;
+  margin: auto;
 }
 
 @media (max-width: 1200px) {
