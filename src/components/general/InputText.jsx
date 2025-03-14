@@ -7,7 +7,7 @@ export default function InputText({ label }) {
       className="myInput"
       size="small"
       placeholder={label}
-      style={{width: "300px", height:55, margin:'0 0px 0 5px' }}
+      style={{width: "31%", height:65, margin:'0 0px 0 5px' }}
       prefix={<SearchOutlined style={{ fontSize: "18px" }} />}
       color="red"
     />

@@ -2,7 +2,7 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 
 import Button from "@mui/material/Button";
 
-export default function Buttons() {
+export default function Buttons({onClick}) {
   return (
     <Button
       variant="contained"
@@ -17,6 +17,7 @@ export default function Buttons() {
         margin:'0 10px'
       }}
       endIcon={<FilterListIcon />}
+      onClick={onClick}
     >
       Mais filtros
     </Button>

@@ -37,6 +37,7 @@ export default function SelectOption({
   hiddenCheckbox,
   iconLabel,
   label,
+  width
 }) {
   const [personName, setPersonName] = useState([]);
 
@@ -48,7 +49,13 @@ export default function SelectOption({
   };
 
   return (
-    <FormControl sx={{ minWidth: 200, margin: "0 5px" }}>
+    <FormControl
+      sx={{
+        minWidth: width == undefined ? 200 : width,
+        margin: "0 5px",
+        flex: 1,
+      }}
+    >
       <InputLabel
         id="demo-multiple-checkbox-label"
         sx={{
@@ -57,8 +64,8 @@ export default function SelectOption({
             color: "black", // Cor do label ao focar
           },
           position: "absolute",
-          top: "50%",
-          fontSize: 20,
+          top: "45%",
+          fontSize: 25,
           display: "flex",
           alignItems: "center",
           pointerEvents: "none",
@@ -85,7 +92,8 @@ export default function SelectOption({
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
             border: "none", // Cor da borda ao focar
           },
-          background:'white'
+          background: "white",
+          height: 65,
         }}
       >
         {names.map((name) => (
