@@ -1,5 +1,6 @@
 import CarouselGridImoveis from "@/components/site-principal/CarouselGridImoveis";
 import { getIcon } from "@/assets/icons";
+import { cloneElement } from "react";
 
 const listCaracteristicas = [
   <p>{getIcon().iconBed}&nbsp; 3 ou 4 Dormitórios &nbsp; </p>,
@@ -28,7 +29,14 @@ export default function SitePrincipalSobreEdificio() {
           </p>
           <div className="container-site-principal-imoveis-informacoes-edificios-detalhes-list-caracteristicas">
             {listCaracteristicas.map((el, i) => {
-              return <div key={i}>{el}</div>;
+              return (
+                <div key={i}>
+                  {cloneElement(el, {
+                    className:
+                      "container-site-principal-imoveis-informacoes-edificios-detalhes-list-caracteristicas-p",
+                  })}
+                </div>
+              );
             })}
           </div>
           <div>
