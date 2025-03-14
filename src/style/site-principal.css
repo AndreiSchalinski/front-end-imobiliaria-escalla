@@ -492,7 +492,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 75%;
+  width: 80%;
 }
 
 .container-site-principal-imoveis-informacoes-edificios-detalhes {
@@ -521,6 +521,12 @@ p {
 
 .container-site-principal-imoveis-informacoes-edificios-detalhes-list-caracteristicas p{
   line-height: 3;
+}
+
+.container-site-principal-imoveis-informacoes-edificios-detalhes-list-caracteristicas-p{
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
 }
 
 .container-site-principal-informacoes-imovel-cliente-icones-medidas {
