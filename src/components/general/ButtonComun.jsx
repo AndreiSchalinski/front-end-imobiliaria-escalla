@@ -4,7 +4,14 @@ export default function ButtonsC() {
   return (
     <Button
       variant="contained"
-      sx={{ textTransform: "none", borderRadius: 2, background: "black" }}
+      sx={{
+        textTransform: "none",
+        borderRadius: 4,
+        background: "black",
+        padding: "0px 40px",
+        fontSize: 17,
+        height:80
+      }}
     >
       Encontrar imóveis
     </Button>
