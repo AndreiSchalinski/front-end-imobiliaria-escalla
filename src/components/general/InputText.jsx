@@ -4,11 +4,10 @@ import { Input } from "antd";
 export default function InputText({ label }) {
   return (
     <Input
-      className="myInput"
-      size="small"
+      style={{ width: 350 }}
+      className="input-filtro-imoveis myInput"
       placeholder={label}
-      style={{width: "31%", height:65, margin:'0 0px 0 5px' }}
-      prefix={<SearchOutlined style={{ fontSize: "18px" }} />}
+      prefix={<SearchOutlined style={{ fontSize: "18px", color: "black" }} />}
       color="red"
     />
   );
