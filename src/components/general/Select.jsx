@@ -55,6 +55,7 @@ export default function SelectOption({
         margin: "0 5px",
         flex: 1,
       }}
+      className="input-filtro-imoveis"
     >
       <InputLabel
         id="demo-multiple-checkbox-label"

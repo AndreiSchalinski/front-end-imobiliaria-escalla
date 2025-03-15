@@ -1,7 +1,6 @@
 "use client";
 
 import SelectOption from "@/components/general/Select";
-import Grouped from "@/components/general/Autocomplite";
 import InputText from "@/components/general/InputText";
 import Buttons from "@/components/general/Buttons";
 import ButtonsC from "@/components/general/ButtonComun";
@@ -9,10 +8,10 @@ import { getIcon } from "@/assets/icons";
 import { useState } from "react";
 
 export default function HomePage() {
-  const [openInputs, setOpenInputs] = useState(false);
+  const [openInputs, setOpenInputs] = useState(true);
 
   const handleToggleInputs = () => {
-    setOpenInputs((prev) => !prev); // Alterna o estado entre true e false
+    setOpenInputs((prev) => !prev);
   };
 
   return (
@@ -22,7 +21,13 @@ export default function HomePage() {
           <h1>A melhor experiência é morar e investir bem!</h1>
           <h3>Cidade. Campo. Litoral</h3>
         </div>
-        <div className="home-page-container-filters">
+        <div
+          className="home-page-container-filters"
+          style={{
+            maxWidth: openInputs ? 1200 : 1200,
+            flexWrap: openInputs ? "nowrap" : "wrap",
+          }}
+        >
           <SelectOption
             hiddenCheckbox={true}
             isMultiple={false}
@@ -43,36 +48,35 @@ export default function HomePage() {
           />
           {/*<Grouped />*/}
           <InputText label={"Digite condomínio, região, bairro, cidade"} />
-          <Buttons onClick={handleToggleInputs} />
+          <Buttons
+            onClick={handleToggleInputs}
+            legenda={openInputs ? "Mais filtros" : "Menos filtros"}
+          />
           <ButtonsC />
 
           <div
             style={{
               width: "100%",
               display: openInputs ? "none" : "flex",
-              marginTop:20,
-              
+              marginTop: 20,
             }}
           >
             <SelectOption
               hiddenCheckbox={true}
               isMultiple={false}
               label={"Preço de venda"}
-              disable={openInputs}
             />
 
             <SelectOption
               hiddenCheckbox={true}
               isMultiple={false}
               label={"Em condomínio fechado"}
-              disable={openInputs}
             />
 
             <SelectOption
               hiddenCheckbox={true}
               isMultiple={false}
               label={"Suítes"}
-              disable={openInputs}
             />
           </div>
         </div>
