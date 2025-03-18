@@ -410,10 +410,15 @@ p {
   display: flex;
   align-items: center;
   background-color: #020617;
+  justify-content: space-between;
   width: 100%;
   height: 48px;
   color: white;
   font-family: "Sora", sans-serif;
+}
+
+.container-site-principal-consultor-button p{
+  margin: 0 0px 0 10px;
 }
 
 .container-site-principal-consultor img {
