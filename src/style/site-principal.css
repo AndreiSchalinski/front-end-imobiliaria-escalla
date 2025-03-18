@@ -131,6 +131,53 @@
   transition: 0.4s;
 }
 
+/*-------------------------------------------------------------*/
+
+.site-fifth {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.9ms ease-in-out;
+  letter-spacing: 2px !important;
+  font-weight: lighter !important;
+}
+
+.site-fifth:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: #08789a81;
+  z-index: -1;
+  transition: width 500ms ease-in-out;
+}
+
+.site-fifth:hover {
+  color: #fff;
+}
+
+.site-fifth:hover:after {
+  width: 110%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-----------------------Input text filters--------------------*/
 
 .myInput {
