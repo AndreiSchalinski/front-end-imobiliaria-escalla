@@ -175,20 +175,36 @@
   text-align: center;
   font-family: "Sora", sans-serif;
   margin-bottom: 50px;
+  font-size: 40px;
 }
 
 .container-site-principal-informacoes-destaques {
   display: flex;
   justify-content: center;
+  gap: 80;
   align-items: center;
-  width: 60%;
+  width: 100%;
   margin: auto;
 }
 
-.container-site-principal-lista-informacoes {
-  margin: 10px;
+.container-site-principal-lista-informacoes:nth-child(2){
+  width: 600px;
 }
 
+.container-site-principal-lista-informacoes-avaliacoes {
+  font-family: "Sora", sans-serif;
+  margin: 30px 0 30px 0;
+}
+
+.container-site-principal-lista-informacoes-avaliacoes-exibirmais{
+  font-family: "Sora", sans-serif;
+  margin: 20px 0 20px 0;
+  font-size: 20px;
+}
+
+.container-site-principal-lista-informacoes ul li p {
+  display: flex;
+}
 /*----------------------configuração swiper carousel---------------------*/
 
 .swiper {
