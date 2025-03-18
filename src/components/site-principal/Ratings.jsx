@@ -6,7 +6,7 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { Typography } from "@mui/material";
 import { useState } from "react";
 
-export default function Ratings() {
+export default function Ratings({ colorRating }) {
   const [value, setValue] = useState(2.5);
 
   return (
@@ -22,7 +22,14 @@ export default function Ratings() {
           }
         }}
         value={value}
-        icon={<StarIcon sx={{ color: "black", fontSize: 30 }} />}
+        icon={
+          <StarIcon
+            sx={{
+              color: colorRating == undefined ? "black" : colorRating,
+              fontSize: 30,
+            }}
+          />
+        }
         emptyIcon={<StarBorderIcon sx={{ color: "", fontSize: 30 }} />}
         precision={0.5}
       />

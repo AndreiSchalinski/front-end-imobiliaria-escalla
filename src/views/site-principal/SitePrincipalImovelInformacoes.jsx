@@ -2,7 +2,7 @@
 
 import { Button } from "@mui/material";
 import { getIcon } from "@/assets/icons";
-import { useState } from "react";
+import Ratings from "@/components/site-principal/Ratings";
 import CardDescription from "../../components/site-principal/CardDescription";
 
 const listChecksImovel = [
@@ -111,11 +111,14 @@ export default function SitePrincipalImoveisCarousel() {
 
         <p>Apartamento no Edifício Brava Aikon na Praia Brava. IM23685</p>
 
-        <p>Localização</p>
+        <p style={{display:'flex', margin:'20px 0 20px 0'}}>{getIcon().iconLocation}Localização</p>
 
-        <p>5/5 (3 avaliações)</p>
+        <div style={{ margin: "30px 0 30px 0" }}>
+          <Ratings colorRating={"#0057B8"} />
+        </div>
 
         <Button
+          className="button-informacoes site-fift"
           variant="contained"
           sx={{
             background: "#0057B8",
