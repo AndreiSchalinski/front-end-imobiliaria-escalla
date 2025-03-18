@@ -1,36 +1,41 @@
 import Image from "next/image";
 import ImagemDestaque from "@/assets/image-destaque.png";
+import Ratings from "@/components/site-principal/Ratings";
+import { getIcon } from "@/assets/icons";
 
 export default function Destaques() {
   return (
     <section className="container-site-principal-destaques">
-      <h1>Destaques</h1>
+      <h1>Imóveis em destaque</h1>
       <div className="container-site-principal-informacoes-destaques">
         <div className="container-site-principal-lista-informacoes">
-          <Image src={ImagemDestaque} alt=""/>
+          <Image src={ImagemDestaque} alt="" />
         </div>
         <div className="container-site-principal-lista-informacoes">
           <ul>
             <li>
-              <p>2 ou 4 Dormitórios</p>
+              <p>{getIcon("#000000").iconBed}&nbsp;&nbsp;2 ou 4 Dormitórios</p>
             </li>
             <li>
-              <p>2 ou 4 Suítes</p>
+              <p>{getIcon("#000000").iconShower}&nbsp;&nbsp;2 ou 4 Suítes</p>
             </li>
             <li>
-              <p>de 147m a 328m</p>
+              <p>{getIcon("#000000").iconRuler}&nbsp;&nbsp;de 147m a 328m</p>
             </li>
             <li>
-              <p>2 ou 4 vagas de garagem</p>
+              <p>{getIcon("#000000").iconCar}&nbsp;&nbsp;2 ou 4 vagas de garagem</p>
             </li>
             <li>
-              <p>3140 202, Balneário Camboriú - SC</p>
+              <p>
+                {getIcon("#000000").iconLocation}&nbsp;&nbsp;3140 202, Balneário Camboriú - SC
+              </p>
             </li>
           </ul>
 
-          <ul>
-            <li>4.5/5(10 avaliações)</li>
-            <li>Estrelinhas</li>
+          <ul className="container-site-principal-lista-informacoes-avaliacoes">
+            <li>
+              <Ratings />
+            </li>
           </ul>
 
           <ul>
@@ -53,9 +58,9 @@ export default function Destaques() {
             </li>
           </ul>
 
-          <ul>
+          <ul className="container-site-principal-lista-informacoes-avaliacoes-exibirmais">
             <li>
-              <h2>Exibir Mais+</h2>
+              <p>Exibir Mais+</p>
             </li>
           </ul>
         </div>
