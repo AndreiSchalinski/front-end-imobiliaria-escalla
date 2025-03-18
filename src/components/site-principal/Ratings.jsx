@@ -13,7 +13,6 @@ export default function Ratings() {
     <>
       <Typography component="legend">{value}/5&nbsp;(10 avaliações)</Typography>
       <Rating
-        color="red"
         name="simple-uncontrolled"
         onChange={(event, newValue) => {
           if (newValue == null) {
@@ -22,7 +21,7 @@ export default function Ratings() {
             setValue(newValue);
           }
         }}
-        defaultValue={value}
+        value={value}
         icon={<StarIcon sx={{ color: "black", fontSize: 30 }} />}
         emptyIcon={<StarBorderIcon sx={{ color: "", fontSize: 30 }} />}
         precision={0.5}
