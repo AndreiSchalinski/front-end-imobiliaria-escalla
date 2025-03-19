@@ -80,6 +80,11 @@ export default function HomePage() {
             />
           </div>
         </div>
+        <div
+          style={{ display: "flex", justifyContent: "center", marginTop: 20 }}
+        >
+          <Buttons legenda={"Buscar por código"} />
+        </div>
       </div>
     </div>
   );

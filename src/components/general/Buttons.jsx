@@ -10,16 +10,20 @@ export default function Buttons({ onClick, legenda }) {
         borderRadius: 20,
         color: "black",
         border: "none",
-        background: "white",
+        background:
+          legenda !== "Buscar por código"
+            ? "white"
+            : "rgba(255, 255, 255, 0.65)",
         height: 40,
         textTransform: "none",
         fontSize: 15,
-        margin: "0 10px",
+        margin: legenda !== "Buscar por código" ?"0 10px":'auto',
         whiteSpace: "nowrap",
-        width: 150,
+        width: legenda !== "Buscar por código" ? 150 : 170,
       }}
-      endIcon={<FilterListIcon />}
+      endIcon={legenda !== "Buscar por código" ? <FilterListIcon /> : null}
       onClick={onClick}
+      className="input-filtro-imoveis-fifltros-adicionais"
     >
       {legenda}
     </Button>

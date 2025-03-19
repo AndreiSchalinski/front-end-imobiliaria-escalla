@@ -99,8 +99,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.685); /* Preto com 50% de transparência */
-  z-index: 1; /* Certifique-se de que a camada de sobreposição fique acima da imagem */
+  background-color: rgba(0, 0, 0, 0.685); 
+  z-index: 1; 
 }
 
 .home-page-site-principal-container-informations {
@@ -164,20 +164,6 @@
   width: 110%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-----------------------Input text filters--------------------*/
 
 .myInput {
@@ -201,14 +187,20 @@
   transition: 0s !important;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   .home-page-container-filters {
     width: 100%;
     flex-direction: column;
+    justify-content: space-around;
   }
 
   .input-filtro-imoveis {
-    width: 100% !important;
+    width: 70% !important;
+    margin: 2px 0 !important;
+  }
+
+  .input-filtro-imoveis-fifltros-adicionais{
+    display: none !important;
   }
 }
 
@@ -234,7 +226,7 @@
   margin: auto;
 }
 
-.container-site-principal-lista-informacoes:nth-child(2){
+.container-site-principal-lista-informacoes:nth-child(2) {
   width: 550px;
 }
 
@@ -243,7 +235,7 @@
   margin: 30px 0 30px 0;
 }
 
-.container-site-principal-lista-informacoes-avaliacoes-exibirmais{
+.container-site-principal-lista-informacoes-avaliacoes-exibirmais {
   font-family: "Sora", sans-serif;
   margin: 20px 0 20px 0;
   font-size: 20px;
@@ -417,7 +409,7 @@ p {
   font-family: "Sora", sans-serif;
 }
 
-.container-site-principal-consultor-button p{
+.container-site-principal-consultor-button p {
   margin: 0 0px 0 10px;
 }
 

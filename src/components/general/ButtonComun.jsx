@@ -13,6 +13,7 @@ export default function ButtonsC() {
         height: 65,
         whiteSpace: "nowrap",
       }}
+      className="input-filtro-imoveis"
     >
       Encontrar imóveis
     </Button>
