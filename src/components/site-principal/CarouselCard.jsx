@@ -21,9 +21,8 @@ export default function SiteCardCarousel({ imovel }) {
       >
         {imovel.legendas.map((el, i) => {
           return (
-            <div style={{display:'flex'}}>
+            <div style={{ display: "flex" }} key={i}>
               <li
-                key={i}
                 style={{
                   display: "inline-flex",
                   flexDirection: "column",
