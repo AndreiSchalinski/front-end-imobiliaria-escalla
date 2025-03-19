@@ -1,5 +1,3 @@
-
-
 import CarouselDestaques from "@/components/site-principal/CarouselCategoriaDestaque";
 
 export default function SitePrincipalCarouselDestaques({
@@ -7,8 +5,13 @@ export default function SitePrincipalCarouselDestaques({
 }) {
   return (
     <>
-      {listImoveisDestaques.map((el,i) => (
-        <CarouselDestaques key={i} categoriaDestaque={el.titulo} legenda={el.legenda} />
+      {listImoveisDestaques.map((imovel, i) => (
+        <CarouselDestaques
+          key={i}
+          categoriaDestaque={imovel.titulo}
+          legenda={imovel.legenda}
+          listaCategorias={imovel.listaCategorias}
+        />
       ))}
     </>
   );
