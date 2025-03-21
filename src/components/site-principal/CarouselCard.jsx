@@ -2,15 +2,14 @@
 
 import { openFacyboxImages } from "@/services/fancybox.service";
 import Fancybox from "@/services/Facyboxs";
-import { Row, Col, Button } from "antd";
+import { Button } from "antd";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { getIcon } from "@/assets/icons";
-import { Box } from "@mui/material";
 
 export default function SiteCardCarousel({ imovel }) {
   return (
-    <div style={{ width: 500 }}>
+    <div style={{ width: "100%" }}>
       <ul
         style={{
           position: "absolute",
@@ -41,48 +40,37 @@ export default function SiteCardCarousel({ imovel }) {
           );
         })}
       </ul>
-      <Box
-        sx={{
-          padding: 0,
-          margin: "0 10px",
-          borderRadius: 2,
-          transition: "0.9s",
-          "&:hover": {
-            transition: "0.2s",
-            transform: "translateY(-15px)",
-            boxShadow: "0 15px 25px #08789a36",
-          },
-        }}
-      >
+      <div className="card-imovel">
         <Swiper
           style={{
-            height: 300,
+            height: "auto",
             borderTopLeftRadius: 10,
             borderTopRightRadius: 10,
+            width: "100%",
           }}
           navigation={true}
           modules={[Navigation]}
+          className="card-imovel-swiper"
         >
           {imovel.imgs.map((image, index) => {
             return (
-              <SwiperSlide
-                key={index}
-                style={{ height: "400px", backgroundColor: "lightblue" }}
-              >
+              <SwiperSlide key={index} style={{ backgroundColor: "lightblue" }}>
                 <img
                   src={image}
                   alt=""
+                  style={{ objectFit: "cover" }}
+                  layout="intrinsic"
                   onClick={(e) => {
                     e.preventDefault();
-                    openFacyboxImages(images, index);
+                    openFacyboxImages(imovel.imgs, index);
                   }}
                 />
               </SwiperSlide>
             );
           })}
         </Swiper>
-        <Box
-          sx={{
+        <div
+          style={{
             borderLeft: "1px solid #00000019",
             borderBottom: "1px solid #00000019",
             borderRight: "1px solid #00000019",
@@ -91,21 +79,21 @@ export default function SiteCardCarousel({ imovel }) {
             padding: 2,
           }}
         >
-          <Row style={{ display: "flex", alignItems: "center" }}>
-            <Col>{getIcon().iconLocation}</Col>
-            <Col>
+          <ul style={{ display: "flex", alignItems: "center" }}>
+            <li>{getIcon().iconLocation}</li>
+            <li>
               <h5>Testando título</h5>
-            </Col>
-          </Row>
+            </li>
+          </ul>
 
-          <Row>
+          <div>
             <p>
               Apartamento Duplex no Magnifique Tower em Balneário Camboriú com
               227m² privativos.
             </p>
-          </Row>
+          </div>
 
-          <Row
+          <ul
             style={{
               display: "flex",
               alignItems: "center",
@@ -113,26 +101,26 @@ export default function SiteCardCarousel({ imovel }) {
               marginBottom: 20,
             }}
           >
-            <Col>
+            <li>
               <span>{getIcon().iconRuler} 149 m²</span>
-            </Col>
+            </li>
 
-            <Col>
+            <li>
               <span>{getIcon().iconCar} 3 vagas</span>
-            </Col>
+            </li>
 
-            <Col>
+            <li>
               <span>{getIcon().iconBed} 4 quartos</span>
-            </Col>
-          </Row>
+            </li>
+          </ul>
 
-          <Row>
+          <div>
             <span>R$ 2.800.000,00</span>
-          </Row>
+          </div>
 
-          <Row style={{ marginTop: 40 }}>
-            <Col style={{ width: "100%", display: "flex" }}>
-              <Box sx={{ flexGrow: 1 }} />
+          <ul style={{ marginTop: 40 }}>
+            <li style={{ width: "100%", display: "flex" }}>
+              <div style={{ flexGrow: 1 }}></div>
               <Button
                 style={{
                   borderRadius: 20,
@@ -147,10 +135,10 @@ export default function SiteCardCarousel({ imovel }) {
               >
                 VER DETALHES
               </Button>
-            </Col>
-          </Row>
-        </Box>
-      </Box>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

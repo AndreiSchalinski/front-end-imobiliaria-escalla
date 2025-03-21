@@ -99,8 +99,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.685); 
-  z-index: 1; 
+  background-color: rgba(0, 0, 0, 0.685);
+  z-index: 1;
 }
 
 .home-page-site-principal-container-informations {
@@ -199,7 +199,7 @@
     margin: 2px 0 !important;
   }
 
-  .input-filtro-imoveis-fifltros-adicionais{
+  .input-filtro-imoveis-fifltros-adicionais {
     display: none !important;
   }
 }
@@ -246,26 +246,28 @@
 }
 /*----------------------configuração swiper carousel---------------------*/
 
-.swiper {
-  width: 100%;
+.swiper-container-carousel {
   height: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 60 0;
 }
 
-.swiper-slide {
-  text-align: center;
+.swiper-container-carousel {
+  width: 100%;
+  max-height: 600px;
+}
+
+.swiper-container-carousel .swiper-slide {
   font-size: 18px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  color: #08789a36;
+  padding: 0 0;
 }
 
 .swiper-container-carousel .swiper-button-next,
@@ -281,22 +283,21 @@
   box-shadow: 0px 8px 5px #83b2c173;
 }
 
+.swiper-container-carousel .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  color: #08789a36;
+}
+
 .swiper-container-carousel [class^="swiper-button-"]::after {
   font-size: 15px;
 }
 
-.swiper-grid {
-  padding: 0px 0 25px 0;
-}
-
-.swiper-grid .swiper-pagination-bullet {
+.swiper-container-carousel .swiper-pagination-bullet {
   position: relative;
   top: 10px;
-  height: 12px;
-  width: 12px;
-}
-
-.swiper-container-carousel .swiper-pagination-bullet {
   height: 12px;
   width: 12px;
 }
@@ -304,13 +305,29 @@
 /*-------------------------destaques-----------------------*/
 
 .container-carousel-destaques {
-  padding: 0 150px;
+  padding: 0 100px;
   margin-bottom: 100px;
 }
 
 .container-carousel-destaques h1,
 p {
   font-family: "Sora", sans-serif;
+}
+
+/*---------------------Site Card Imóvel-----------------------------*/
+
+.card-imovel {
+  padding: 0;
+  margin: 0 10px;
+  border-radius: 2px;
+  transition: 0.9s;
+  max-width: 100%;
+}
+
+.card-imovel:hover {
+  transition: 0.2s;
+  transform: translateY(-15px);
+  box-shadow: 0 15px 25px rgba(8, 120, 154, 0.21);
 }
 
 /*---------------------Site principal consultorias------------------*/
