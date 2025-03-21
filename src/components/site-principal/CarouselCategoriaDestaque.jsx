@@ -3,22 +3,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import CardCarousel from "@/components/site-principal/CarouselCard";
+import { useEffect, useState } from "react";
 
 export default function CarouselDestaques({
   categoriaDestaque,
   legenda,
   listaCategorias,
 }) {
-  const divideIntoChunks = (arr, chunkSize) => {
-    let result = [];
-    for (let i = 0; i < arr.length; i += chunkSize) {
-      result.push(arr.slice(i, i + chunkSize));
-    }
-    return result;
-  };
-
-  const listaEmChunks = divideIntoChunks(listaCategorias, 3);
-
   return (
     <div className="container-carousel-destaques">
       <h1>{categoriaDestaque}</h1>
@@ -26,6 +17,20 @@ export default function CarouselDestaques({
 
       <Swiper
         loop={false}
+        breakpoints={{
+          1300: {
+            slidesPerView: 3,
+          },
+
+          900: {
+            slidesPerView: 2,
+          },
+
+          576: {
+            slidesPerView: 1,
+          },
+        }}
+        spaceBetween={10}
         navigation={true}
         pagination={{
           clickable: true,
@@ -33,52 +38,12 @@ export default function CarouselDestaques({
         modules={[Pagination, Navigation]}
         className="swiper-container-carousel"
       >
-        {listaEmChunks.map((grupo, index) => (
-          <SwiperSlide
-            key={index}
-            style={{
-              display: "flex",
-              justifyContent: grupo.length > 2 ? "center" : "flex-start",
-              paddingLeft: grupo.length > 2 ? "initial" : 55,
-            }}
-          >
-            {grupo.map((imovel, idx) => (
-              <CardCarousel key={idx} imovel={imovel} />
-            ))}
+        {listaCategorias.map((imovel, index) => (
+          <SwiperSlide key={index}>
+            <CardCarousel key={index} imovel={imovel} />
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
   );
 }
-
-/*
-
-<Swiper
-        loop={true}
-        e
-        navigation={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination, Navigation]}
-        className="swiper-container-carousel"
-      >
-        {listaCategorias.map((imovel, i) => (
-          <SwiperSlide
-            key={i}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              padding: "20px",
-            }}
-          >
-            <CardCarousel imovel={imovel} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-
-
-
-*/
