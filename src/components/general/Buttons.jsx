@@ -11,13 +11,13 @@ export default function Buttons({ onClick, legenda }) {
         color: "black",
         border: "none",
         background:
-          legenda !== "Buscar por código"
+          legenda !== "Buscar por código" && legenda !== "Filtros gerais"
             ? "white"
             : "rgba(255, 255, 255, 0.65)",
         height: 40,
         textTransform: "none",
         fontSize: 15,
-        margin: legenda !== "Buscar por código" ?"0 10px":'auto',
+        margin: legenda !== "Buscar por código" ? "0 10px" : "auto",
         whiteSpace: "nowrap",
         width: legenda !== "Buscar por código" ? 150 : 170,
       }}
