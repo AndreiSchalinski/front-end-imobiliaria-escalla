@@ -10,8 +10,14 @@ import { useState } from "react";
 export default function HomePage() {
   const [openInputs, setOpenInputs] = useState(true);
 
+  const [openFiltroCod, setOpenFiltroCod] = useState(true);
+
   const handleToggleInputs = () => {
     setOpenInputs((prev) => !prev);
+  };
+
+  const handleToggleInputFiltro = () => {
+    setOpenFiltroCod((prev) => !prev);
   };
 
   return (
@@ -26,6 +32,7 @@ export default function HomePage() {
           style={{
             maxWidth: openInputs ? 1200 : 1200,
             flexWrap: openInputs ? "nowrap" : "wrap",
+            display: !openFiltroCod ? "none" : "flex",
           }}
         >
           <SelectOption
@@ -81,9 +88,33 @@ export default function HomePage() {
           </div>
         </div>
         <div
+          style={{
+            width: "100%",
+            display: !openFiltroCod ? "flex" : "none",
+            marginTop: 20,
+          }}
+        >
+          <SelectOption
+            hiddenCheckbox={true}
+            isMultiple={false}
+            label={"Código"}
+            width={20}
+          />
+
+          <InputText
+            label={"Preencha o código do imóvel"}
+            margin={"0 5px 0 0"}
+          />
+
+          <ButtonsC />
+        </div>
+        <div
           style={{ display: "flex", justifyContent: "center", marginTop: 20 }}
         >
-          <Buttons legenda={"Buscar por código"} />
+          <Buttons
+            legenda={openFiltroCod ? "Buscar por código" : "Filtros gerais"}
+            onClick={handleToggleInputFiltro}
+          />
         </div>
       </div>
     </div>

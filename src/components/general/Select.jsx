@@ -37,7 +37,7 @@ export default function SelectOption({
   hiddenCheckbox,
   iconLabel,
   label,
-  width
+  width,
 }) {
   const [personName, setPersonName] = useState([]);
 
