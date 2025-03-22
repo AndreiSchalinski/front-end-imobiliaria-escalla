@@ -10,42 +10,42 @@ import { getIcon } from "@/assets/icons";
 export default function SiteCardCarousel({ imovel }) {
   return (
     <div style={{ width: "100%" }}>
-      <ul
-        style={{
-          position: "absolute",
-          zIndex: 2,
-          fontSize: 12,
-          margin: "5px 0 0 20px",
-        }}
-      >
-        {imovel.legendas.map((el, i) => {
-          return (
-            <div style={{ display: "flex" }} key={i}>
-              <li
-                style={{
-                  display: "inline-flex",
-                  flexDirection: "column",
-                  background: "black",
-                  color: "white",
-                  margin: "2.5px 0",
-                  borderRadius: 12,
-                  padding: "3px 8px",
-                  fontFamily: '"Sora", sans-serif',
-                  fontSize: 12,
-                }}
-              >
-                <div>{el}</div>
-              </li>
-            </div>
-          );
-        })}
-      </ul>
       <div className="card-imovel">
+        <ul
+          style={{
+            position: "absolute",
+            zIndex: 2,
+            fontSize: 12,
+            margin: "5px 0 0 5px",
+          }}
+        >
+          {imovel.legendas.map((el, i) => {
+            return (
+              <div style={{ display: "flex" }} key={i}>
+                <li
+                  style={{
+                    display: "inline-flex",
+                    flexDirection: "column",
+                    background: "black",
+                    color: "white",
+                    margin: "2.5px 0",
+                    borderRadius: 12,
+                    padding: "3px 8px",
+                    fontFamily: '"Sora", sans-serif',
+                    fontSize: 12,
+                  }}
+                >
+                  <div>{el}</div>
+                </li>
+              </div>
+            );
+          })}
+        </ul>
         <Swiper
           style={{
             height: "auto",
-            borderTopLeftRadius: 10,
-            borderTopRightRadius: 10,
+            borderTopLeftRadius: 5,
+            borderTopRightRadius: 5,
             width: "100%",
           }}
           navigation={true}
@@ -69,56 +69,41 @@ export default function SiteCardCarousel({ imovel }) {
             );
           })}
         </Swiper>
-        <div
-          style={{
-            borderLeft: "1px solid #00000019",
-            borderBottom: "1px solid #00000019",
-            borderRight: "1px solid #00000019",
-            borderBottomLeftRadius: 10,
-            borderBottomRightRadius: 10,
-            padding: 2,
-          }}
-        >
-          <ul style={{ display: "flex", alignItems: "center" }}>
+        <div ssName="card-imove-legendas">
+          <ul className="card-imove-legendas-1">
             <li>{getIcon().iconLocation}</li>
             <li>
               <h5>Testando título</h5>
             </li>
           </ul>
 
-          <div>
+          <div className="card-imove-legendas-2">
             <p>
               Apartamento Duplex no Magnifique Tower em Balneário Camboriú com
-              227m² privativos.
+              227m² privativos.&nbsp;&nbsp;
+              <span className="cod-imovel">IM06103</span>
             </p>
           </div>
 
-          <ul
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginBottom: 20,
-            }}
-          >
+          <ul className="card-imove-legendas-3">
             <li>
-              <span>{getIcon().iconRuler} 149 m²</span>
+              <p>{getIcon().iconRuler}&nbsp;&nbsp;149 m²</p>
             </li>
 
             <li>
-              <span>{getIcon().iconCar} 3 vagas</span>
+              <p>{getIcon().iconCar}&nbsp;&nbsp;3 vagas</p>
             </li>
 
             <li>
-              <span>{getIcon().iconBed} 4 quartos</span>
+              <p>{getIcon().iconBed}&nbsp;&nbsp;4 quartos</p>
             </li>
           </ul>
 
-          <div>
-            <span>R$ 2.800.000,00</span>
+          <div className="card-imove-legendas-4">
+            <p>R$ 2.800.000,00</p>
           </div>
 
-          <ul style={{ marginTop: 40 }}>
+          <ul style={{ padding: "10px 10px" }}>
             <li style={{ width: "100%", display: "flex" }}>
               <div style={{ flexGrow: 1 }}></div>
               <Button
