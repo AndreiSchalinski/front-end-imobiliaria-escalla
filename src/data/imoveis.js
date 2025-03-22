@@ -3,6 +3,7 @@ export const getImoveisAltaProcura = () => {
     {
       legendas: [],
       imgs: [
+        "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/thumb-photoshop-novo0018-1714155140.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-28-1723828636.webp",

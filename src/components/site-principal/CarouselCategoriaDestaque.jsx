@@ -3,7 +3,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import CardCarousel from "@/components/site-principal/CarouselCard";
-import { useEffect, useState } from "react";
 
 export default function CarouselDestaques({
   categoriaDestaque,
