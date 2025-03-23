@@ -6,16 +6,27 @@ import SitePrincipalSobreEdificio from "@/views/site-principal/SitePrincipalSobr
 import SitePrincipalCarouselDestaques from "@/views/site-principal/SitePrincipalCarouselDestaques";
 import SitePrincipalBlog from "@/views/site-principal/SitePrincipalBlog";
 import SitePrincipalFooter from "@/components/site-principal/Footer";
+import {
+  getImoveisAltaProcura,
+  getImoveisFrenteAoMar,
+  getImoveisNaPlanta,
+} from "@/data/imoveis";
 
 const listImoveisDestaques = [
-  { titulo: "Imóveis com alta procura", legenda: "" },
+  {
+    titulo: "Imóveis com alta procura",
+    legenda: "",
+    listaCategorias: getImoveisAltaProcura(),
+  },
   {
     titulo: "Imóveis frente mar",
     legenda: "Um cenário à altura das suas conquistas.",
+    listaCategorias: getImoveisFrenteAoMar(),
   },
   {
     titulo: "Imóveis na planta",
     legenda: "A melhor parte da sua vida já está nos nossos planos.",
+    listaCategorias: getImoveisNaPlanta(),
   },
 ];
 

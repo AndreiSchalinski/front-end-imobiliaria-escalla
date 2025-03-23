@@ -1,7 +1,16 @@
 export const getImoveisAltaProcura = () => {
   return [
     {
-      legendas: [],
+      codigo: "IM06103",
+      localizacao: "Balneário Camboriú - Centro",
+      dadosGerais:
+        "Apartamento no Edifício Alameda Jardins em Balneário Camboriú com 228,00m²",
+      metragem: 123.13,
+      vagas: 4,
+      quartos: 2,
+      preco: 5900000.0,
+      promocao: 490000.0,
+      chips: [],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/thumb-photoshop-novo0018-1714155140.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
@@ -23,7 +32,14 @@ export const getImoveisAltaProcura = () => {
       ],
     },
     {
-      legendas: ["AAA", "LLLLLLLL"],
+      localizacao: "Itapema - Meia Praia",
+      dadosGerais: "Apartamento no Edifício Torres do Atlântico em Itapema.",
+      metragem: 172,
+      vagas: 1,
+      quartos: 3,
+      preco: 2345312.34,
+      promocao: "",
+      chips: ["AAA", "LLLLLLLL"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -44,7 +60,15 @@ export const getImoveisAltaProcura = () => {
       ],
     },
     {
-      legendas: ["Testandooooooo", "hhhhhhhh", "ççç"],
+      localizacao: "Balneário Camboriú - Barra sul",
+      dadosGerais:
+        "Apartamento Duplex no Magnifique Tower em Balneário Camboriú com 227m² privativos. ",
+      metragem: 345,
+      vagas: 2,
+      quartos: 1,
+      preco: 234123.45,
+      promocao: 233345.12,
+      chips: ["Testandooooooo", "hhhhhhhh", "ççç"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -65,7 +89,15 @@ export const getImoveisAltaProcura = () => {
       ],
     },
     {
-      legendas: ["ppppp", "ASDASDASDA", "FGHFGHFGHF", "CVBVBN"],
+      localizacao: "Balneário Camboriú - Centro",
+      dadosGerais:
+        "Apartamento frente mar, andar alto, no Edifício Cosmos Torre Halley ",
+      metragem: 654,
+      vagas: 2,
+      quartos: 3,
+      preco: 120333.78,
+      promocao: 234345.76,
+      chips: ["ppppp", "ASDASDASDA", "FGHFGHFGHF", "CVBVBN"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -91,7 +123,15 @@ export const getImoveisAltaProcura = () => {
 export const getImoveisFrenteAoMar = () => {
   return [
     {
-      legendas: ["OOOOO", "WWW", "HHHHHHHHHHHHH"],
+      localizacao: "Balneário Camboriú - Centro",
+      dadosGerais:
+        "Apartamento frente mar, andar alto, no Edifício Cosmos Torre Halley ",
+      metragem: 654,
+      vagas: 2,
+      quartos: 3,
+      preco: 120333.78,
+      promocao: 234345.76,
+      chips: ["OOOOO", "WWW", "HHHHHHHHHHHHH"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -112,7 +152,15 @@ export const getImoveisFrenteAoMar = () => {
       ],
     },
     {
-      legendas: ["XXXX", "VV", "KKKKKKKKKKKKKKKKKKK"],
+      localizacao: "Balneário Camboriú - Centro",
+      dadosGerais:
+        "Apartamento frente mar, andar alto, no Edifício Cosmos Torre Halley ",
+      metragem: 654,
+      vagas: 2,
+      quartos: 3,
+      preco: 120333.78,
+      promocao: 234345.76,
+      chips: ["XXXX", "VV", "KKKKKKKKKKKKKKKKKKK"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -138,7 +186,14 @@ export const getImoveisFrenteAoMar = () => {
 export const getImoveisNaPlanta = () => {
   return [
     {
-      legendas: ["AAAAAAAAAAAAAA", "BBBBBBB"],
+      localizacao: "Itapema - Meia Praia",
+      dadosGerais: "Apartamento no Edifício Torres do Atlântico em Itapema.",
+      metragem: 172,
+      vagas: 1,
+      quartos: 3,
+      preco: 2345312.34,
+      promocao: "",
+      chips: ["AAAAAAAAAAAAAA", "BBBBBBB"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -159,7 +214,14 @@ export const getImoveisNaPlanta = () => {
       ],
     },
     {
-      legendas: ["CCCCCCAAAAAAAAAA", "PPPPPPPPPPPPPPPP"],
+      localizacao: "Itapema - Meia Praia",
+      dadosGerais: "Apartamento no Edifício Torres do Atlântico em Itapema.",
+      metragem: 172,
+      vagas: 1,
+      quartos: 3,
+      preco: 2345312.34,
+      promocao: "",
+      chips: ["CCCCCCAAAAAAAAAA", "PPPPPPPPPPPPPPPP"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
