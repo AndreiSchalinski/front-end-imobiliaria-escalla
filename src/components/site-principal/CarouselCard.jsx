@@ -19,7 +19,7 @@ export default function SiteCardCarousel({ imovel }) {
             margin: "5px 0 0 5px",
           }}
         >
-          {imovel.legendas.map((el, i) => {
+          {imovel.chips.map((el, i) => {
             return (
               <div style={{ display: "flex" }} key={i}>
                 <li
@@ -69,38 +69,44 @@ export default function SiteCardCarousel({ imovel }) {
             );
           })}
         </Swiper>
-        <div ssName="card-imove-legendas">
+        <div className="card-imove-legendas">
           <ul className="card-imove-legendas-1">
             <li>{getIcon().iconLocation}</li>
             <li>
-              <h5>Testando título</h5>
+              <h5>{imovel.localizacao}</h5>
             </li>
           </ul>
 
           <div className="card-imove-legendas-2">
             <p>
-              Apartamento Duplex no Magnifique Tower em Balneário Camboriú com
-              227m² privativos.&nbsp;&nbsp;
-              <span className="cod-imovel">IM06103</span>
+              {imovel.dadosGerais} &nbsp;&nbsp;
+              <span className="cod-imovel">{imovel.codigo}</span>
             </p>
           </div>
 
           <ul className="card-imove-legendas-3">
             <li>
-              <p>{getIcon().iconRuler}&nbsp;&nbsp;149 m²</p>
+              <p>
+                {getIcon().iconRuler}&nbsp;&nbsp;
+                {imovel.metragem} m²
+              </p>
             </li>
 
             <li>
-              <p>{getIcon().iconCar}&nbsp;&nbsp;3 vagas</p>
+              <p>
+                {getIcon().iconCar}&nbsp;&nbsp;{imovel.vagas} vagas
+              </p>
             </li>
 
             <li>
-              <p>{getIcon().iconBed}&nbsp;&nbsp;4 quartos</p>
+              <p>
+                {getIcon().iconBed}&nbsp;&nbsp;{imovel.quartos} quartos
+              </p>
             </li>
           </ul>
 
           <div className="card-imove-legendas-4">
-            <p>R$ 2.800.000,00</p>
+            <p>R$ {imovel.preco}</p>
           </div>
 
           <ul style={{ padding: "10px 10px" }}>
