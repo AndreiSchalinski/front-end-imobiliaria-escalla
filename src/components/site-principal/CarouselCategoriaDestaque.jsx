@@ -35,7 +35,7 @@ export default function CarouselDestaques({
           clickable: true,
         }}
         modules={[Pagination, Navigation]}
-        className="swiper-container-carousel"
+        className=" swiper-container-carousel"
       >
         {listaCategorias.map((imovel, index) => (
           <SwiperSlide key={index}>
