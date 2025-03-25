@@ -1,26 +1,39 @@
 import Button from "@mui/material/Button";
 import Card from "@/components/site-principal/Card";
-import ImgBlog1 from "@/assets/blog-2.png"
-import ImgBlog2 from "@/assets/blog-4.png"
-import ImgBlog3 from "@/assets/blog-5.png"
+import ImgBlog1 from "@/assets/blog-2.png";
+import ImgBlog2 from "@/assets/blog-4.png";
+import ImgBlog3 from "@/assets/blog-5.png";
 
 export default function SitePrincipalBlog() {
   return (
     <div className="container-site-principal-blog">
-      <ul>
+      <ul className="container-site-principal-blog-link">
         <li>
           <h1>Quer acompanhar as novidades?</h1>
+        </li>
+        <li>
           <p>
             Descubra conteúdos sobre apartamentos, tendências e mais assuntos do
             seu interesse.
           </p>
+        </li>
+        <li>
           <Button
             variant="contained"
-            sx={{ background: "black", textTransform: "none", width:245, height:48, fontSize:16 }}
+            sx={{
+              background: "black",
+              textTransform: "none",
+              width: 245,
+              height: 48,
+              fontSize: 16,
+            }}
           >
             Acesse nosso Blog
           </Button>
         </li>
+      </ul>
+
+      <ul className="container-site-principal-blog-cards">
         <li>
           <Card
             img={ImgBlog1}

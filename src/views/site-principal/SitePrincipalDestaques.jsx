@@ -9,7 +9,7 @@ export default function Destaques() {
       <h1>Imóveis em destaque</h1>
       <div className="container-site-principal-informacoes-destaques">
         <div className="container-site-principal-lista-informacoes">
-          <Image src={ImagemDestaque} alt="" />
+          <Image src={ImagemDestaque} alt="" height={655.53} width={588} layout="intrinsic" />
         </div>
         <div className="container-site-principal-lista-informacoes">
           <ul>
@@ -23,11 +23,14 @@ export default function Destaques() {
               <p>{getIcon("#000000").iconRuler}&nbsp;&nbsp;de 147m a 328m</p>
             </li>
             <li>
-              <p>{getIcon("#000000").iconCar}&nbsp;&nbsp;2 ou 4 vagas de garagem</p>
+              <p>
+                {getIcon("#000000").iconCar}&nbsp;&nbsp;2 ou 4 vagas de garagem
+              </p>
             </li>
             <li>
               <p>
-                {getIcon("#000000").iconLocation}&nbsp;&nbsp;3140 202, Balneário Camboriú - SC
+                {getIcon("#000000").iconLocation}&nbsp;&nbsp;3140 202, Balneário
+                Camboriú - SC
               </p>
             </li>
           </ul>
