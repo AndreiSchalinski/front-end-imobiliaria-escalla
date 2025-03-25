@@ -178,7 +178,6 @@
 
 .myInput::placeholder {
   font-size: 17px !important;
-  color: red !important;
   letter-spacing: 0px !important;
 }
 
@@ -227,7 +226,7 @@
 }
 
 .container-site-principal-lista-informacoes:nth-child(2) {
-  width: 550px;
+  max-width: 550px;
 }
 
 .container-site-principal-lista-informacoes-avaliacoes {
@@ -246,8 +245,18 @@
 }
 
 @media (max-width: 1000px) {
+  .container-site-principal-destaques {
+  }
+
+  .container-site-principal-lista-informacoes:nth-child(1) {
+    width: 100%;
+    height: auto;
+  }
+
   .container-site-principal-informacoes-destaques {
     flex-direction: column !important;
+
+    height: 100%;
   }
 }
 /*----------------------configuração swiper carousel---------------------*/
@@ -422,6 +431,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Adiciona este estilo */
+  transition: margin 0.7s ease;
 }
 
 .button-consultores {
@@ -434,23 +444,54 @@ p {
   font-family: "Sora", sans-serif;
   cursor: pointer;
   transition: 0.4s;
-  position: absolute;
+  position: relative;
   margin: 0 0 20px 20px;
+  white-space: nowrap;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .container-site-principal-consultorias {
-    display: block;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
     transition: 0.7s;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
   }
 
   .container-site-principal-consultorias-vantagens,
   .container-site-principal-consultorias-corretores {
     width: 100%;
+    margin: 0;
   }
+}
 
-  .button-consultores {
-    width: 100%;
+@media (max-width: 800px) {
+  .container-site-principal-consultorias-vantagens,
+  .container-site-principal-consultorias-corretores {
+    margin: -20px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .container-site-principal-consultorias-vantagens,
+  .container-site-principal-consultorias-corretores {
+    margin: -30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-site-principal-consultorias-vantagens,
+  .container-site-principal-consultorias-corretores {
+    margin: -50px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .container-site-principal-consultorias-vantagens,
+  .container-site-principal-consultorias-corretores {
+    margin: -70px 0;
   }
 }
 
@@ -490,7 +531,7 @@ p {
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   transition: 0.5s !important;
 }
 
@@ -542,19 +583,20 @@ p {
 /*-------------------Depoimentos-------------------*/
 
 .container-site-principal-depoimentos {
+  padding: 0 15px;
   padding-top: 100px;
   text-align: center;
 }
 
 .container-site-principal-depoimentos h2 {
   font-family: "Sora", sans-serif;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .container-site-principal-depoimentos div {
   border: 3px solid #dddddd;
   border-radius: 4px;
-  width: 912px;
+  max-width: 912px;
   text-align: center;
   padding: 30px 10px;
   font-family: "Sora", sans-serif;
@@ -565,12 +607,9 @@ p {
 
 @media (max-width: 800px) {
   .container-site-principal-depoimentos {
-    width: 100%;
-    padding: 0 100px;
   }
 
   .container-site-principal-depoimentos div {
-    width: 100%;
   }
 }
 
@@ -585,6 +624,7 @@ p {
   background-color: black;
   font-family: "Sora", sans-serif;
   padding: 100px 0;
+  transition: 0.5s;
 }
 
 .container-site-principal-footer-row1,
@@ -594,6 +634,7 @@ p {
   display: flex;
   justify-content: center;
   margin: auto;
+  transition: 0.5s;
 }
 
 .container-site-principal-footer-row1 ul {
@@ -609,10 +650,12 @@ p {
 .container-site-principal-footer-row2 {
   display: flex;
   justify-content: flex-start;
+  transition: 0.5s;
 }
 
 .container-site-principal-footer-row2 ul {
   margin-left: 100px;
+  transition: 0.5s;
 }
 
 .container-barra-footer {
@@ -623,15 +666,55 @@ p {
   display: flex;
   justify-content: space-around;
   padding-bottom: 60px;
+  transition: 0.5s;
 }
 
 .container-barra-footer ul {
   display: flex;
   align-items: center;
+  transition: 0.5s;
 }
 
 .container-barra-footer ul li {
   margin: 0 20px;
+  transition: 0.5s;
+}
+
+@media (max-width: 1000px) {
+  .container-site-principal-footer-row1 {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    transition: 0.5s;
+  }
+
+  .container-site-principal-footer-row1 ul {
+    margin: 20px 10px;
+    white-space: nowrap;
+    flex: 1;
+    transition: 0.5s;
+  }
+
+  .container-barra-footer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .container-barra-footer ul {
+    
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .container-barra-footer ul li {
+    margin: 10px;
+  }
+
+  .container-barra-footer ul:nth-child(1) {
+    padding-top: 40px;
+    border-top: 4px solid rgba(255, 255, 255, 0.052);
+    width: 100%;
+    transition: 0.5s;
+  }
 }
 
 /*-----------------Site principal blog----------------*/
@@ -643,41 +726,58 @@ p {
   transition: 0.6s;
 }
 
-@media (max-width: 800px) {
-  .container-site-principal-blog ul {
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    transition: 0.6s;
-  }
-
-  .container-site-principal-blog ul li {
-    margin: 5px 0 5px 0 !important;
-    transition: 0.6s;
-  }
-}
-
-.container-site-principal-blog ul {
+.container-site-principal-blog-cards {
   display: flex;
+  justify-content: center;
   font-family: "Sora", sans-serif;
+  gap: 10;
 }
 
-.container-site-principal-blog ul li:nth-child(1) {
-  border: none;
+.container-site-principal-blog-link {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  margin-right: 50px;
-  line-height: 40px;
+  width: 300px;
+  font-family: "Sora", sans-serif;
 }
 
 .container-site-principal-blog ul li:nth-child(1) p {
   line-height: 23px;
 }
 
-.container-site-principal-blog ul li {
-  width: 300px;
-  margin: 0 10px 0 10px;
+@media (max-width: 1400px) {
+  .container-site-principal-blog {
+    flex-direction: column;
+    align-items: center !important;
+    width: 95% !important;
+    transition: 0.6s;
+    margin: auto;
+  }
+
+  .container-site-principal-blog-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container-site-principal-blog-link p {
+    margin: 25px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .container-site-principal-blog-cards {
+    flex-direction: column;
+  }
+
+  .container-site-principal-blog-link {
+    text-align: center;
+  }
+
+  .container-site-principal-blog-link p {
+    margin: 20px 0;
+    line-height: 20px;
+  }
 }
 
 /*-----------------Page informações imóveis---------------*/
@@ -838,7 +938,6 @@ p {
 .carousel-large-swiper .append-buttons {
   text-align: center;
   margin-top: 20px;
-  border: 3px solid red !important;
 }
 
 .carousel-large-swiper .append-buttons button {

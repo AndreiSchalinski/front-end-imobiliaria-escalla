@@ -1,4 +1,4 @@
-import {getIcon} from "@/assets/icons";
+import { getIcon } from "@/assets/icons";
 import Link from "@/assets/Link.png";
 import Image from "next/image";
 
@@ -71,12 +71,8 @@ export default function SitePrincipalFooter() {
                 {getIcon().iconLinkedin} {getIcon().iconWhatsBackground}
               </p>
             </li>
-          </ul>
-        </div>
 
-        <div className="container-site-principal-footer-row2">
-          <ul>
-            <li>
+            <li style={{marginTop:30}}>
               <h3>Contato</h3>
             </li>
             <li>
@@ -102,7 +98,7 @@ export default function SitePrincipalFooter() {
         <ul>
           <li>Acessar a área do corretor</li>
           <li>
-            <Image src={Link} alt=""/>
+            <Image src={Link} alt="" />
           </li>
         </ul>
       </div>
