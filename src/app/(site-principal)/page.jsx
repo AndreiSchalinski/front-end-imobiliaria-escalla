@@ -7,11 +7,9 @@ import SitePrincipalDepoimentos from "@/views/site-principal/SitePrincipalDepoim
 import SitePrincipalBlog from "@/views/site-principal/SitePrincipalBlog";
 import SitePrincipalFooter from "@/components/site-principal/Footer";
 import HeaderSite from "@/components/site-principal/Header";
-import {
-  getImoveisAltaProcura,
-  getImoveisFrenteAoMar,
-  getImoveisNaPlanta,
-} from "@/data/imoveis";
+import { getImoveisAltaProcura } from "@/data/imoveisAltaProcura";
+import { getImoveisFrenteAoMar } from "@/data/imoveisFrenteAoMar";
+import { getImoveisNaPlanta } from "@/data/imoveisNaPlanta";
 
 const listImoveisDestaques = [
   {
