@@ -804,6 +804,7 @@ p {
   justify-content: space-around;
   width: 90%;
   margin: auto;
+  transition: 0.9s;
 }
 
 .container-site-principal-informacoes-imovel
@@ -877,6 +878,7 @@ p {
 
 .container-site-principal-informacoes-imovel-cliente-icones-medidas {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .container-site-principal-informacoes-imovel-cliente-icones-medidas li {
@@ -934,6 +936,20 @@ p {
 
 .container-site-principal-informacoes-imovel-cliente .receber-informacoes {
   width: 30%;
+}
+
+@media (max-width: 1300px) {
+  .container-site-principal-informacoes-imovel {
+    flex-direction: column;
+    align-items: center;
+    transition: 0.9s;
+  }
+
+  .container-site-principal-informacoes-imovel
+    .container-site-principal-informacoes-imovel-cliente:nth-child(1) {
+    width: 100%;
+    transition: 0.9s;
+  }
 }
 
 .container-button-preco-informacoes-imoveis {
@@ -1118,10 +1134,6 @@ p {
   .legenda-item {
     margin: 2px 0;
     transition: 0.5s;
-  }
-
-  .legenda-list {
-    border: 1px solid red;
   }
 }
 

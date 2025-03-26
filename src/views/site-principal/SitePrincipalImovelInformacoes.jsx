@@ -111,7 +111,9 @@ export default function SitePrincipalImoveisCarousel() {
 
         <p>Apartamento no Edifício Brava Aikon na Praia Brava. IM23685</p>
 
-        <p style={{display:'flex', margin:'20px 0 20px 0'}}>{getIcon().iconLocation}Localização</p>
+        <p style={{ display: "flex", margin: "20px 0 20px 0" }}>
+          {getIcon().iconLocation}Localização
+        </p>
 
         <div style={{ margin: "30px 0 30px 0" }}>
           <Ratings colorRating={"#0057B8"} />
