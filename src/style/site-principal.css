@@ -24,7 +24,6 @@
 }
 
 .dropdown-header {
-  color: #5a5a5a !important;
   font-size: 17px !important;
   width: 200px;
 }
@@ -66,6 +65,10 @@
   fill: #6d6d6d;
 }
 
+.button-drawer-text-left {
+  display: none !important;
+}
+
 @media (max-width: 1200px) {
   .space-img {
     transform: translateX(-170%) !important;
@@ -73,9 +76,31 @@
   }
 }
 
+@media (max-width: 800px) {
+  .space-img {
+    display: none !important;
+  }
+
+  .dropdown-header {
+    display: none !important;
+  }
+
+  .button-drawer-text-left {
+    display: initial !important;
+  }
+
+  .button-drawer-text-right {
+    display: none !important;
+  }
+}
+
 .titles-drawer-links {
   color: #265ae6;
   font-size: 20px;
+}
+
+.titles-drawer-links-text {
+  color: #ffffff;
 }
 
 /*--------------------------Home Site Principal------------------------*/
@@ -700,7 +725,6 @@ p {
   }
 
   .container-barra-footer ul {
-    
     flex-direction: column;
     margin: auto;
   }
@@ -931,8 +955,8 @@ p {
 
 /*---------------------carousel large-------------------------*/
 
-.testekk {
-  padding-top: 102px;
+.container-carousel-large-imovels {
+  padding-top: 78px;
 }
 
 .carousel-large-swiper .append-buttons {
@@ -1021,12 +1045,10 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding-top: 5;
-  padding-left: 0;
-  padding-right: 0;
   margin-left: 30;
-  width: 59%;
+  width: 61%;
   margin: auto;
+  margin-top: 15px;
   background: rgba(0, 0, 0, 0);
 }
 
@@ -1044,14 +1066,28 @@ p {
   margin: 10px 0 0 0;
   background-color: black;
   font-family: "Sora", sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   padding: 5px 8px;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: bold;
+  transition: 0.5s;
+}
+
+@media (max-width: 1200px) {
+  .legenda-item {
+    margin: 2px 0;
+    transition: 0.5s;
+  }
+
+  .legenda-list{
+    border: 1px solid red;
+  }
+  
 }
 
 .icon-list {
+  margin-top: 10px;
   display: flex;
 }
 

@@ -30,6 +30,18 @@ export default function HeaderSite() {
 
   return (
     <header className={`header-site ${header}`}>
+      <div>
+        <Button
+          className="button-drawer-text-left button-drawer-text"
+          type="text"
+          onClick={showDrawer}
+        >
+          <span className="material-symbols-outlined" style={{ fontSize: 30 }}>
+            menu
+          </span>
+        </Button>
+        <DrawerSite open={open} onCloseDrawer={onClose} />
+      </div>
       <h1></h1>
       <Space
         className="space-img"
@@ -66,7 +78,7 @@ export default function HeaderSite() {
         </div>
         <div>
           <Button
-            className="button-drawer-text"
+            className="button-drawer-text-right button-drawer-text"
             type="text"
             onClick={showDrawer}
           >

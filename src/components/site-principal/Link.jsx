@@ -106,7 +106,7 @@ export default function Links({
   ) : (
     <div>
       <Dropdown
-        className="dropdown-header"
+        className="dropdown-header-left dropdown-header"
         menu={{
           items,
         }}
@@ -115,7 +115,10 @@ export default function Links({
           pointAtCenter: true,
         }}
       >
-        <Button type="link" style={{ padding: "10px" }}>
+        <Button
+          type="link"
+          style={{ padding: "10px", color: color, width: "100%" }}
+        >
           {label}
         </Button>
       </Dropdown>
