@@ -6,6 +6,7 @@ import { Grid, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import { useEffect, useState } from "react";
 
 const images = [
   "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-26-1723828636.webp",
@@ -27,10 +28,29 @@ const images = [
 ];
 
 export default function SiteCardCarouselFotos() {
+  const [slidesPerView, setSlidesPerView] = useState(2);
+
+  const handleResize = () => {
+    if (window.innerWidth <= 1300) {
+      setSlidesPerView(1);
+    } else {
+      setSlidesPerView(2);
+    }
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div style={{ maxWidth: "800px", margin: "auto" }}>
+    <div className="container-carousel-grid-edificio-imovel">
       <Swiper
-        slidesPerView={2}
+        slidesPerView={slidesPerView}
         grid={{
           rows: 2,
           fill: "row",
