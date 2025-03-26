@@ -21,7 +21,7 @@ const listImgs = [
 
 export default function SitePrincipalCarouselInformacoesImovel() {
   return (
-    <div className="testekk">
+    <div className="container-carousel-large-imovels">
       <CarouselLargeImovel listImgs={listImgs}/>
     </div>
   );

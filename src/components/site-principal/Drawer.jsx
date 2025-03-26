@@ -1,6 +1,7 @@
 "use client";
 
 import { Drawer } from "antd";
+import Links from "./Link";
 
 const styleIcon = {
   color: "white",
@@ -31,28 +32,28 @@ export default function DrawerSite({ open, onCloseDrawer }) {
       destroyOnClose
     >
       <p className="titles-drawer-links">Imóveis</p>
-      <p>Imóveis à venda</p>
-      <p>Empreendimentos</p>
-      <p>Favoritos</p>
+      <p className="titles-drawer-links-text">Imóveis à venda</p>
+      <p className="titles-drawer-links-text">Empreendimentos</p>
+      <p className="titles-drawer-links-text">Favoritos</p>
       <br />
       <br />
       <p className="titles-drawer-links">Serviços</p>
-      <p>Anunciar imóvel</p>
-      <p>Calculadora de Imóvel</p>
-      <p>Encontre meu imóvel</p>
-      <p>Como comprar</p>
-      <p>Simular Financiamento</p>
+      <p className="titles-drawer-links-text">Anunciar imóvel</p>
+      <p className="titles-drawer-links-text">Calculadora de Imóvel</p>
+      <p className="titles-drawer-links-text">Encontre meu imóvel</p>
+      <p className="titles-drawer-links-text">Como comprar</p>
+      <p className="titles-drawer-links-text">Simular Financiamento</p>
       <br />
       <br />
       <p className="titles-drawer-links">Institucional</p>
-      <p>Quem somos</p>
-      <p>Contato</p>
-      <p>Trabalhe Conosco</p>
-      <p>Viva BC</p>
-      <p>Viva Itajaí</p>
-      <p>Blog</p>
-      <p>(47) 3367-0990 </p>
-      <p>(47) 99699-3030</p>
+      <p className="titles-drawer-links-text">Quem somos</p>
+      <p className="titles-drawer-links-text">Contato</p>
+      <p className="titles-drawer-links-text">Trabalhe Conosco</p>
+      <p className="titles-drawer-links-text">Viva BC</p>
+      <p className="titles-drawer-links-text">Viva Itajaí</p>
+      <p className="titles-drawer-links-text">Blog</p>
+      <p className="titles-drawer-links-text">(47) 3367-0990 </p>
+      <p className="titles-drawer-links-text">(47) 99699-3030</p>
     </Drawer>
   );
 }

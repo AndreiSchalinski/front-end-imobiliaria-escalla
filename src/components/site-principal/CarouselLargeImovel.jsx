@@ -28,7 +28,7 @@ export default function CarouselLargeImovel({ listImgs }) {
 
         <Swiper
           loop={true}
-          slidesPerView={1.65}
+          slidesPerView={1.6}
           centeredSlides={true}
           spaceBetween={10}
           pagination={{
@@ -54,9 +54,14 @@ export default function CarouselLargeImovel({ listImgs }) {
                 src={img}
                 alt={`Imagem ${i + 1}`}
                 layout="intrinsic"
-                width={2000}
-                height={1000}
-                style={{ borderRadius: 5, objectFit: "cover" }}
+                width={"auto"}
+                height={"auto"}
+                style={{
+                  borderRadius: 5,
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "auto",
+                }}
                 onClick={(e) => {
                   e.preventDefault();
                   openFacyboxImages(listImgs, i);
