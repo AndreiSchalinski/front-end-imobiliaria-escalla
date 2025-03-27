@@ -33,7 +33,7 @@ jobs:
             npm install next react react-dom
             npx next build
             chown -R www-data:www-data .
-            
+
       - name: "Rodar o servidor Next.js"
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -43,3 +43,16 @@ jobs:
           script: |
             cd /home/ubuntu/projetos/front-end-imobiliaria-escalla
             nohup npm run dev &> /dev/null &
+
+  #executa automação para instalar e configurar servidor web que redireciona domínio com porta exibida apenas para o domínio
+
+  #configure_nginx:
+    #needs: build_front_end_escalla_staging
+    #runs-on: ubuntu-latest
+    #steps:
+      #- name: "Acionar workflow para configuração do Nginx"
+        #uses: peter-evans/workflow-dispatch@v1
+        #with:
+          #repository: ${{ github.repository }}
+          #workflow: nginx-configuration.yml
+          #ref: refs/heads/staging
