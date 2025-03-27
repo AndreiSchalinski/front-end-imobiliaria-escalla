@@ -19,7 +19,7 @@ jobs:
           username: "root"
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "."
-          target: "projetos/front-end-imobiliaria-escalla"
+          target: "/home/ubuntu/projetos/front-end-imobiliaria-escalla"
 
       - name: "Build da aplicação"
         uses: appleboy/ssh-action@v1.0.3
@@ -28,7 +28,7 @@ jobs:
           username: "root"
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /projetos/front-end-imobiliaria-escalla
+            cd /home/ubuntu/projetos/front-end-imobiliaria-escalla
             npm install
             npm install next react react-dom
             npx next build --no-dev --no-progress -a
@@ -41,5 +41,5 @@ jobs:
           username: "root"
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /projetos/front-end-imobiliaria-escalla
+            cd /home/ubuntu/projetos/front-end-imobiliaria-escalla
             next start -p 3000 & # Inicia o servidor na porta 3000 em segundo plano
