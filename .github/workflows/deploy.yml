@@ -19,7 +19,7 @@ jobs:
           username: "root"
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "."
-          target: "projetos/front-end-site"
+          target: "projetos/front-end-imobiliaria-escalla"
 
       - name: "Build da aplicação"
         uses: appleboy/ssh-action@v1.0.3
@@ -28,9 +28,10 @@ jobs:
           username: "root"
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /projetos/front-end-site
+            cd /projetos/front-end-imobiliaria-escalla
             npm install
-            next build --no-dev --no-progress -a
+            npm install next react react-dom
+            npx next build --no-dev --no-progress -a
             chown -R www-data:www-data .
             
       - name: "Rodar o servidor Next.js"
@@ -40,5 +41,5 @@ jobs:
           username: "root"
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /projetos/front-end-site
+            cd /projetos/front-end-imobiliaria-escalla
             next start -p 3000 & # Inicia o servidor na porta 3000 em segundo plano
