@@ -1,0 +1,37 @@
+name: "Deploy projeto front-end Escalla imobiliária"
+on:
+  push:
+    Branches:
+      - staging
+jobs:
+  build_front_end_escalla_staging:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Baixar o código"
+        uses: actions/checkout@v4
+
+      - name: "Copiar arquivos para VPS"
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: "82.25.69.129"
+          username: "root"
+          password: ${{ secrets.SSH_PRIVATE_KEY}}
+          source: "."
+          target: "projetos/front-end-site"
+
+      - name: "Build da aplicação"
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: "82.25.69.129"
+          username: "root"
+          password: ${{ secrets.SSH_PRIVATE_KEY}}
+          script: |
+            cd /projetos/front-end-site
+            # Navegar até o diretório da aplicação front-end-imobiliaria-escalla
+            cd front-end-imobiliaria-escalla
+            # Instalar as dependências (caso necessário)
+            npm install
+            # Rodar o build diretamente com as flags desejadas
+            next build --no-dev --no-progress -a
+            chown -R www-data:www-data .
