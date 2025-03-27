@@ -28,7 +28,7 @@ jobs:
           username: "root"
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /projetos/front-end-site/front-end-imobiliaria-escalla
+            cd /projetos/front-end-site
             npm install
             next build --no-dev --no-progress -a
             chown -R www-data:www-data .
@@ -40,5 +40,5 @@ jobs:
           username: "root"
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /projetos/front-end-site/front-end-imobiliaria-escalla
+            cd /projetos/front-end-site
             next start -p 3000 & # Inicia o servidor na porta 3000 em segundo plano
