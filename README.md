@@ -51,6 +51,8 @@ Crie ou edite o arquivo de configuração do Nginx para configurar o proxy rever
 
 Edite o arquivo de configuração para algo assim:
 
+sudo nano default
+
 server {
     listen 80;
     server_name escallaimoveis.com www.escallaimoveis.com;
