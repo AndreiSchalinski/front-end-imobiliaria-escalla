@@ -31,7 +31,7 @@ jobs:
             cd /home/ubuntu/projetos/front-end-imobiliaria-escalla
             npm install
             npm install next react react-dom
-            npx next build --no-dev --no-progress -a
+            npx next build
             chown -R www-data:www-data .
             
       - name: "Rodar o servidor Next.js"
@@ -42,4 +42,4 @@ jobs:
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/ubuntu/projetos/front-end-imobiliaria-escalla
-            next start -p 3000 & # Inicia o servidor na porta 3000 em segundo plano
+            npm run dev & # Inicia o servidor na porta 3000 em segundo plano
