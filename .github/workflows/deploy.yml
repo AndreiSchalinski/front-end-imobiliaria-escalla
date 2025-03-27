@@ -42,4 +42,4 @@ jobs:
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/ubuntu/projetos/front-end-imobiliaria-escalla
-            npm run dev & # Inicia o servidor na porta 3000 em segundo plano
+            nohup npm run dev &> /dev/null &
