@@ -8,7 +8,7 @@ export const getImoveisNaPlanta = () => {
       quartos: 3,
       preco: 2345312.34,
       promocao: "",
-      chips: ["AAAAAAAAAAAAAA", "BBBBBBB"],
+      chips: ["Aceita permuta", "300 metros da praia"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -36,7 +36,7 @@ export const getImoveisNaPlanta = () => {
       quartos: 3,
       preco: 2345312.34,
       promocao: "",
-      chips: ["CCCCCCAAAAAAAAAA", "PPPPPPPPPPPPPPPP"],
+      chips: ["Churrasqueira a carvão", "Vista mar"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
