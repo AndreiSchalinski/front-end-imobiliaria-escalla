@@ -9,7 +9,7 @@ export const getImoveisFrenteAoMar = () => {
       quartos: 3,
       preco: 120333.78,
       promocao: 234345.76,
-      chips: ["OOOOO", "WWW", "HHHHHHHHHHHHH"],
+      chips: ["150 metros da praia", "Vista mar", "Mobiliado"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -38,7 +38,7 @@ export const getImoveisFrenteAoMar = () => {
       quartos: 3,
       preco: 120333.78,
       promocao: 234345.76,
-      chips: ["XXXX", "VV", "KKKKKKKKKKKKKKKKKKK"],
+      chips: ["Quadra mar", "Mobiliado"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",

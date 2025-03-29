@@ -39,7 +39,7 @@ export const getImoveisAltaProcura = () => {
       quartos: 3,
       preco: 2345312.34,
       promocao: "",
-      chips: ["AAA", "LLLLLLLL"],
+      chips: ["Churrasqueira frente mar", "Vista mar"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -68,7 +68,7 @@ export const getImoveisAltaProcura = () => {
       quartos: 1,
       preco: 234123.45,
       promocao: 233345.12,
-      chips: ["Testandooooooo", "hhhhhhhh", "ççç"],
+      chips: ["Vista mar", "Piscina privativa", "Na planta/2025"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
@@ -97,7 +97,7 @@ export const getImoveisAltaProcura = () => {
       quartos: 3,
       preco: 120333.78,
       promocao: 234345.76,
-      chips: ["ppppp", "ASDASDASDA", "FGHFGHFGHF", "CVBVBN"],
+      chips: ["Próximo a Beira Rio", "Na planta/2025"],
       imgs: [
         "https://imobillesite.s3.sa-east-1.amazonaws.com/real-estates-photo/April2024/photoshop-novo0000-1713981945.jpg",
         "https://imobillesite.s3.sa-east-1.amazonaws.com/ventures-photo/August2024/mueller-ocean-club-22-1723828635.webp",
