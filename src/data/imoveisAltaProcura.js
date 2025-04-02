@@ -4,7 +4,7 @@ export const getImoveisAltaProcura = () => {
       codigo: "IM06103",
       localizacao: "Balneário Camboriú - Centro",
       dadosGerais:
-        "Apartamento no Edifício Alameda Jardins em Balneário Camboriú com 228,00m²",
+        "Apartamento no Edifício Alameda Jardins em Balneário Camboriú com 228,00m² ",
       metragem: 123.13,
       vagas: 4,
       quartos: 2,

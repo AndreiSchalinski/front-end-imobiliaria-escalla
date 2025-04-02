@@ -1,3 +1,6 @@
+
+"use client"
+
 import SitePrincipalHomePage from "@/views/site-principal/SitePrincipalHomePage";
 import SitePrincipalDestaques from "@/views/site-principal/SitePrincipalDestaques";
 import SitePrincipalCarouselDestaques from "@/views/site-principal/SitePrincipalCarouselDestaques";
@@ -10,6 +13,8 @@ import HeaderSite from "@/components/site-principal/Header";
 import { getImoveisAltaProcura } from "@/data/imoveisAltaProcura";
 import { getImoveisFrenteAoMar } from "@/data/imoveisFrenteAoMar";
 import { getImoveisNaPlanta } from "@/data/imoveisNaPlanta";
+import { getImoveisDestaques } from "@/services/service.imoveis.destaque";
+import { useEffect } from "react";
 
 const listImoveisDestaques = [
   {
@@ -30,6 +35,15 @@ const listImoveisDestaques = [
 ];
 
 export default function Home() {
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      await getImoveisDestaques();
+    };
+  
+    fetchData();
+  }, []);
+
   return (
     <>
       <HeaderSite />
