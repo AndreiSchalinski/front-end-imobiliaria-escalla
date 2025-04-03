@@ -5,18 +5,20 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
-export default function BlogCardArtigo({ img, titulo }) {
+export default function BlogCardArtigo({ img, titulo, cidade }) {
   return (
-    <Card
-      sx={{ width: 273, height: 300, display: "flex", flexDirection: "column" }}
-    >
-      <div>
+    <Card className="card-artigo-blog">
+      <div className="container-title-card-blog">
+        <p>{cidade}</p>
+      </div>
+
+      <div style={{ marginTop: 10 }}>
         <Image
           src={img}
           alt=""
           layout="intrinsic"
-          width={273}
-          height={180.17}
+          width={"100%"}
+          height={"auto"}
         />
       </div>
       <CardContent
