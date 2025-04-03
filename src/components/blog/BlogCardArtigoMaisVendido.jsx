@@ -3,24 +3,10 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
 
-export default function BlogCardArtigo({ img, titulo, cidade }) {
+export default function BlogCardArtigoMaisVendido({ titulo, legenda }) {
   return (
-    <Card className="card-artigo-blog">
-      <div className="container-title-card-blog">
-        <p>{cidade}</p>
-      </div>
-
-      <div style={{ marginTop: 10 }}>
-        <Image
-          src={img}
-          alt=""
-          layout="intrinsic"
-          width={"100%"}
-          height={"auto"}
-        />
-      </div>
+    <Card className="card-artigo-mais-lido-carousel-blog">
       <CardContent
         style={{
           marginTop: 13,
@@ -45,6 +31,19 @@ export default function BlogCardArtigo({ img, titulo, cidade }) {
           }}
         >
           {titulo}
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            display: "-webkit-box",
+            WebkitBoxOrient: "vertical",
+            WebkitLineClamp: 2,
+            lineHeight: 1.3,
+          }}
+        >
+          {legenda}
         </Typography>
       </CardContent>
 
