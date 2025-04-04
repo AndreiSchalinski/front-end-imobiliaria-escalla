@@ -108,12 +108,12 @@
 .card-artigo-mais-lido-carousel-blog {
   width: 273px;
   height: 300px;
-  
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.418) !important;
 }
 
 .swiper-container-carousel-artigos-mais-lidos-blog {
   width: 59.09%;
+  margin-top: 30px;
 }
 
 .swiper-container-carousel-artigos-mais-lidos-blog .swiper-slide {
@@ -124,8 +124,7 @@
   align-items: center;
   width: 273px;
   height: 300px;
-  padding: 0 0;
-  border: 1px solid red;
+  padding: 20px 0;
   margin: 0;
 }
 
