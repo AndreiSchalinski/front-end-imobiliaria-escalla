@@ -584,12 +584,15 @@ p {
 
 .container-site-principal-consultor {
   width: 250px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   margin: 0 2.5px;
   display: flex;
   flex-direction: column;
   justify-content: end;
+}
+
+.container-site-principal-consultor-imagem {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .container-site-principal-consultor-button {

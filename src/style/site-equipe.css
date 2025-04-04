@@ -1,0 +1,112 @@
+/*-------------------home page equipe-------------------*/
+
+.container-equipe-home {
+  padding-top: 50px;
+}
+
+.container-links-equipe-home {
+  position: absolute;
+  margin: 180px 0 0 20%;
+  max-width: 585px;
+}
+
+.container-links-equipe-home-title {
+  font-size: 38px;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 55px;
+}
+
+.container-links-equipe-home-legenda {
+  font-size: 16px;
+  color: white;
+}
+
+/*-------------------informações serviços page equipe-------------------*/
+
+.container-equipe-servicos {
+  display: flex;
+  max-width: 1170px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.container-equipe-servicos-informacoes {
+  max-width: 540px;
+  margin-left: 40px;
+}
+
+.container-equipe-servicos-informacoes-title {
+  font-size: 32px;
+  line-height: 45px;
+}
+
+.container-equipe-servicos-informacoes-texts {
+  font-size: 14px;
+  color: #64748b;
+  font-family: "Sora", serif;
+  margin: 20px 0;
+}
+
+/*-------------------informações feedbacks clientes page equipe-------------------*/
+
+.container-equipe-feedbacks-clientes {
+  max-width: 1140px;
+  margin: auto;
+  margin-top: 90px;
+}
+
+.container-equipe-feedbacks-clientes-title {
+  font-size: 32px;
+  color: #0519aa;
+  text-align: center;
+}
+
+/*-------------------informações card feedback clientes page equipe-------------------*/
+
+.card-feedback-cliente-equipe {
+  margin: 40px 10px;
+  padding: 20px 50px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-shadow: 10px 10px 2px #ffc24b;
+}
+
+.card-feedback-cliente-equipe-nome,
+.card-feedback-cliente-equipe-papel,
+.card-feedback-cliente-equipe-relato {
+  font-family: "Sora", serif;
+  display: flex;
+  justify-content: center;
+}
+
+.card-feedback-cliente-equipe-nome {
+  font-size: 20px;
+
+  color: #020617;
+}
+
+.card-feedback-cliente-equipe-papel {
+  font-size: 16px;
+  color: #333333;
+}
+
+.card-feedback-cliente-equipe-relato {
+  font-size: 19px;
+  color: #707070;
+  margin-top: 10px;
+}
+
+.swiper-container-carousel-equipe-feedbacks-clientes .swiper-pagination-bullet {
+  position: relative;
+  top: 10px;
+  height: 12px;
+  width: 12px;
+}
+
+.swiper-container-carousel-equipe-feedbacks-clientes
+  .swiper-pagination-bullet-active {
+  height: 12px;
+  width: 12px;
+  background: #ffc24b;
+}
