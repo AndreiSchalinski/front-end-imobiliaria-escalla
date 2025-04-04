@@ -108,7 +108,7 @@
 .card-artigo-mais-lido-carousel-blog {
   width: 273px;
   height: 300px;
-  margin: 20px;
+  
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.418) !important;
 }
 
@@ -122,8 +122,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 273px;
+  height: 300px;
   padding: 0 0;
+  border: 1px solid red;
+  margin: 0;
 }
 
 .swiper-container-carousel-artigos-mais-lidos-blog .swiper-button-next,

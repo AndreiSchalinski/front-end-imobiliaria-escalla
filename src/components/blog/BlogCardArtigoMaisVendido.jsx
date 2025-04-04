@@ -39,7 +39,7 @@ export default function BlogCardArtigoMaisVendido({ titulo, legenda }) {
             textOverflow: "ellipsis",
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",
-            WebkitLineClamp: 2,
+            WebkitLineClamp: 7,
             lineHeight: 1.3,
           }}
         >
