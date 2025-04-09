@@ -1,0 +1,20 @@
+.container-home-artigo {
+  margin: auto;
+  padding-top: 100px;
+  max-width: 1140px;
+}
+
+.container-home-artigo p {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Sora", serif;
+  line-height: 50px;
+  margin: 50px 0;
+}
+
+.border-div {
+  height: 5px;
+  width: 912px;
+  background-color: #3762ed;
+  margin: 65px auto;
+}
