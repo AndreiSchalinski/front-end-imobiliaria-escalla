@@ -38,7 +38,7 @@ export default function Home() {
   
   useEffect(() => {
     const fetchData = async () => {
-      await getImoveisDestaques();
+      //await getImoveisDestaques();
     };
   
     fetchData();
