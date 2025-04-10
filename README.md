@@ -51,7 +51,7 @@ Crie ou edite o arquivo de configuração do Nginx para configurar o proxy rever
 
 Edite o arquivo de configuração para algo assim:
 
-sudo nano default
+sudo nano /etc/nginx/sites-available/default
 
 server {
     listen 80;
