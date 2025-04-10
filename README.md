@@ -64,6 +64,37 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
+
+    # Abaixo são as configurações para o projeto de Lexical text editor
+        location /artigos {
+                proxy_pass http://localhost:3001;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }
+
+        location /node_modules/ {
+                proxy_pass http://localhost:3001;
+        }
+
+        # Proxy Vite dev paths
+        location /@vite/ {
+                proxy_pass http://localhost:3001;
+        }
+
+        location /@react-refresh {
+                proxy_pass http://localhost:3001;
+        }
+
+        location /src/ {
+                proxy_pass http://localhost:3001;
+        }
+
+        location /@fs/ {
+                proxy_pass http://localhost:3001;
+        }
 }
 
 Testar e reiniciar o Nginx:
