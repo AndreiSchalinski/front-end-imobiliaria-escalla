@@ -44,7 +44,6 @@ const artigo = {
 };
 
 export default function ArtigoHomePage() {
-
   return (
     <div className="container-home-artigo">
       <p>{artigo.titulo}</p>
@@ -55,10 +54,9 @@ export default function ArtigoHomePage() {
 
       <div>
         <iframe
-          src={'http://localhost:3001/'}
+          src={"https://escallaimoveis.com/artigos"}
           width="100%"
-          height="600"
-          style={{ border: "none" }}
+          style={{ border: "none", minHeight: 6000 }}
         ></iframe>
       </div>
     </div>
