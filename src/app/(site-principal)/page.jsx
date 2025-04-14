@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 
 import SitePrincipalHomePage from "@/views/site-principal/SitePrincipalHomePage";
 import SitePrincipalDestaques from "@/views/site-principal/SitePrincipalDestaques";
@@ -35,15 +34,11 @@ const listImoveisDestaques = [
 ];
 
 export default function Home() {
-  
   useEffect(() => {
     const fetchData = async () => {
-      
-      const result = await getImoveisDestaques();
-
-      console.log(result)
+      await getImoveisDestaques();
     };
-  
+
     fetchData();
   }, []);
 
