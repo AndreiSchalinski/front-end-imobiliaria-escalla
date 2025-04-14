@@ -38,7 +38,10 @@ export default function Home() {
   
   useEffect(() => {
     const fetchData = async () => {
-      //await getImoveisDestaques();
+      
+      const result = await getImoveisDestaques();
+
+      console.log(result)
     };
   
     fetchData();
