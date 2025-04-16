@@ -4,6 +4,7 @@ const customAxios = (contentType, responseType) => {
   const token = JSON.parse(localStorage.getItem("user"));
 
   const axiosInstance = axios.create({
+    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
     headers: {
       "Content-Type": contentType ? contentType : "application/json",
     },

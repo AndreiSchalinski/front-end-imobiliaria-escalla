@@ -4,7 +4,7 @@ import Ratings from "@/components/site-principal/Ratings";
 import { getIcon } from "@/assets/icons";
 import { imovelDestaque } from "@/data/imovelDestaque";
 
-export default function Destaques() {
+export default function Destaques({imDestaque}) {
   return (
     <section className="container-site-principal-destaques">
       <h1>Imóveis em destaque</h1>
@@ -23,33 +23,32 @@ export default function Destaques() {
             <li>
               <p>
                 {getIcon("#000000").iconBed}&nbsp;&nbsp;
-                {imovelDestaque.qtdDormitorios}
+                {imDestaque.quantidadeDormitorios}
               </p>
             </li>
             <li>
               <p>
                 {getIcon("#000000").iconShower}&nbsp;&nbsp;
-                {imovelDestaque.qtdSuites}
+                {imDestaque.quantidadeSuites}
               </p>
             </li>
             <li>
               <p>
                 {getIcon("#000000").iconRuler}&nbsp;&nbsp;de{" "}
-                {imovelDestaque.metragemApsMin}m a{" "}
-                {imovelDestaque.metragemApsMax}m
+                {imDestaque.metragemApartamentos}
               </p>
             </li>
             <li>
               <p>
                 {getIcon("#000000").iconCar}&nbsp;&nbsp;
-                {imovelDestaque.vagasGaragemMin} ou{" "}
-                {imovelDestaque.vagasGaragemMax} vagas de garagem
+                {imDestaque.vagasGaragemMin} ou{" "}
+                {imDestaque.vagasGaragemMax} vagas de garagem
               </p>
             </li>
             <li>
               <p>
                 {getIcon("#000000").iconLocation}&nbsp;&nbsp;
-                {imovelDestaque.localizacao}
+                {imDestaque.localizacao}
               </p>
             </li>
           </ul>
