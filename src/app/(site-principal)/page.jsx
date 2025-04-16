@@ -13,7 +13,7 @@ import { getImoveisAltaProcura } from "@/data/imoveisAltaProcura";
 import { getImoveisFrenteAoMar } from "@/data/imoveisFrenteAoMar";
 import { getImoveisNaPlanta } from "@/data/imoveisNaPlanta";
 import { getImoveisDestaques } from "@/services/service.imoveis.destaque";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const listImoveisDestaques = [
   {
@@ -34,11 +34,13 @@ const listImoveisDestaques = [
 ];
 
 export default function Home() {
+  const [imovelDestaque, setImovelDestaque] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
-      await getImoveisDestaques();
+      const {data} = await getImoveisDestaques();
+      setImovelDestaque(data[0]);
     };
-
     fetchData();
   }, []);
 
@@ -46,7 +48,7 @@ export default function Home() {
     <>
       <HeaderSite />
       <SitePrincipalHomePage />
-      <SitePrincipalDestaques />
+      {imovelDestaque ? <SitePrincipalDestaques imDestaque={imovelDestaque}/> : <div>Carregando...</div>}
       <SitePrincipalCarouselDestaques
         listImoveisDestaques={listImoveisDestaques}
       />
