@@ -2,7 +2,11 @@ import { getIcon } from "@/assets/icons";
 
 import { Button, Dropdown, Space } from "antd";
 
-export default function Drops({items}) {
+export default function Drops({ items }) {
+  const enviarURLImovel = () => {
+    console.log(items);
+  };
+
   return (
     <Space direction="vertical">
       <Space wrap>
@@ -21,6 +25,7 @@ export default function Drops({items}) {
               border: "none",
               background: "rgba(255, 255, 255, 0)",
             }}
+            onClick={enviarURLImovel}
           >
             {getIcon().iconCompartilhamento}
           </Button>
