@@ -27,7 +27,7 @@ export default function HomePage() {
           <h1>A melhor experiência é morar e investir bem!</h1>
           <h3>Cidade. Campo. Litoral</h3>
         </div>
-        <div
+        {/*<div
           className="home-page-container-filters"
           style={{
             maxWidth: openInputs ? 1200 : 1200,
@@ -53,7 +53,7 @@ export default function HomePage() {
             }
             label={"Tipo imóvel"}
           />
-          {/*<Grouped />*/}
+
           <InputText label={"Digite condomínio, região, bairro, cidade"} />
           <Buttons
             onClick={handleToggleInputs}
@@ -116,6 +116,9 @@ export default function HomePage() {
             onClick={handleToggleInputFiltro}
           />
         </div>
+        */}
+
+        
       </div>
     </div>
   );

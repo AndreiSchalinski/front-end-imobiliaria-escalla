@@ -17,7 +17,11 @@ const listLegends = [
   //"Living integrado"
 ];
 
-export default function ButtonsLegendaImovel({ listImgs, index }) {
+export default function ButtonsLegendaImovel({ listImgs, index, listCaracteristicas }) {
+  const caracteristicasEmpreendimento = () => {
+    return listCaracteristicas.split(",").map((item) => item.trim());
+  };
+
   const [state, setState] = useState({
     open: false,
     vertical: "bottom",
@@ -91,15 +95,15 @@ export default function ButtonsLegendaImovel({ listImgs, index }) {
         autoHideDuration={3000}
         ContentProps={{
           sx: {
-            backgroundColor: "#5783eb", 
-            color: "#fff", 
-            fontWeight:'bold'
+            backgroundColor: "#5783eb",
+            color: "#fff",
+            fontWeight: "bold",
           },
         }}
       />
 
       <ul className="legenda-list">
-        {listLegends.map((el, i) => (
+        {caracteristicasEmpreendimento().map((el, i) => (
           <li key={i} className="legenda-item">
             {el}
           </li>
