@@ -5,37 +5,6 @@ import { getIcon } from "@/assets/icons";
 import Ratings from "@/components/site-principal/Ratings";
 import CardDescription from "../../components/site-principal/CardDescription";
 
-const listChecksImovel = [
-  "Cozinha",
-  "integrada",
-  "Área de serviço",
-  "Suíte máster",
-  "Banheira de hidromassagem",
-  "Vista mar",
-  "Sacada integrada",
-  "Espaço gourmet",
-  "Lavabo",
-  "Living integrado",
-  "Quadra mar",
-];
-
-const listChecksEmpreendimento = [
-  "Piscina",
-  "Playground",
-  "Salão de festas",
-  "Salão de jogos",
-  "Brinquedoteca",
-  "Espaço",
-  "Fitness",
-  "Espaço",
-  "Gourmet",
-  "Cinema",
-  "Sala de Massagem",
-  "Spa",
-  "Sala de descanso",
-  "Sauna úmida",
-];
-
 export default function SitePrincipalImoveisCarousel({ imovel }) {
   const caracteristicasList = () => {
     return imovel.caracteristicas.split(",").map((item) => item.trim());
