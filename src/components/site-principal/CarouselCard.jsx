@@ -83,13 +83,9 @@ export default function SiteCardCarousel({ imovel }) {
             {getIcon().iconLocation} <p>{imovel?.localizacao}</p>
           </div>
 
-          <div className="card-imove-legendas-5">{imovel?.tituloAnuncio}</div>
-
-          <div className="card-imove-legendas-2">
-            <p>
-              {imovel.dadosGerais} &nbsp;
-              <span className="cod-imovel">{imovel.imovelCod}</span>
-            </p>
+          <div className="card-imove-legendas-5">
+            {imovel?.tituloAnuncio} &nbsp;{" "}
+            <span style={{color:'#83B1C1', fontWeight:'bold'}}>{imovel.imovelCod}</span>
           </div>
 
           <ul className="card-imove-legendas-3">

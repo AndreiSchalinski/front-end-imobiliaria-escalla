@@ -91,7 +91,7 @@ export default function SitePrincipalImoveisCarousel({ imovel }) {
 
         <div style={{ display: "flex" }}>
           <p>{imovel.tituloAnuncio} &nbsp;</p>
-          <p style={{color:'#83B1C1'}}>{imovel.imovelCod}</p>
+          <p style={{color:'#83B1C1', fontWeight:'bold'}}>{imovel.imovelCod}</p>
         </div>
 
         <p style={{ display: "flex", margin: "20px 0 20px 0" }}>
