@@ -110,7 +110,7 @@ export default function SiteCardCarousel({ imovel }) {
           </ul>
 
           <div className="card-imove-legendas-4">
-            <p>R$ {imovel.preco}</p>
+            <p> {imovel.preco}</p>
           </div>
 
           <ul style={{ padding: "10px 10px" }}>
