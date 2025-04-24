@@ -28,7 +28,7 @@ export default function CarouselLargeImovel({ imovel }) {
           justifyContent: "center",
         }}
       >
-        <ButtonsLegendaImovel listImgs={imovel?.imagens} index={indexImg} />
+        <ButtonsLegendaImovel listImgs={imovel?.imagens} index={indexImg} listCaracteristicas={imovel.caracteristicas} />
 
         <Swiper
           loop={true}
