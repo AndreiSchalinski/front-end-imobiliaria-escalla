@@ -12,7 +12,9 @@ import {
 } from "@/services/service.imoveis.destaque";
 
 export default async function ImoveisPage({ params }) {
-  const imovelRes = await getImovel(params.id);
+  const {id} = await  params;
+
+  const imovelRes = await getImovel(id);
   const destaquesRes = await getImoveisDestaques();
 
   return (
@@ -20,7 +22,7 @@ export default async function ImoveisPage({ params }) {
       <HeaderSite />
       <SitePrincipalCarouselInformacoesImovel imovel={imovelRes.data} />
       <SitePrincipalButtonsApresentacao />
-      <SitePrincipalImovelInformacoes imovel={imovelRes.data}/>
+      <SitePrincipalImovelInformacoes imovel={imovelRes.data} />
       <SitePrincipalSobreEdificio />
       <SitePrincipalCarouselDestaques
         listCategoriasImoveis={destaquesRes.data}

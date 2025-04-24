@@ -3,13 +3,10 @@ import Button from "@mui/material/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { getIcon } from "@/assets/icons";
-import { useRouter } from "next/navigation";
 
 export default function SiteCardCarousel({ imovel }) {
-  const router = useRouter();
-
   const redirectToImoveis = (imovel) => {
-    router.push(`/imoveis/${imovel.id}`);
+    window.location.href = `/imoveis/${imovel.id}`;
   };
 
   const fazerLista = () => {
@@ -86,9 +83,7 @@ export default function SiteCardCarousel({ imovel }) {
             {getIcon().iconLocation} <p>{imovel?.localizacao}</p>
           </div>
 
-          <div className="card-imove-legendas-5">
-            {imovel?.tituloAnuncio}
-          </div>
+          <div className="card-imove-legendas-5">{imovel?.tituloAnuncio}</div>
 
           <div className="card-imove-legendas-2">
             <p>
@@ -139,11 +134,11 @@ export default function SiteCardCarousel({ imovel }) {
                   letterSpacing: "2px",
                   textTransform: "none",
                   boxShadow: "none",
-                  transition:'0.3s',
+                  transition: "0.3s",
                   "&:hover": {
                     boxShadow: "none",
-                    color:'rgb(74, 199, 240)',
-                    transition:'0.3s'
+                    color: "rgb(74, 199, 240)",
+                    transition: "0.3s",
                   },
                 }}
                 onClick={() => redirectToImoveis(imovel)}
