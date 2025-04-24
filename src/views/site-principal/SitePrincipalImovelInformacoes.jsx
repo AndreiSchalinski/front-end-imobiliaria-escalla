@@ -36,26 +36,33 @@ const listChecksEmpreendimento = [
   "Sauna úmida",
 ];
 
-export default function SitePrincipalImoveisCarousel({imovel}) {
-
-  console.log(imovel)
-
+export default function SitePrincipalImoveisCarousel({ imovel }) {
   const caracteristicasList = () => {
     return imovel.caracteristicas.split(",").map((item) => item.trim());
   };
 
   const caracteristicasEmpreendimento = () => {
-    return imovel.empreendimento.opcoesLazer.split(",").map((item) => item.trim());
-  }
+    return imovel.empreendimento.opcoesLazer
+      .split(",")
+      .map((item) => item.trim());
+  };
 
   return (
     <div className="container-site-principal-informacoes-imovel">
       <div className="container-site-principal-informacoes-imovel-cliente">
         <ul className="container-site-principal-informacoes-imovel-cliente-icones-medidas">
-          <li>{getIcon("#83B1C1").iconRuler} {imovel.metragemApartamento}m²</li>
-          <li>{getIcon("#83B1C1").iconShower} {imovel.qtdSuites} suítes</li>
-          <li>{getIcon("#83B1C1").iconBed} {imovel.qtdDormitorios} quartos</li>
-          <li>{getIcon("#83B1C1").iconCar} {imovel.qtdVagasGaragem} vagas</li>
+          <li>
+            {getIcon("#83B1C1").iconRuler} {imovel.metragemApartamento}m²
+          </li>
+          <li>
+            {getIcon("#83B1C1").iconShower} {imovel.qtdSuites} suítes
+          </li>
+          <li>
+            {getIcon("#83B1C1").iconBed} {imovel.qtdDormitorios} quartos
+          </li>
+          <li>
+            {getIcon("#83B1C1").iconCar} {imovel.qtdVagasGaragem} vagas
+          </li>
         </ul>
 
         <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
@@ -87,9 +94,7 @@ export default function SitePrincipalImoveisCarousel({imovel}) {
         <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2">
           <h3>Sobre este imóvel</h3>
 
-          <p>
-            {imovel.informacoesGerais}
-          </p>
+          <p>{imovel.informacoesGerais}</p>
 
           <CardDescription />
         </div>
@@ -115,10 +120,13 @@ export default function SitePrincipalImoveisCarousel({imovel}) {
           </Button>
         </div>
 
-        <p>Apartamento no Edifício Brava Aikon na Praia Brava. IM23685</p>
+        <div style={{ display: "flex" }}>
+          <p>{imovel.tituloAnuncio} &nbsp;</p>
+          <p style={{color:'#83B1C1'}}>{imovel.imovelCod}</p>
+        </div>
 
         <p style={{ display: "flex", margin: "20px 0 20px 0" }}>
-          {getIcon().iconLocation} {imovel.empreendimento.localizacao}
+          {getIcon().iconLocation} {imovel.localizacao}
         </p>
 
         <div style={{ margin: "30px 0 30px 0" }}>

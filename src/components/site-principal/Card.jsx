@@ -7,15 +7,26 @@ import Image from "next/image";
 
 export default function ImgMediaCard({ img, titulo, legenda }) {
   return (
-    <Card sx={{ maxWidth: 345, border: "1px solid black", padding: "4px 4px" }}>
+    <Card sx={{ maxWidth: 345, border: "1px solid black", padding: "4px 4px", height: "100%" }}>
       <div>
-        <Image src={img} alt="" layout="intrinsic"/>
+        <Image src={img} alt="" layout="intrinsic" />
       </div>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {titulo}
         </Typography>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "text.secondary",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            display: "-webkit-box",
+            WebkitBoxOrient: "vertical",
+            WebkitLineClamp: 2,
+            lineHeight: 1.3,
+          }}
+        >
           {legenda}
         </Typography>
       </CardContent>
