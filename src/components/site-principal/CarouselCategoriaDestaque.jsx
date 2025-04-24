@@ -4,15 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import CardCarousel from "@/components/site-principal/CarouselCard";
 
-export default function CarouselDestaques({
-  categoriaDestaque,
-  legenda,
-  listaCategorias,
-}) {
+export default function CarouselDestaques({ categoria }) {
+  
   return (
     <div className="container-carousel-destaques">
-      <h1>{categoriaDestaque}</h1>
-      <p>{legenda}</p>
+      <h1>{categoria.nome}</h1>
 
       <Swiper
         loop={false}
@@ -37,12 +33,15 @@ export default function CarouselDestaques({
         modules={[Pagination, Navigation]}
         className=" swiper-container-carousel"
       >
-        {listaCategorias.map((imovel, index) => (
-          <SwiperSlide key={index}>
-            <CardCarousel key={index} imovel={imovel} />
+        {categoria.imoveis.map((imovel, j) => (
+          <SwiperSlide key={j}>
+            <CardCarousel key={j} imovel={imovel} />
           </SwiperSlide>
         ))}
       </Swiper>
+      {/*<p>{categoria.legenda}</p><div }>{JSON.stringify(imovel)}</div>
+    
+      */}
     </div>
   );
 }

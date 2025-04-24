@@ -9,7 +9,7 @@ export default function SitePrincipalBlog() {
     <div className="container-site-principal-blog">
       <ul className="container-site-principal-blog-link">
         <li>
-          <h1>Quer acompanhar as novidades?</h1>
+          <h2>Quer acompanhar as novidades?</h2>
         </li>
         <li>
           <p>
@@ -39,7 +39,7 @@ export default function SitePrincipalBlog() {
             img={ImgBlog1}
             titulo={"long established"}
             legenda={
-              "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that...."
+              "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that sjdnfksdfsdfsdfnsodfisodifsodnfosdnfsdfiosdfmsomsdnfjsdnfjs"
             }
           />
         </li>
@@ -48,7 +48,7 @@ export default function SitePrincipalBlog() {
             img={ImgBlog2}
             titulo={"long established"}
             legenda={
-              "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that...."
+              "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
             }
           />
         </li>
@@ -57,7 +57,7 @@ export default function SitePrincipalBlog() {
             img={ImgBlog3}
             titulo={"long established"}
             legenda={
-              "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that...."
+              "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
             }
           />
         </li>

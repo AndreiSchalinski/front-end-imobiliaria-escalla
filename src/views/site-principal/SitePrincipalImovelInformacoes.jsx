@@ -36,20 +36,38 @@ const listChecksEmpreendimento = [
   "Sauna úmida",
 ];
 
-export default function SitePrincipalImoveisCarousel() {
+export default function SitePrincipalImoveisCarousel({ imovel }) {
+  const caracteristicasList = () => {
+    return imovel.caracteristicas.split(",").map((item) => item.trim());
+  };
+
+  const caracteristicasEmpreendimento = () => {
+    return imovel.empreendimento.opcoesLazer
+      .split(",")
+      .map((item) => item.trim());
+  };
+
   return (
     <div className="container-site-principal-informacoes-imovel">
       <div className="container-site-principal-informacoes-imovel-cliente">
         <ul className="container-site-principal-informacoes-imovel-cliente-icones-medidas">
-          <li>{getIcon("#83B1C1").iconRuler} 228m²</li>
-          <li>{getIcon("#83B1C1").iconShower} 4 suítes</li>
-          <li>{getIcon("#83B1C1").iconBed} 4 quartos</li>
-          <li>{getIcon("#83B1C1").iconCar} 3 vagas</li>
+          <li>
+            {getIcon("#83B1C1").iconRuler} {imovel.metragemApartamento}m²
+          </li>
+          <li>
+            {getIcon("#83B1C1").iconShower} {imovel.qtdSuites} suítes
+          </li>
+          <li>
+            {getIcon("#83B1C1").iconBed} {imovel.qtdDormitorios} quartos
+          </li>
+          <li>
+            {getIcon("#83B1C1").iconCar} {imovel.qtdVagasGaragem} vagas
+          </li>
         </ul>
 
         <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
           <h3>O que você vai encontrar nesse imóvel:</h3>
-          {listChecksImovel.map((el, index) => {
+          {caracteristicasList().map((el, index) => {
             return (
               <p key={index}>
                 &nbsp; {getIcon().iconCircleCheck}
@@ -62,7 +80,7 @@ export default function SitePrincipalImoveisCarousel() {
 
         <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
           <h3>O que você vai encontrar nesse empreendimento:</h3>
-          {listChecksEmpreendimento.map((el, index) => {
+          {caracteristicasEmpreendimento().map((el, index) => {
             return (
               <p key={index}>
                 &nbsp; {getIcon().iconCircleCheck}
@@ -76,21 +94,14 @@ export default function SitePrincipalImoveisCarousel() {
         <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2">
           <h3>Sobre este imóvel</h3>
 
-          <p>
-            ANDAR ALTO VISTA MAR FINAMENTE MOBILIADO - Apartamento no Edifício
-            Alameda Jardins em Balneário Camboriú com 228,00m² privativos, 04
-            suítes sendo uma máster com closet, finamente mobiliado pela
-            Kitchens, jacuzzi no living, sala de estar, sala de jantar, home
-            office, lavabo, cozinha, área de serviço, vista mar e 03 vagas de
-            garagem.
-          </p>
+          <p>{imovel.informacoesGerais}</p>
 
           <CardDescription />
         </div>
       </div>
       <div className="container-site-principal-informacoes-imovel-cliente receber-informacoes">
         <div className="container-button-preco-informacoes-imoveis">
-          <p>R$ 3.200.000,00</p>
+          <p>{imovel.preco}</p>
 
           <Button
             variant="contained"
@@ -109,10 +120,13 @@ export default function SitePrincipalImoveisCarousel() {
           </Button>
         </div>
 
-        <p>Apartamento no Edifício Brava Aikon na Praia Brava. IM23685</p>
+        <div style={{ display: "flex" }}>
+          <p>{imovel.tituloAnuncio} &nbsp;</p>
+          <p style={{color:'#83B1C1'}}>{imovel.imovelCod}</p>
+        </div>
 
         <p style={{ display: "flex", margin: "20px 0 20px 0" }}>
-          {getIcon().iconLocation}Localização
+          {getIcon().iconLocation} {imovel.localizacao}
         </p>
 
         <div style={{ margin: "30px 0 30px 0" }}>

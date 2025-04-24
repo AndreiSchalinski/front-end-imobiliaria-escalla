@@ -6,11 +6,15 @@ import { Pagination, Navigation } from "swiper/modules";
 import ButtonsLegendaImovel from "./ButtonsLegendaImovel";
 import { useState } from "react";
 
-export default function CarouselLargeImovel({ listImgs }) {
+export default function CarouselLargeImovel({ imovel }) {
   const [indexImg, setIndexImg] = useState(null);
 
   const handleSlideChange = (swiper) => {
     setIndexImg(swiper.realIndex);
+  };
+
+  const getImageSrc = (img) => {
+    return `data:image/jpeg;base64,${img}`;
   };
 
   return (
@@ -24,7 +28,7 @@ export default function CarouselLargeImovel({ listImgs }) {
           justifyContent: "center",
         }}
       >
-        <ButtonsLegendaImovel listImgs={listImgs} index={indexImg} />
+        <ButtonsLegendaImovel listImgs={imovel?.imagens} index={indexImg} />
 
         <Swiper
           loop={true}
@@ -39,7 +43,7 @@ export default function CarouselLargeImovel({ listImgs }) {
           onSlideChange={handleSlideChange}
           className="carousel-large-swiper"
         >
-          {listImgs.map((img, i) => (
+          {imovel?.imagens.map((img, i) => (
             <SwiperSlide
               key={i}
               style={{
@@ -51,7 +55,7 @@ export default function CarouselLargeImovel({ listImgs }) {
               }}
             >
               <img
-                src={img}
+                src={getImageSrc(img.dadosImagem)}
                 alt={`Imagem ${i + 1}`}
                 layout="intrinsic"
                 width={"auto"}
@@ -64,7 +68,7 @@ export default function CarouselLargeImovel({ listImgs }) {
                 }}
                 onClick={(e) => {
                   e.preventDefault();
-                  openFacyboxImages(listImgs, i);
+                  openFacyboxImages(imovel?.imagens, i);
                 }}
               />
             </SwiperSlide>
