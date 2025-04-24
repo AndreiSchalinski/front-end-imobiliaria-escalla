@@ -32,7 +32,7 @@ export default function CarouselLargeImovel({ imovel }) {
 
         <Swiper
           loop={true}
-          slidesPerView={1.6}
+          slidesPerView={1.9}
           centeredSlides={true}
           spaceBetween={10}
           pagination={{

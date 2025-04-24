@@ -1079,11 +1079,11 @@ p {
 }
 
 .carousel-large-swiper .swiper-button-next {
-  right: 18.35%;
+  right: 22.5%;
 }
 
 .carousel-large-swiper .swiper-button-prev {
-  left: 18.35%;
+  left: 22.5%;
 }
 
 @media (max-width: 900px) {
@@ -1136,7 +1136,7 @@ p {
   justify-content: space-between;
   align-items: baseline;
   margin-left: 30;
-  width: 61%;
+  width: 51%;
   margin: auto;
   margin-top: 15px;
   background: rgba(0, 0, 0, 0);
