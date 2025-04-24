@@ -1,13 +1,25 @@
-"use client";
-
 import { openFacyboxImages } from "@/services/fancybox.service";
-import Fancybox from "@/services/Facyboxs";
-import { Button } from "antd";
+import Button from "@mui/material/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { getIcon } from "@/assets/icons";
+import { useRouter } from "next/navigation";
 
 export default function SiteCardCarousel({ imovel }) {
+  const router = useRouter();
+
+  const redirectToImoveis = (imovel) => {
+    router.push(`/imoveis/${imovel.id}`);
+  };
+
+  const fazerLista = () => {
+    return imovel.caracteristicas.split(",").map((item) => item.trim());
+  };
+
+  const getImageSrc = (img) => {
+    return `data:image/jpeg;base64,${img}`;
+  };
+
   return (
     <div style={{ width: "100%" }}>
       <div className="card-imovel">
@@ -19,7 +31,7 @@ export default function SiteCardCarousel({ imovel }) {
             margin: "5px 0 0 5px",
           }}
         >
-          {imovel.chips.map((el, i) => {
+          {fazerLista().map((el, i) => {
             return (
               <div style={{ display: "flex" }} key={i}>
                 <li
@@ -52,17 +64,17 @@ export default function SiteCardCarousel({ imovel }) {
           modules={[Navigation]}
           className="card-imovel-swiper"
         >
-          {imovel.imgs.map((image, index) => {
+          {imovel.imagens.map((image, index) => {
             return (
               <SwiperSlide key={index} style={{ backgroundColor: "lightblue" }}>
                 <img
-                  src={image}
+                  src={getImageSrc(image.dadosImagem)}
                   alt=""
                   style={{ objectFit: "cover" }}
                   layout="intrinsic"
                   onClick={(e) => {
                     e.preventDefault();
-                    openFacyboxImages(imovel.imgs, index);
+                    openFacyboxImages(imovel.imagens, index);
                   }}
                 />
               </SwiperSlide>
@@ -70,17 +82,14 @@ export default function SiteCardCarousel({ imovel }) {
           })}
         </Swiper>
         <div className="card-imove-legendas">
-          <ul className="card-imove-legendas-1">
-            <li>{getIcon().iconLocation}</li>
-            <li>
-              <h5>{imovel.localizacao}</h5>
-            </li>
-          </ul>
+          <div className="card-imove-legendas-1">
+            {getIcon().iconLocation} <p>{imovel?.localizacao}</p>
+          </div>
 
           <div className="card-imove-legendas-2">
             <p>
               {imovel.dadosGerais} &nbsp;&nbsp;
-              <span className="cod-imovel">{imovel.codigo}</span>
+              <span className="cod-imovel">{imovel.imovelCod}</span>
             </p>
           </div>
 
@@ -88,19 +97,19 @@ export default function SiteCardCarousel({ imovel }) {
             <li>
               <p>
                 {getIcon().iconRuler}&nbsp;&nbsp;
-                {imovel.metragem} m²
+                {imovel.metragemApartamento} m²
               </p>
             </li>
 
             <li>
               <p>
-                {getIcon().iconCar}&nbsp;&nbsp;{imovel.vagas} vagas
+                {getIcon().iconCar}&nbsp;&nbsp;{imovel.qtdVagasGaragem} vagas
               </p>
             </li>
 
             <li>
               <p>
-                {getIcon().iconBed}&nbsp;&nbsp;{imovel.quartos} quartos
+                {getIcon().iconBed}&nbsp;&nbsp;{imovel.qtdDormitorios} quartos
               </p>
             </li>
           </ul>
@@ -112,19 +121,30 @@ export default function SiteCardCarousel({ imovel }) {
           <ul style={{ padding: "10px 10px" }}>
             <li style={{ width: "100%", display: "flex" }}>
               <div style={{ flexGrow: 1 }}></div>
+
               <Button
-                style={{
+                variant="contained"
+                sx={{
                   borderRadius: 20,
                   background: "#cfd8fd",
                   fontWeight: "bold",
                   padding: "3px 20px",
-                  fontSize: 14,
+                  fontSize: 15,
                   color: "#0057b8",
                   border: "none",
                   letterSpacing: "2px",
+                  textTransform: "none",
+                  boxShadow: "none",
+                  transition:'0.3s',
+                  "&:hover": {
+                    boxShadow: "none",
+                    color:'rgb(74, 199, 240)',
+                    transition:'0.3s'
+                  },
                 }}
+                onClick={() => redirectToImoveis(imovel)}
               >
-                VER DETALHES
+                Ver detalhes
               </Button>
             </li>
           </ul>

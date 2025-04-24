@@ -9,37 +9,16 @@ import SitePrincipalDepoimentos from "@/views/site-principal/SitePrincipalDepoim
 import SitePrincipalBlog from "@/views/site-principal/SitePrincipalBlog";
 import SitePrincipalFooter from "@/components/site-principal/Footer";
 import HeaderSite from "@/components/site-principal/Header";
-import { getImoveisAltaProcura } from "@/data/imoveisAltaProcura";
-import { getImoveisFrenteAoMar } from "@/data/imoveisFrenteAoMar";
-import { getImoveisNaPlanta } from "@/data/imoveisNaPlanta";
 import { getImoveisDestaques } from "@/services/service.imoveis.destaque";
 import { useEffect, useState } from "react";
 
-const listImoveisDestaques = [
-  {
-    titulo: "Imóveis com alta procura",
-    legenda: "",
-    listaCategorias: getImoveisAltaProcura(),
-  },
-  {
-    titulo: "Imóveis frente mar",
-    legenda: "Um cenário à altura das suas conquistas.",
-    listaCategorias: getImoveisFrenteAoMar(),
-  },
-  {
-    titulo: "Imóveis na planta",
-    legenda: "A melhor parte da sua vida já está nos nossos planos.",
-    listaCategorias: getImoveisNaPlanta(),
-  },
-];
-
 export default function Home() {
-  const [imovelDestaque, setImovelDestaque] = useState([]);
+  const [listCategorias, setListCategorias] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const {data} = await getImoveisDestaques();
-      setImovelDestaque(data[0]);
+      setListCategorias(data);
     };
     fetchData();
   }, []);
@@ -48,9 +27,9 @@ export default function Home() {
     <>
       <HeaderSite />
       <SitePrincipalHomePage />
-      {imovelDestaque ? <SitePrincipalDestaques imDestaque={imovelDestaque}/> : <div>Carregando...</div>}
+      <SitePrincipalDestaques/>
       <SitePrincipalCarouselDestaques
-        listImoveisDestaques={listImoveisDestaques}
+        listCategoriasImoveis={listCategorias}
       />
       <SitePrincipalConsultoria />
       <SitePrincipalConsultores />
