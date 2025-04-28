@@ -5,6 +5,9 @@ import { Navigation } from "swiper/modules";
 import { getIcon } from "@/assets/icons";
 
 export default function SiteCardCarousel({ imovel }) {
+
+  console.log(imovel)
+
   const redirectToImoveis = (imovel) => {
     window.location.href = `/imoveis/${imovel.id}`;
   };
@@ -65,7 +68,7 @@ export default function SiteCardCarousel({ imovel }) {
             return (
               <SwiperSlide key={index} style={{ backgroundColor: "lightblue" }}>
                 <img
-                  src={getImageSrc(image.dadosImagem)}
+                  src={image.url}
                   alt=""
                   style={{ objectFit: "cover" }}
                   layout="intrinsic"

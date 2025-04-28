@@ -3,7 +3,7 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 export const openFacyboxImages = (listImagens, index) => {
   const items = listImagens.map((img) => ({
-    src: `data:image/jpeg;base64,${img.dadosImagem}`,
+    src: img.url,
     type: "image",
     opts: {
       zoom: true,
