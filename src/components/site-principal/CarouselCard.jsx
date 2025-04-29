@@ -6,8 +6,6 @@ import { getIcon } from "@/assets/icons";
 
 export default function SiteCardCarousel({ imovel }) {
 
-  console.log(imovel)
-
   const redirectToImoveis = (imovel) => {
     window.location.href = `/imoveis/${imovel.id}`;
   };
