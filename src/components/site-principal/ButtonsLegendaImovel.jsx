@@ -6,17 +6,6 @@ import { openFacyboxImages } from "@/services/fancybox.service";
 import { useEffect, useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 
-const listLegends = [
-  "Cozinha integrada",
-  "Área de serviço",
-  "Suíte máster",
-  //"Banheira de hidromassagem",
-  //"Vista mar",
-  //"Sacada integrada",
-  //"Espaço gourmet",
-  //"Living integrado"
-];
-
 export default function ButtonsLegendaImovel({ listImgs, index, listCaracteristicas }) {
   const caracteristicasEmpreendimento = () => {
     return listCaracteristicas.split(",").map((item) => item.trim());

@@ -13,10 +13,6 @@ export default function CarouselLargeImovel({ imovel }) {
     setIndexImg(swiper.realIndex);
   };
 
-  const getImageSrc = (img) => {
-    return `data:image/jpeg;base64,${img}`;
-  };
-
   return (
     <>
       <div
@@ -28,7 +24,11 @@ export default function CarouselLargeImovel({ imovel }) {
           justifyContent: "center",
         }}
       >
-        <ButtonsLegendaImovel listImgs={imovel?.imagens} index={indexImg} listCaracteristicas={imovel.caracteristicas} />
+        <ButtonsLegendaImovel
+          listImgs={imovel?.imagens}
+          index={indexImg}
+          listCaracteristicas={imovel.caracteristicas}
+        />
 
         <Swiper
           loop={true}
@@ -55,7 +55,7 @@ export default function CarouselLargeImovel({ imovel }) {
               }}
             >
               <img
-                src={getImageSrc(img.dadosImagem)}
+                src={img.url}
                 alt={`Imagem ${i + 1}`}
                 layout="intrinsic"
                 width={"auto"}
