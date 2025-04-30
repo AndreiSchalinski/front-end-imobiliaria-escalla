@@ -48,7 +48,7 @@ export default function SiteCardCarouselFotos({ listImagens }) {
             <img
               alt={`Imagem ${i + 1}`}
               src={img.url}
-              width="100%"
+              width="100% "
               height="auto"
               style={{
                 display: "block",
