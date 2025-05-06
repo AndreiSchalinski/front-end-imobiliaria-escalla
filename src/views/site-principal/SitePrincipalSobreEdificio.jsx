@@ -3,14 +3,23 @@ import { getIcon } from "@/assets/icons";
 import { cloneElement } from "react";
 
 export default function SitePrincipalSobreEdificio({ empreendimento }) {
-  console.log(empreendimento);
-
   const listCaracteristicas = [
-    <p>{getIcon().iconBed}&nbsp; {empreendimento.qtdDormitorios} &nbsp; </p>,
-    <p>{getIcon().iconShower}&nbsp; {empreendimento.qtdSuites} &nbsp; </p>,
-    <p>{getIcon().iconRuler}&nbsp; {empreendimento.vlrMetragem} &nbsp; </p>,
-    <p>{getIcon().iconCar}&nbsp; {empreendimento.qtdGaragem} &nbsp; </p>,
-    <p>{getIcon("#5783EB").iconHome}&nbsp; {empreendimento.unidadesDisponiveis} Unidades disponíveis &nbsp; </p>,
+    <p>
+      {getIcon().iconBed}&nbsp; {empreendimento.qtdDormitorios} &nbsp;{" "}
+    </p>,
+    <p>
+      {getIcon().iconShower}&nbsp; {empreendimento.qtdSuites} &nbsp;{" "}
+    </p>,
+    <p>
+      {getIcon().iconRuler}&nbsp; {empreendimento.vlrMetragem} &nbsp;{" "}
+    </p>,
+    <p>
+      {getIcon().iconCar}&nbsp; {empreendimento.qtdGaragem} &nbsp;{" "}
+    </p>,
+    <p>
+      {getIcon("#5783EB").iconHome}&nbsp; {empreendimento.unidadesDisponiveis}{" "}
+      Unidades disponíveis &nbsp;{" "}
+    </p>,
     <p>
       {getIcon().iconLocation}&nbsp; {empreendimento.localizacao}
       &nbsp;{" "}
@@ -45,7 +54,7 @@ export default function SitePrincipalSobreEdificio({ empreendimento }) {
           </div>
         </div>
         <div className="container-site-principal-imoveis-informacoes-edificios-detalhes">
-          <CarouselGridImoveis listImagens={empreendimento.imagens}/>
+          <CarouselGridImoveis listImagens={empreendimento.imagens} />
         </div>
       </div>
     </>

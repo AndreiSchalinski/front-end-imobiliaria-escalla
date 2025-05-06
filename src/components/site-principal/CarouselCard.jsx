@@ -5,17 +5,12 @@ import { Navigation } from "swiper/modules";
 import { getIcon } from "@/assets/icons";
 
 export default function SiteCardCarousel({ imovel }) {
-
   const redirectToImoveis = (imovel) => {
     window.location.href = `/imoveis/${imovel.id}`;
   };
 
   const fazerLista = () => {
     return imovel.caracteristicas.split(",").map((item) => item.trim());
-  };
-
-  const getImageSrc = (img) => {
-    return `data:image/jpeg;base64,${img}`;
   };
 
   return (
@@ -86,7 +81,9 @@ export default function SiteCardCarousel({ imovel }) {
 
           <div className="card-imove-legendas-5">
             {imovel?.tituloAnuncio} &nbsp;{" "}
-            <span style={{color:'#83B1C1', fontWeight:'bold'}}>{imovel.imovelCod}</span>
+            <span style={{ color: "#83B1C1", fontWeight: "bold" }}>
+              Cod {imovel.id}
+            </span>
           </div>
 
           <ul className="card-imove-legendas-3">

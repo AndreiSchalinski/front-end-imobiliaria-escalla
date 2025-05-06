@@ -47,18 +47,22 @@ export default function SitePrincipalImoveisCarousel({ imovel }) {
           })}
         </div>
 
-        <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
-          <h3>O que você vai encontrar nesse empreendimento:</h3>
-          {caracteristicasEmpreendimento().map((el, index) => {
-            return (
-              <p key={index}>
-                &nbsp; {getIcon().iconCircleCheck}
-                &nbsp; &nbsp;
-                {el}
-              </p>
-            );
-          })}
-        </div>
+        {imovel.empreendimento !== null ? (
+          <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
+            <h3>O que você vai encontrar nesse empreendimento:</h3>
+            {caracteristicasEmpreendimento().map((el, index) => {
+              return (
+                <p key={index}>
+                  &nbsp; {getIcon().iconCircleCheck}
+                  &nbsp; &nbsp;
+                  {el}
+                </p>
+              );
+            })}
+          </div>
+        ) : (
+          ""
+        )}
 
         <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts-container-2">
           <h3>Sobre este imóvel</h3>
@@ -91,7 +95,9 @@ export default function SitePrincipalImoveisCarousel({ imovel }) {
 
         <div style={{ display: "flex" }}>
           <p>{imovel.tituloAnuncio} &nbsp;</p>
-          <p style={{color:'#83B1C1', fontWeight:'bold'}}>{imovel.imovelCod}</p>
+          <p style={{ color: "#83B1C1", fontWeight: "bold" }}>
+            Cod {imovel.id}
+          </p>
         </div>
 
         <p style={{ display: "flex", margin: "20px 0 20px 0" }}>

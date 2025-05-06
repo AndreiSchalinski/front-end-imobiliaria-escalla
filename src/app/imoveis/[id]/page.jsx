@@ -23,7 +23,13 @@ export default async function ImoveisPage({ params }) {
       <SitePrincipalCarouselInformacoesImovel imovel={imovelRes.data} />
       <SitePrincipalButtonsApresentacao />
       <SitePrincipalImovelInformacoes imovel={imovelRes.data} />
-      <SitePrincipalSobreEdificio empreendimento={imovelRes.data?.empreendimento}/>
+      {imovelRes.data.empreendimento !== null ? (
+        <SitePrincipalSobreEdificio
+          empreendimento={imovelRes.data.empreendimento}
+        />
+      ) : (
+        ""
+      )}
       <SitePrincipalCarouselDestaques
         listCategoriasImoveis={destaquesRes.data}
       />
