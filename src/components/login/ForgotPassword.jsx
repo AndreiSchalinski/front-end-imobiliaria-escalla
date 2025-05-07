@@ -28,8 +28,8 @@ export default function ForgotPassword({ open, handleClose }) {
         sx={{ display: 'flex', flexDirection: 'column', gap: 2, width: '100%' }}
       >
         <DialogContentText>
-          Enter your account&apos;s email address, and we&apos;ll send you a link to
-          reset your password.
+          
+          Informe seu endereço de email que enviaremos um link para você fazer reset de password.
         </DialogContentText>
         <OutlinedInput
           autoFocus
@@ -38,14 +38,14 @@ export default function ForgotPassword({ open, handleClose }) {
           id="email"
           name="email"
           label="Email address"
-          placeholder="Email address"
+          placeholder="seu@email.com"
           type="email"
           fullWidth
         />
       </DialogContent>
       <DialogActions sx={{ pb: 3, px: 3 }}>
-        <Button onClick={handleClose}>Cancel</Button>
-        <Button variant="contained" type="submit">
+        <Button onClick={handleClose} sx={{color:"black"}}>Cancelar</Button>
+        <Button variant="contained" type="submit" sx={{background:'black'}}>
           Continue
         </Button>
       </DialogActions>
