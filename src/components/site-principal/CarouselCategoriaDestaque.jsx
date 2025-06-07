@@ -9,7 +9,7 @@ export default function CarouselDestaques({ categoria }) {
   return (
     <div className="container-carousel-destaques">
       <h1>{categoria.nome}</h1>
-
+      <p>{categoria.legenda}</p>
       <Swiper
         loop={false}
         breakpoints={{
