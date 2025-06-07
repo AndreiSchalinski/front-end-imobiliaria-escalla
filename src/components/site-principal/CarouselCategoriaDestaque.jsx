@@ -5,7 +5,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import CardCarousel from "@/components/site-principal/CarouselCard";
 
 export default function CarouselDestaques({ categoria }) {
-  
   return (
     <div className="container-carousel-destaques">
       <h1>{categoria.nome}</h1>
@@ -31,7 +30,7 @@ export default function CarouselDestaques({ categoria }) {
           clickable: true,
         }}
         modules={[Pagination, Navigation]}
-        className=" swiper-container-carousel"
+        className="swiper-container-carousel"
       >
         {categoria.imoveis.map((imovel, j) => (
           <SwiperSlide key={j}>
