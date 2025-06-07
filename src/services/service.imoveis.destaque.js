@@ -1,13 +1,15 @@
 import customAxios from "./serive.customAxios";
 
 export const getImoveisDestaques = async () => {
-  return customAxios()
+  const resp = customAxios()
     .get("/categorias/dashboard/list")
     .then((resp) => resp);
+  return resp;
 };
 
 export const getImovel = async (idImovel) => {
-  return customAxios()
+  const { data } = customAxios()
     .get(`/imovel/${idImovel}`)
     .then((resp) => resp);
+  return data;
 };
