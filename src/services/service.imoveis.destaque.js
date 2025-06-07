@@ -2,7 +2,7 @@ import customAxios from "./serive.customAxios";
 
 export const getImoveisDestaques = async () => {
   return customAxios()
-    .get("/categorias/imoveis")
+    .get("/categorias/dashboard/list")
     .then((resp) => resp);
 };
 

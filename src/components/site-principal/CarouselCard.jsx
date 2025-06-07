@@ -13,6 +13,8 @@ export default function SiteCardCarousel({ imovel }) {
     return imovel.caracteristicas.split(",").map((item) => item.trim());
   };
 
+  const listImagens = [...imovel.imagens].sort((a, b) => a.ordem - b.ordem);
+
   return (
     <div style={{ width: "100%" }}>
       <div className="card-imovel">
@@ -57,7 +59,7 @@ export default function SiteCardCarousel({ imovel }) {
           modules={[Navigation]}
           className="card-imovel-swiper"
         >
-          {imovel.imagens.map((image, index) => {
+          {listImagens.map((image, index) => {
             return (
               <SwiperSlide key={index} style={{ backgroundColor: "lightblue" }}>
                 <img
