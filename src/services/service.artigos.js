@@ -6,3 +6,10 @@ export const getArtigos = async () => {
     .then((resp) => resp);
   return resp;
 };
+
+export const getArtigo = async (id) => {
+  const resp = await customAxios()
+    .get(`/artigo/${id}`)
+    .then((resp) => resp);
+  return resp;
+};

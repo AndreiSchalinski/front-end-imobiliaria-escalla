@@ -1,7 +1,6 @@
 "use client";
 
 import BlogCardArtigo from "@/components/blog/BlogCardArtigo";
-import ImgArtigo from "@/assets/imgs-blog/Link.png";
 import Button from "@mui/material/Button";
 import { getArtigos } from "@/services/service.artigos";
 import { useEffect, useState } from "react";
@@ -12,7 +11,6 @@ export default function BlogArtigosPage() {
   useEffect(() => {
     const fetchData = async () => {
       const respArtigos = await getArtigos();
-      console.log(respArtigos.data);
       setListArtigos(respArtigos.data);
     };
     fetchData();
@@ -25,17 +23,11 @@ export default function BlogArtigosPage() {
       </div>
 
       <div className="container-blog-artigos-cards">
-        {listArtigos.map((artigo, i) => (
+        {listArtigos.map((artigo, i) =>
           artigo.imagem !== null ? (
-            <BlogCardArtigo
-              key={i}
-              img={artigo.imagem}
-              cidade={artigo.cidade}
-              titulo={artigo.nome}
-              legenda={""}
-            />
+            <BlogCardArtigo key={i} artigo={artigo} />
           ) : null
-        ))}
+        )}
       </div>
       <div className="card-artigo-blog-container-button">
         <Button
