@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Quill from "quill";
 import "quill/dist/quill.bubble.css";
 
 export default function ArtigoHomePage({ artigo }) {
@@ -9,34 +8,36 @@ export default function ArtigoHomePage({ artigo }) {
   const quillRef = useRef(null);
 
   useEffect(() => {
-    if (containerRef.current && !quillRef.current) {
-      quillRef.current = new Quill(containerRef.current, {
-        readOnly: true,
-        theme: "bubble",
-        modules: {
-          toolbar: false,
-        },
-      });
-    }
-  }, []);
+    const initQuill = async () => {
+      if (containerRef.current && !quillRef.current) {
+        const Quill = (await import("quill")).default;
 
-  useEffect(() => {
-    if (!quillRef.current || !artigo?.conteudo) return;
+        quillRef.current = new Quill(containerRef.current, {
+          readOnly: true,
+          theme: "bubble",
+          modules: {
+            toolbar: false,
+          },
+        });
 
-    let conteudo = artigo.conteudo;
+        let conteudo = artigo?.conteudo;
 
-    if (typeof conteudo === "string") {
-      try {
-        conteudo = JSON.parse(conteudo);
-      } catch (error) {
-        console.error("Erro ao parsear conteúdo do artigo:", error);
-        return;
+        if (typeof conteudo === "string") {
+          try {
+            conteudo = JSON.parse(conteudo);
+          } catch (error) {
+            console.error("Erro ao parsear conteúdo do artigo:", error);
+            return;
+          }
+        }
+
+        if (conteudo) {
+          quillRef.current.setContents(conteudo);
+        }
       }
-    }
+    };
 
-    if (conteudo) {
-      quillRef.current.setContents(conteudo);
-    }
+    initQuill();
   }, [artigo?.conteudo]);
 
   return (
@@ -53,14 +54,7 @@ export default function ArtigoHomePage({ artigo }) {
 
       <div ref={containerRef} className="quill-reader"></div>
 
-      <div className="container-button-nav-artigos-nex-prev">
-        <div className="buttons">
-          <a href="">Prev</a>
-        </div>
-        <div className="buttons">
-          <a href="">Next</a>
-        </div>
-      </div>
+      <div className="spacer-text-reader"></div>
     </div>
   );
 }
