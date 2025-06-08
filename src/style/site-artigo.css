@@ -2,9 +2,12 @@
   margin: auto;
   padding-top: 100px;
   max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.container-home-artigo p {
+.container-home-artigo .title {
   text-align: center;
   font-size: 35px;
   font-family: "Sora", serif;
@@ -12,9 +15,33 @@
   margin: 50px 0;
 }
 
-.border-div {
+.container-div-line {
   height: 5px;
   width: 912px;
   background-color: #3762ed;
-  margin: 65px auto;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.quill-reader{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.226);
+  border-radius: 5px;
+  padding: 20px 30px;
+}
+
+.container-button-nav-artigos-nex-prev{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.container-button-nav-artigos-nex-prev .buttons{
+  height: 100px;
+  background-color: #3762ed;
+  margin: 10px;
+  width: 100%;
+  border-radius: 10px;
 }

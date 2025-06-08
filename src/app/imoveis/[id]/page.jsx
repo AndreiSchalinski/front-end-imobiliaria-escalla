@@ -12,6 +12,7 @@ import {
 } from "@/services/service.imoveis.destaque";
 
 export default async function ImoveisPage({ params }) {
+
   const { id } = await params;
 
   const imovelRes = await getImovel(id);
