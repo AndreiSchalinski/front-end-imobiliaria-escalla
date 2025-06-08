@@ -3,7 +3,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
 
 export default function BlogCardArtigo({ img, titulo, cidade }) {
   return (
@@ -13,9 +12,9 @@ export default function BlogCardArtigo({ img, titulo, cidade }) {
       </div>
 
       <div style={{ marginTop: 10 }}>
-        <Image
-          src={img}
-          alt=""
+        <img
+          src={img.url}
+          alt={img.nomeArquivo}
           layout="intrinsic"
           width={"100%"}
           height={"auto"}
