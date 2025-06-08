@@ -1,85 +1,41 @@
+"use client";
+
 import BlogCardArtigo from "@/components/blog/BlogCardArtigo";
 import ImgArtigo from "@/assets/imgs-blog/Link.png";
 import Button from "@mui/material/Button";
+import { getArtigos } from "@/services/service.artigos";
+import { useEffect, useState } from "react";
 
 export default function BlogArtigosPage() {
+  const [listArtigos, setListArtigos] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const respArtigos = await getArtigos();
+      console.log(respArtigos.data);
+      setListArtigos(respArtigos.data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className="container-blog-artigos">
-      <div style={{width:'59.09%'}}>
+      <div style={{ width: "59.09%" }}>
         <p>Artigos recentes</p>
       </div>
+
       <div className="container-blog-artigos-cards">
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"Balneário Camboriú"}
-          titulo={
-            "Auris Residenze: a nova era da construção sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-          legenda={""}
-        />
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"Joinville"}
-          titulo={
-            "Senna Tower em Balneário Camboriú o sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-        />
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"Balneário Camboriú"}
-          titulo={
-            "Roteiro perfeito para encontrar o seu paraís sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-        />
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"Florianópolis"}
-          titulo={
-            "Lotisa entrega primeira etapa do Home Clube sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-        />
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"Curitiba"}
-          titulo={
-            "Lotisa entrega primeira etapa do Home Clube sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-        />
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"Balneário Camboriú"}
-          titulo={
-            "Lotisa entrega primeira etapa do Home Clube sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-        />
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"São Francisco do Sul"}
-          titulo={
-            "Lotisa entrega primeira etapa do Home Clube sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-        />
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"Itapema"}
-          titulo={
-            "Lotisa entrega primeira etapa do Home Clube sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-        />
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"Balneário Camboriú"}
-          titulo={
-            "Lotisa entrega primeira etapa do Home Clube sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-        />
-        <BlogCardArtigo
-          img={ImgArtigo}
-          cidade={"Itapoá"}
-          titulo={
-            "Lotisa entrega primeira etapa do Home Clube sdofsodnfosdinfosdasdasda asdasdasdasdasd"
-          }
-        />
+        {listArtigos.map((artigo, i) => (
+          artigo.imagem !== null ? (
+            <BlogCardArtigo
+              key={i}
+              img={artigo.imagem}
+              cidade={artigo.cidade}
+              titulo={artigo.nome}
+              legenda={""}
+            />
+          ) : null
+        ))}
       </div>
       <div className="card-artigo-blog-container-button">
         <Button
