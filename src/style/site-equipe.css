@@ -54,6 +54,7 @@
   max-width: 1140px;
   margin: auto;
   margin-top: 90px;
+  margin-bottom: 80px;
 }
 
 .container-equipe-feedbacks-clientes-title {
@@ -82,7 +83,6 @@
 
 .card-feedback-cliente-equipe-nome {
   font-size: 20px;
-
   color: #020617;
 }
 
@@ -95,6 +95,7 @@
   font-size: 19px;
   color: #707070;
   margin-top: 10px;
+  word-wrap: break-word;
 }
 
 .swiper-container-carousel-equipe-feedbacks-clientes .swiper-pagination-bullet {

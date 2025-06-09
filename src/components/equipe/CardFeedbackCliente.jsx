@@ -1,22 +1,20 @@
 import { getIcon } from "@/assets/icons";
 
-export default function CardFeedbackCliente() {
+export default function CardFeedbackCliente({ depoimento }) {
   return (
     <div className="card-feedback-cliente-equipe">
       <ul>
         <li>
-          <p className="card-feedback-cliente-equipe-nome">
-            Octavio Deiroz Neto
+          <p className="card-feedback-cliente-equipe-nome">{depoimento.nome}</p>
+        </li>
+        <li>
+          <p className="card-feedback-cliente-equipe-papel">
+            {depoimento.ocupacao}
           </p>
         </li>
         <li>
-          <p className="card-feedback-cliente-equipe-papel">Comprador</p>
-        </li>
-        <li>
           <p className="card-feedback-cliente-equipe-relato">
-            {getIcon().iconAbreAspas} Atendimento impecável, principalmente do
-            corretor Flávio. Comprei uma casa ano passado e foram muito
-            prestativos e extremamente rápidos com todos os trâmites. Nota 10!{" "}
+            {getIcon().iconAbreAspas} {depoimento.depoimento}{" "}
             {getIcon().iconFechaAspas}
           </p>
         </li>

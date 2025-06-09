@@ -1,4 +1,5 @@
 import "../../style/global.css";
+import "@/style/site-equipe.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "swiper/css";
 import "swiper/css/grid";

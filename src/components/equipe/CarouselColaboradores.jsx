@@ -9,19 +9,16 @@ import CardColaborador from "./CardColaborador";
 import { useState, useEffect } from "react";
 import { getColaboradores } from "@/services/service.colaboradores";
 
-
-
 export default function CarouselColaboradores() {
-
   const [listColaboradores, setListColaboradores] = useState([]);
 
   useEffect(() => {
-      const fetchData = async () => {
-        const respColaboradores = await getColaboradores();
-        setListColaboradores(respColaboradores.data);
-      };
-      fetchData();
-    }, []);
+    const fetchData = async () => {
+      const respColaboradores = await getColaboradores();
+      setListColaboradores(respColaboradores.data);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="container-site-principal-consultores">
