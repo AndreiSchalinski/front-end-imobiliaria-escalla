@@ -18,6 +18,8 @@ export default async function ImoveisPage({ params }) {
   const imovelRes = await getImovel(id);
   const destaquesRes = await getImoveisDestaques();
 
+  console.log(imovelRes.data)
+
   return (
     <>
       <HeaderSite />

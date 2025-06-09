@@ -295,7 +295,11 @@
 /*----------------------configuração swiper carousel---------------------*/
 
 .swiper-container-carousel {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
   font-size: 14px;
   color: #000;
   padding-top: 30px;
@@ -582,7 +586,7 @@ p {
   width: 50%;
 }
 
-.container-site-principal-consultor{
+.container-site-principal-consultor {
   margin: 0 2px 0 0;
 }
 
@@ -599,7 +603,6 @@ p {
     transition: 0.8s !important;
   }
 }
-
 
 .container-site-principal-consultor-imagem {
   border-top-left-radius: 10px;
@@ -627,12 +630,12 @@ p {
   object-fit: cover; /* Ajusta a imagem para cobrir o container, cortando se necessário */
 }
 
-.swiper-container-carousel-consultores{
+.swiper-container-carousel-consultores {
   padding-bottom: 30px;
   width: 100%;
 }
 
-.container-site-principal-consultores-title{
+.container-site-principal-consultores-title {
   margin: auto;
   width: 100%;
   font-family: "Sora", sans-serif;
@@ -834,12 +837,12 @@ p {
   margin-right: 4px;
 }
 
-.container-site-principal-blog-link li h2{
+.container-site-principal-blog-link li h2 {
   line-height: 28px;
 }
 
-.container-site-principal-blog-link p{
-  margin:10px 0  20px 0;
+.container-site-principal-blog-link p {
+  margin: 10px 0 20px 0;
   line-height: 20px;
 }
 
@@ -969,10 +972,7 @@ p {
 }
 
 .container-site-principal-informacoes-imovel-cliente-icones-medidas li {
-  margin: 0 20px 50px 20px;
-  margin-left: 0;
   border: 1px solid #83b1c1;
-  padding: 17px 35px;
   border-radius: 5px;
   color: #83b1c1;
   font-family: "Sora", sans-serif;
@@ -982,6 +982,9 @@ p {
   align-items: center;
   font-size: 12px;
   transition: 0.2s;
+  width: 100px;
+  margin: 5px 5px;
+  padding: 10px 10px;
 }
 
 .container-site-principal-informacoes-imovel-cliente-icones-medidas li:hover {

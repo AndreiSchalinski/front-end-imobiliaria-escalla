@@ -5,7 +5,7 @@ import SitePrincipalDestaques from "@/views/site-principal/SitePrincipalDestaque
 import SitePrincipalCarouselDestaques from "@/views/site-principal/SitePrincipalCarouselDestaques";
 import SitePrincipalConsultoria from "@/views/site-principal/SitePrincipalConsultoria";
 import SitePrincipalConsultores from "@/views/site-principal/SitePrincipalConsultores";
-import SitePrincipalDepoimentos from "@/views/site-principal/SitePrincipalDepoimentos";
+import EquipeFeedbacksPage from "@/views/equipe/EquipeFeedbacksPage"
 import SitePrincipalBlog from "@/views/site-principal/SitePrincipalBlog";
 import SitePrincipalFooter from "@/components/site-principal/Footer";
 import HeaderSite from "@/components/site-principal/Header";
@@ -19,7 +19,7 @@ export default function Home() {
       <SitePrincipalCarouselDestaques />
       <SitePrincipalConsultoria />
       <SitePrincipalConsultores />
-      <SitePrincipalDepoimentos />
+      <EquipeFeedbacksPage />
       <SitePrincipalBlog />
       <SitePrincipalFooter />
     </>

@@ -8,8 +8,8 @@ export const getImoveisDestaques = async () => {
 };
 
 export const getImovel = async (idImovel) => {
-  const { data } = customAxios()
+  const resp = customAxios()
     .get(`/imovel/${idImovel}`)
     .then((resp) => resp);
-  return data;
+  return resp;
 };

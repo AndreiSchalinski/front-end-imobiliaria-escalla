@@ -6,6 +6,7 @@ import Ratings from "@/components/site-principal/Ratings";
 import CardDescription from "../../components/site-principal/CardDescription";
 
 export default function SitePrincipalImoveisCarousel({ imovel }) {
+
   const caracteristicasList = () => {
     return imovel.caracteristicas.split(",").map((item) => item.trim());
   };
@@ -21,31 +22,39 @@ export default function SitePrincipalImoveisCarousel({ imovel }) {
       <div className="container-site-principal-informacoes-imovel-cliente">
         <ul className="container-site-principal-informacoes-imovel-cliente-icones-medidas">
           <li>
-            {getIcon("#83B1C1").iconRuler} {imovel.metragemApartamento}m²
+            {getIcon("#83B1C1").iconRuler} {imovel.metragemApartamento}
           </li>
-          <li>
-            {getIcon("#83B1C1").iconShower} {imovel.qtdSuites} suítes
-          </li>
-          <li>
-            {getIcon("#83B1C1").iconBed} {imovel.qtdDormitorios} quartos
-          </li>
-          <li>
-            {getIcon("#83B1C1").iconCar} {imovel.qtdVagasGaragem} vagas
-          </li>
+          {imovel.tipo !== "Terreno" ? (
+            <li>
+              {getIcon("#83B1C1").iconShower} {imovel.qtdSuites}
+            </li>
+          ) : null}
+          {imovel.tipo !== "Terreno" ? (
+            <li>
+              {getIcon("#83B1C1").iconBed} {imovel.qtdDormitorios}
+            </li>
+          ) : null}
+          {imovel.tipo !== "Terreno" ? (
+            <li>
+              {getIcon("#83B1C1").iconCar} {imovel.qtdVagasGaragem}
+            </li>
+          ) : null}
         </ul>
 
-        <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
-          <h3>O que você vai encontrar nesse imóvel:</h3>
-          {caracteristicasList().map((el, index) => {
-            return (
-              <p key={index}>
-                &nbsp; {getIcon().iconCircleCheck}
-                &nbsp; &nbsp;
-                {el}
-              </p>
-            );
-          })}
-        </div>
+        {imovel.tipo !== "Terreno" ? (
+          <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">
+            <h3>O que você vai encontrar nesse imóvel:</h3>
+            {caracteristicasList().map((el, index) => {
+              return (
+                <p key={index}>
+                  &nbsp; {getIcon().iconCircleCheck}
+                  &nbsp; &nbsp;
+                  {el}
+                </p>
+              );
+            })}
+          </div>
+        ) : null}
 
         {imovel.empreendimento !== null ? (
           <div className="container-site-principal-informacoes-imovel-cliente-icones-medidas-texts">

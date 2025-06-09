@@ -1,3 +1,5 @@
+"use client"
+
 import CarouselDestaques from "@/components/site-principal/CarouselCategoriaDestaque";
 import { getImoveisDestaques } from "@/services/service.imoveis.destaque";
 import { useEffect, useState } from "react";
